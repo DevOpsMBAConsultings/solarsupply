@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    <record id="view_order_form_inherit_dgi_payment_term" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.dgi.payment.term</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='payment_term_id']" position="attributes">
+                <attribute name="readonly">1</attribute>
+                <attribute name="options">{'no_open': True}</attribute>
+            </xpath>
+            <!-- Hide Standard Odoo Totals (tax_totals) ONLY when showing our DGI custom block -->
+            <xpath expr="//field[@name='tax_totals']" position="attributes">
+                <attribute name="invisible">dgi_show_retention_block</attribute>
+            </xpath>
+            <!-- DGI Totals: Right aligned (after taxes block) - Simplified: Subtotal, ITBMS, Total (No Retention line) -->
+            <xpath expr="//field[@name='tax_totals']" position="after">
+                <group class="oe_subtotal_footer oe_right"
+                       invisible="not dgi_show_retention_block">
+                    <field name="dgi_show_retention_block" invisible="1"/>
+                    
+                    <!-- 1. Subtotal -->
+                    <field name="dgi_amount_untaxed" 
+                           string="Subtotal" 
+                           widget="monetary" 
+                           options="{'currency_field': 'currency_id'}"/>
+
+                    <!-- 2. ITBMS (Positive Taxes) -->
+                    <field name="dgi_amount_taxes" 
+                           string="Impuesto" 
+                           widget="monetary" 
+                           options="{'currency_field': 'currency_id'}"/>
+
+                    <!-- 3. DGI Gross Total -->
+                    <field name="dgi_amount_total" 
+                           string="Total" 
+                           widget="monetary" 
+                           options="{'currency_field': 'currency_id'}"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_order_form_inherit_dgi_notes" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.dgi.notes</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <!-- Mostrar Disposición fiscal como solo lectura debajo del cliente en la cotización -->
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="fiscal_position_id" string="Disposición fiscal" readonly="1" options="{'no_open': True}"/>
+            </xpath>
+            <!-- Sección de Notas Complementarias después de las pestañas (cuerpo del formulario) -->
+            <xpath expr="//sheet//notebook" position="after">
+                <group name="group_dgi_payment_notes">
+                    <separator string="NOTAS COMPLEMENTARIAS PARA FACTURACIÓN"/>
+                    <field name="dgi_payment_notes"
+                           nolabel="1"
+                           colspan="2"
+                           readonly="state not in ('draft', 'sent')"
+                           placeholder="Notas complementarias (se copiarán a la factura para DGI, máx. 200 caracteres)..."/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_order_form_inherit_dgi_no_quick_create" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.dgi.no.quick.create</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_line']/list/field[@name='product_id']" position="attributes">
+                <attribute name="options">{'no_quick_create': True}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/list/field[@name='product_template_id']" position="attributes">
+                <attribute name="options">{'no_quick_create': True}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_order_form_inherit_dgi_direct_invoice" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.dgi.direct.invoice</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <!-- Overrides primary "Create Invoice" button -->
+            <xpath expr="//button[@id='create_invoice']" position="attributes">
+                <attribute name="name">action_create_invoice_direct</attribute>
+                <attribute name="type">object</attribute>
+                <attribute name="groups">mba_pa_edi.group_digifact_user</attribute>
+            </xpath>
+            <!-- Overrides secondary "Create Invoice" button (percentage/advance) -->
+            <xpath expr="//button[@id='create_invoice_percentage']" position="attributes">
+                <attribute name="name">action_create_invoice_direct</attribute>
+                <attribute name="type">object</attribute>
+                <attribute name="groups">mba_pa_edi.group_digifact_user</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_order_form_inherit_dgi_readonly_taxes" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.dgi.readonly.taxes</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_line']/list/field[@name='tax_ids']" position="attributes">
+                <attribute name="readonly">1</attribute>
+                <attribute name="force_save">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/form//field[@name='tax_ids']" position="attributes">
+                <attribute name="readonly">1</attribute>
+                <attribute name="force_save">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/list/field[@name='tax_ids']" position="attributes" groups="mba_pa_sale.group_edit_sale_line_tax">
+                <attribute name="readonly">0</attribute>
+                <attribute name="force_save">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/form//field[@name='tax_ids']" position="attributes" groups="mba_pa_sale.group_edit_sale_line_tax">
+                <attribute name="readonly">0</attribute>
+                <attribute name="force_save">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='date_order']" position="attributes">
+                <attribute name="readonly">1</attribute>
+                <attribute name="force_save">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='validity_date']" position="attributes">
+                <attribute name="readonly">1</attribute>
+                <attribute name="force_save">1</attribute>
+            </xpath>
+        </field>
+    </record>
+    </data>
+</odoo>

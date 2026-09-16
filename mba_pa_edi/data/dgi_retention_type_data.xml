@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="0">
+    <data>
+    <!-- Retenedores Gobierno (2 opciones) -->
+    <record id="dgi_retention_gobierno_50" model="dgi.retention.type">
+        <field name="name">Pago por venta de bienes/servicios al estado 50%</field>
+        <field name="code">2</field>
+        <field name="receptor_type">gobierno</field>
+        <field name="percentage">50.0</field>
+        <field name="sequence">10</field>
+    </record>
+    <record id="dgi_retention_gobierno_100" model="dgi.retention.type">
+        <field name="name">Pago por servicio profesional al estado 100%</field>
+        <field name="code">1</field>
+        <field name="receptor_type">gobierno</field>
+        <field name="percentage">100.0</field>
+        <field name="sequence">20</field>
+    </record>
+    <!-- Retenedores Contribuyente (2 opciones) -->
+    <record id="dgi_retention_contribuyente_50_compra" model="dgi.retention.type">
+        <field name="name">Pago o acreditación por compra de bienes/servicios 50%</field>
+        <field name="code">4</field>
+        <field name="receptor_type">contribuyente</field>
+        <field name="percentage">50.0</field>
+        <field name="sequence">10</field>
+    </record>
+    <record id="dgi_retention_contribuyente_50_tc" model="dgi.retention.type">
+        <field name="name">Pago a comercio afiliado a sistema de TC/TD 50%</field>
+        <field name="code">7</field>
+        <field name="receptor_type">contribuyente</field>
+        <field name="percentage">50.0</field>
+        <field name="sequence">20</field>
+    </record>
+    </data>
+</odoo>

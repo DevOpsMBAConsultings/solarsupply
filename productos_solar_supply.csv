@@ -1,0 +1,56 @@
+name,default_code,list_price,categ_id,type,sale_ok,purchase_ok,description_sale
+Inversor Monofásico-H1.3.0-p/Baterías de alta tensión-IP65-Compatible con monitorización,Single Phase - H1.-3.0 - HV batt,600.0,Inversores,consu,True,True,Single Phase - H1.-3.0 - HV batteries - IP65 - Monitoring capable
+Inversor Monofásico-H1.3.7-p/Baterías de alta tensión-IP65-Compatible con monitorización,Single Phase - H1.-3.7  - HV bat,610.0,Inversores,consu,True,True,Single Phase - H1.-3.7  - HV batteries - IP65 - Monitoring capable
+Inversor Monofásico-H1.4.6-p/Baterías de alta tensión-IP65-Compatible con monitorización,Single Phase - H1.-4.6  - HV bat,623.0,Inversores,consu,True,True,Single Phase - H1.-4.6  - HV batteries -  IP65 - Monitoring capable
+Inversor Monofásico-H1.5.0-p/Baterías de alta tensión-IP65-Compatible con monitorización,Single Phase - H1.-5.0  - HV bat,638.0,Inversores,consu,True,True,Single Phase - H1.-5.0  - HV batteries - IP65 - Monitoring capable
+Inversor Monofásico-H1.6.0-p/Baterías de alta tensión-IP65-Compatible con monitorización,Single Phase - H1.-6.0  - HV bat,653.0,Inversores,consu,True,True,Single Phase - H1.-6.0  - HV batteries - IP65 - Monitoring capable
+Inversor Monofásico-KH7-p/Baterías de alta tensión-IP65-Con capacidad de monitorización,Single Phase - KH7  - HV batteri,850.0,Inversores,consu,True,True,Single Phase - KH7  - HV batteries - IP65 - Monitoring capable
+Inversor Monofásico-KH8-p/Baterías de alta tensión-IP65-Con capacidad de monitorización,Single Phase - KH8  - HV batteri,870.0,Inversores,consu,True,True,Single Phase - KH8  - HV batteries - IP65 - Monitoring capable
+Inversor Monofásico-KH9-p/Baterías de alta tensión-IP65-Con capacidad de monitorización,Single Phase - KH9  - HV batteri,890.0,Inversores,consu,True,True,Single Phase - KH9  - HV batteries - IP65 - Monitoring capable
+Inversor Monofásico-KH10-p/Baterías de alta tensión-IP65-Con capacidad de monitorización,Single Phase - KH10  - HV batter,920.0,Inversores,consu,True,True,Single Phase - KH10  - HV batteries - IP65 - Monitoring capable
+"Inversor Trifásico - H3 Pro 11,5 kW  Tensión de salida 220 V (para Latinoamérica) - p/Baterías de alta tensión",Three Phase - H3 Pro 11.5kW  Out,1600.0,Inversores,consu,True,True,"Three Phase - H3 Pro 11.5kW  Output voltage 220V (for Colombia, CA and Latam) - HV batteries"
+"Inversor Trifásico - H3 Pro 17,3 kW  Tensión de salida 220 V (para Latinoamérica) - p/Baterías de alta tensión",Three Phase - H3 Pro 17.3kW  Out,2120.0,Inversores,consu,True,True,"Three Phase - H3 Pro 17.3kW  Output voltage 220V (for Colombia, CA and Latam) - HV batteries"
+EP6-6kWh-High Voltage Battery compatible with H1-KH-H3-H3 Plus-H3 Pro-US series,EP6 - HV battery compatible with,881.0,Baterías y Almacenamiento,consu,True,True,EP6 - HV battery compatible with H1-KH-H3-H3 Pro-US series
+EP12-12kWh-High Voltage Battery compatible with H1-KH-H3-H3 Plus-H3 Pro-US series,EP12 - HV battery compatible wit,1420.0,Baterías y Almacenamiento,consu,True,True,EP12 - HV battery compatible with H1-KH-H3-H3 Pro-US series
+Three Phase 220v.H3-37.5-Plus-US-L (Output voltage 220V),Three Phase 220v. - H3-37.5-Plus,4100.0,Inversores,consu,True,True,Three Phase 220v. - H3-37.5-Plus-US-L （Output voltage 220V)
+Three Phase 220v.H3-50-Plus-US-L (Output voltage 220V),Three Phase 220v.H3-50-Plus-US-L,5300.0,Inversores,consu,True,True,Three Phase 220v.H3-50-Plus-US-L （Output voltage 220V)
+Three Phase 220v.- H3-60-Plus-US-L (Output voltage 220V）,Three Phase 220v.- H3-60-Plus-US,5600.0,Inversores,consu,True,True,Three Phase 220v.- H3-60-Plus-US-L （Output voltage 220V）
+Three Phase 220v.- H3-70-Plus-US-L (Output voltage 220V）,Three Phase 220v.- H3-70-Plus-US,5900.0,Inversores,consu,True,True,Three Phase 220v.- H3-70-Plus-US-L （Output voltage 220V）
+Three Phase 480v.- H3-80-Plus-US-H (Output voltage 480V),Three Phase 480v.- H3-80-Plus-US,4100.0,Inversores,consu,True,True,
+Three Phase 480v.-  H3-100-Plus-US-H  (Output voltage 480V),Three Phase 480v.-  H3-100-Plus-,5300.0,Inversores,consu,True,True,
+Three Phase 480v.- H3-125-Plus-US-H  (Output voltage 480V),Three Phase 480v.- H3-125-Plus-U,5600.0,Inversores,consu,True,True,
+Three Phase 480v.- H3-150-Plus-US-H  (Output voltage 480V),Three Phase 480v.- H3-150-Plus-U,5900.0,Inversores,consu,True,True,
+CQ6-6kWh-High Voltage Battery for H3 Plus,Batteries for H3 Plus - CQ6,900.0,Baterías y Almacenamiento,consu,True,True,Batteries for H3 Plus - CQ6
+CQ7-7kWh-High Voltage Battery for H3 Plus,Batteries for H3 Plus - CQ7,910.0,Baterías y Almacenamiento,consu,True,True,Batteries for H3 Plus - CQ7
+CQ16-16kWh-High Voltage Battery for H3 Plus,Batteries for H3 Plus - CQ16,1400.0,Baterías y Almacenamiento,consu,True,True,Batteries for H3 Plus - CQ16
+Master Box (BMS) for batteries CQ for H3 Plus,Batteries for H3 Plus - Master B,1000.0,Baterías y Almacenamiento,consu,True,True,Batteries for H3 Plus - Master Box (BMS)
+Hybrid Split Phase Inverter-H1-3.8-US-H Voltage batteries-IP65-Monitoring,Hybrid Split Phase Inverter - H1,830.0,Inversores,consu,True,True,Hybrid Split Phase Inverter - H1-3.8-US - HV batteries - IP65 - Monitoring capable
+Hybrid Split Phase Inverter-H1-5.7-US-H Voltage batteries-IP65-Monitoring,H1-5.7-US - HV batteries - IP65 ,870.0,Inversores,consu,True,True,H1-5.7-US - HV batteries - IP65 - Monitoring capable
+Hybrid Split Phase Inverter-H1-7.6-US-H Voltage batteries-IP65-Monitoring,H1-7.6-US - HV batteries - IP65 ,1100.0,Inversores,consu,True,True,H1-7.6-US - HV batteries - IP65 - Monitoring capable
+Hybrid Split Phase Inverter-H1-9.6-US-H Voltage batteries-IP65-Monitoring,H1-9.6-US - HV batteries - IP65 ,1300.0,Inversores,consu,True,True,H1-9.6-US - HV batteries - IP65 - Monitoring capable
+Hybrid Split Phase Inverter-H1-11.4-US-H Voltage batteries-IP65-Monitoring,H1-11.4-US - HV batteries - IP65,1400.0,Inversores,consu,True,True,H1-11.4-US - HV batteries - IP65 - Monitoring capable
+EP6-6kWh-High Voltage Battery compatible with H1-KH-H3-H3 Plus-H3 Pro-US series,EP6kWh - HV batteries - IP65 - M,881.0,Baterías y Almacenamiento,consu,True,True,EP6kWh - HV batteries - IP65 - Monitoring capable
+EP12-12kWh-High Voltage Battery compatible with H1-KH-H3-H3 Plus-H3 Pro-US series,EP12kWh - HV batteries - IP65 - ,1420.0,Baterías y Almacenamiento,consu,True,True,EP12kWh - HV batteries - IP65 - Monitoring capable
+Hub 2.0 (Accesorio para paralelizar inversores,Hub 2.0 (Accesorio para paraleli,400.0,Inversores,consu,True,True,
+Junction Box (accesorio para paralizar baterías),Junction Box (accesorio para par,75.0,Baterías y Almacenamiento,consu,True,True,
+Single Phase - AIO-H1-3.8-US (G2) (US SeriesTodo en Uno) - HV batteries - IP65 - Monitoring capable,Single Phase - AIO-H1-3.8-US (G2,1134.0,Baterías y Almacenamiento,consu,True,True,
+Single Phase-AIO-H1-5.7-US (G2) (US SeriesTodo en Uno)-HV batteries-IP65 - Monitoring capable,Single Phase-AIO-H1-5.7-US (G2) ,1207.0,Baterías y Almacenamiento,consu,True,True,Single Phase-AIO-H1-5.7-US (G2) (US SeriesTodo en Uno) - HV batteries - IP65 - Monitoring capable
+Single Phase-AIO-H1-7.6-US (G2) (US SeriesTodo en Uno)-HV batteries-IP65 - Monitoring capable,Single Phase-AIO-H1-7.6-US (G2) ,1316.0,Baterías y Almacenamiento,consu,True,True,Single Phase-AIO-H1-7.6-US (G2) (US SeriesTodo en Uno) - HV batteries - IP65 - Monitoring capable
+Single Phase-AIO-H1-9.6-US (G2) (US SeriesTodo en Uno)-HV batteries-IP65-Monitoring capable,Single Phase-AIO-H1-9.6-US (G2) ,1425.0,Baterías y Almacenamiento,consu,True,True,Single Phase-AIO-H1-9.6-US (G2) (US SeriesTodo en Uno) - HV batteries - IP65 - Monitoring capable
+Single Phase-AIO-H1-11.4-US (G2) (US SeriesTodo en Uno)-HV batteries-IP65-Monitoring capable,Single Phase-AIO-H1-11.4-US (G2),1485.0,Baterías y Almacenamiento,consu,True,True,Single Phase-AIO-H1-11.4-US (G2) (US SeriesTodo en Uno) -HV batteries - IP65 - Monitoring capable
+EQ4000 (Bateria para el Todo en Uno),EQ4000 (Bateria para el Todo en ,825.0,Baterías y Almacenamiento,consu,True,True,
+EV Charger Single-phase 7kW 6 meter cables Bluetooth+WIFI+RFID. OCPP Connector Type 2 Plug version,EV Charger Single-phase 7kW 6 me,190.0,Cargadores EV,consu,True,True,EV Charger Single-phase 7kW 6 meter cables Bluetooth+WIFI+RFID. OCPP Connector Type 2。Plug version
+Inversor FoxESS On-Grid S3000-G2 3KW,S3000-G2,140.0,Inversores,consu,True,True,FoxESS On-Grid Solar Inverter S3000-G2 3KW
+Inversor FoxESS On-Grid F3000-G2 3KW,F3000-G2,175.0,Inversores,consu,True,True,FoxESS On-Grid Solar Inverter F3000-G2 3KW
+Inversor FoxESS On-Grid F5000-G2 5KW,F5000-G2,190.0,Inversores,consu,True,True,FoxESS On-Grid Solar Inverter F5000-G2 5KW
+Inversor FoxESS On-Grid F6000-G2 6KW,F6000-G2,200.0,Inversores,consu,True,True,FoxESS On-Grid Solar Inverter F6000-G2 6KW
+Inversor FoxESS On-Grid G7.5 7.5KW,G7.5,250.0,Inversores,consu,True,True,FoxESS On-Grid Solar Inverter G7.5 7.5KW
+Inversor FoxESS On-Grid G8 8KW,G8,270.0,Inversores,consu,True,True,FoxESS On-Grid Solar Inverter G8 8KW
+Inversor FoxESS On-Grid G9 9KW,G9,280.0,Inversores,consu,True,True,FoxESS On-Grid Solar Inverter G9 9KW
+Inversor FoxESS On-Grid G10 10kW,G10,290.0,Inversores,consu,True,True,FoxESS On-Grid Solar Inverter G10 10kW
+Inversor FoxESS On-Grid G10.5 10.5KW,G10.5,300.0,Inversores,consu,True,True,FoxESS On-Grid Solar Inverter G10.5 10.5KW
+Inversor FoxESS On-Grid VL15 15kW,VL15,900.0,Inversores,consu,True,True,FoxESS On-Grid Solar Inverter VL15 15kW
+Inversor FoxESS On-Grid VL20 20kW,VL20,1000.0,Inversores,consu,True,True,FoxESS On-Grid Solar Inverter VL20 20kW
+Inversor FoxESS On-Grid VL25 25kW,VL25,1100.0,Inversores,consu,True,True,FoxESS On-Grid Solar Inverter VL25 25kW
+Inversor FoxESS On-Grid VL30 30kW,VL30,1170.0,Inversores,consu,True,True,FoxESS On-Grid Solar Inverter VL30 30kW
+Inversor FoxESS On-Grid VL37.5 37.5kW,VL37.5,1230.0,Inversores,consu,True,True,FoxESS On-Grid Solar Inverter VL37.5 37.5kW

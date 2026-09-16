@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    <!-- Extendemos la vista del Contacto (base) para añadir campos de Facturación Electrónica DGI -->
+    <record id="view_partner_form_dgi_edi" model="ir.ui.view">
+        <field name="name">res.partner.form.dgi.edi</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            
+            <!-- Sección "Notas Complementarias" en cuerpo principal (antes de los tabs) -->
+            <xpath expr="//sheet//notebook" position="before">
+                <separator string="NOTAS COMPLEMENTARIAS PARA FACTURACIÓN"/>
+                <group>
+                    <field name="dgi_payment_notes"
+                           nolabel="1"
+                           colspan="2"
+                           placeholder="Notas complementarias (se copiarán a la factura)..."
+                           help="Notas complementarias (se copiarán a la factura). Se copian al contacto y a la factura para la facturación electrónica (DGI)."/>
+                </group>
+            </xpath>
+
+            <!-- Movemos la Disposición Fiscal (property_account_position_id) del tab "Sales & Purchases" (Accounting / Fiscal Information) 
+                 para que quede debajo del TP (l10n_pa_tipo_contribuyente) en el encabezado principal -->
+            <xpath expr="//field[@name='l10n_pa_tipo_contribuyente']" position="after">
+                <field name="property_account_position_id" string="Disposición fiscal" options="{'no_create': True, 'no_open': True}"/>
+            </xpath>
+            <xpath expr="//group[@name='fiscal_information']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <!-- Sección de Pago DGI en la tab "Datos Panamá (DGI)".
+                 Todo readonly — se auto-llena vía onchange desde Términos de pago.
+                 El usuario NUNCA edita estos campos directamente (igual que el módulo original). -->
+            <xpath expr="//page[@name='dgi_billing']" position="inside">
+                <group string="Información de Pago (DGI)" col="4">
+                    <field name="dgi_payment_term_type" readonly="1"/>
+                    <field name="dgi_payment_method_id"
+                           options="{'no_create': True, 'no_open': True}"
+                           domain="[('code', '!=', '01')]"
+                           invisible="dgi_payment_term_type != 'contado'"
+                           readonly="1"/>
+                    <field name="dgi_payment_method_code" invisible="1"/>
+                    <field name="dgi_payment_method_other_desc"
+                           colspan="4"
+                           placeholder="Indique la descripción cuando la forma de pago sea 99 - Otro"
+                           invisible="dgi_payment_term_type != 'contado' or dgi_payment_method_code != '99'"
+                           readonly="1"/>
+                    <field name="dgi_plazo_option"
+                           invisible="dgi_payment_term_type != 'credito'"
+                           readonly="1"/>
+                </group>
+            </xpath>
+
+
+        </field>
+    </record>
+    </data>
+</odoo>

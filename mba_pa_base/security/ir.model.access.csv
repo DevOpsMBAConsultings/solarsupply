@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_dgi_provincia_user,access.dgi.provincia.user,model_dgi_provincia,base.group_user,1,0,0,0
+access_dgi_distrito_user,access.dgi.distrito.user,model_dgi_distrito,base.group_user,1,0,0,0
+access_dgi_corregimiento_user,access.dgi.corregimiento.user,model_dgi_corregimiento,base.group_user,1,0,0,0
+access_partner_dgi_warning_wizard,access_partner_dgi_warning_wizard,model_partner_dgi_warning_wizard,base.group_user,1,1,1,1

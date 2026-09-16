@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form_inherit_dgi_hitos" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.dgi.hitos</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="priority">30</field>
+        <field name="arch" type="xml">
+            <!-- Botón secundario para Hitos / Anticipos (Down Payments) -->
+            <xpath expr="//button[@id='create_invoice']" position="after">
+                <field name="dgi_amount_residual" invisible="1"/>
+                <button name="action_create_invoice_advance" 
+                        string="Crear Anticipo / Hito" 
+                        type="object" 
+                        class="btn-secondary"
+                        invisible="state != 'sale' or dgi_amount_residual &lt;= 0"
+                        groups="mba_pa_edi.group_digifact_user"/>
+                <field name="dgi_has_final_invoice" invisible="1"/>
+                <button name="action_create_final_invoice"
+                        string="Factura Final (Liquidación)"
+                        type="object"
+                        class="btn-primary"
+                        invisible="state != 'sale' or dgi_downpayment_count == 0 or dgi_amount_residual &gt; 0 or dgi_has_final_invoice"
+                        groups="mba_pa_edi.group_digifact_user"/>
+            </xpath>
+
+            <!-- Smart Button para Visibilidad y Auditoria de Hitos -->
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <field name="dgi_downpayment_count" invisible="1"/>
+                <button name="action_view_downpayments"
+                        type="object"
+                        class="oe_stat_button"
+                        icon="fa-pie-chart"
+                        invisible="dgi_downpayment_count == 0">
+                    <div class="o_stat_info">
+                        <span class="o_stat_value">
+                            <field name="dgi_downpayment_percentage" class="oe_inline"/>%
+                        </span>
+                        <span class="o_stat_text">Hitos (<field name="dgi_downpayment_count" class="oe_inline"/>)</span>
+                    </div>
+                </button>
+            </xpath>
+
+            <!-- Pestaña de Hitos en el Notebook (Visible solo tras el primer hito) -->
+            <xpath expr="//notebook" position="inside">
+                <page string="Hitos de Facturación" name="page_dgi_hitos" invisible="dgi_downpayment_count == 0">
+                    <field name="dgi_downpayment_invoice_ids" readonly="1">
+                        <list decoration-info="state == 'draft'" decoration-success="payment_state in ('paid', 'in_payment')">
+                            <field name="name" string="Factura / Borrador"/>
+                            <field name="invoice_date" string="Fecha"/>
+                            <field name="dgi_milestone_percentage" string="% Hito"/>
+                            <field name="amount_total" string="Monto del Hito"/>
+                            <field name="state" widget="badge" decoration-info="state == 'draft'" decoration-success="state == 'posted'"/>
+                            <field name="payment_state" widget="badge" decoration-success="payment_state == 'paid'" decoration-info="payment_state == 'in_payment'" decoration-warning="payment_state == 'partial'" decoration-danger="payment_state == 'not_paid'"/>
+                        </list>
+                    </field>
+                    <group class="oe_subtotal_footer">
+                        <field name="dgi_downpayment_invoiced" string="Total Hitos Facturados"/>
+                        <field name="dgi_amount_residual" string="Saldo Pendiente" class="oe_subtotal_footer_separator"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

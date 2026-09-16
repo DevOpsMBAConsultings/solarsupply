@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_confirmar_enviar_wizard_form" model="ir.ui.view">
+            <field name="name">mba_pa_edi.confirmar.enviar.wizard.form</field>
+            <field name="model">mba_pa_edi.confirmar.enviar.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Confirmar Factura y Enviar a DGI (PAC)">
+                    <group>
+                        <field name="move_id" invisible="1"/>
+                        <field name="is_partner_unvalidated" invisible="1"/>
+                        <div class="alert alert-warning" role="alert" colspan="2" invisible="not is_partner_unvalidated">
+                            <strong>Atención:</strong> El cliente/contacto asignado a esta factura no ha sido validado ante la DGI. La factura intentará enviarse al PAC, pero podría ser rechazada por la DGI si sus datos fiscales no son válidos.
+                        </div>
+                        <div class="alert alert-info" role="alert" colspan="2">
+                            Se enviará la factura al PAC. Por favor verifique el número de factura a continuación. Puede modificarlo si es necesario.
+                        </div>
+                        <field name="numero_df" class="oe_inline"/>
+                    </group>
+                    <footer>
+                        <button string="Confirmar y Enviar" name="action_enviar_factura" type="object" class="btn-primary" data-hotkey="q"/>
+                        <button string="Cancelar" class="btn-secondary" special="cancel" data-hotkey="z"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,654 @@
+id,code,name,distrito_id:id
+dgi_corr_01_01_01,1-1-1,Bocas del Toro (Cabecera),dgi_dist_01_01
+dgi_corr_01_01_02,1-1-2,Bastimentos,dgi_dist_01_01
+dgi_corr_01_01_03,1-1-3,Cauchero,dgi_dist_01_01
+dgi_corr_01_01_04,1-1-4,Punta Laurel,dgi_dist_01_01
+dgi_corr_01_01_05,1-1-5,Tierra Oscura,dgi_dist_01_01
+dgi_corr_01_02_01,1-2-1,Changuinola (Cabecera),dgi_dist_01_02
+dgi_corr_01_02_02,1-2-2,Almirante,dgi_dist_01_02
+dgi_corr_01_02_03,1-2-3,Guabito,dgi_dist_01_02
+dgi_corr_01_02_04,1-2-4,Teribe,dgi_dist_01_02
+dgi_corr_01_02_05,1-2-5,Valle del Risco,dgi_dist_01_02
+dgi_corr_01_02_06,1-2-6,El Empalme,dgi_dist_01_02
+dgi_corr_01_02_07,1-2-7,Las Tablas,dgi_dist_01_02
+dgi_corr_01_03_01,1-3-1,Chiriqui Grande (Cabecera),dgi_dist_01_03
+dgi_corr_01_03_02,1-3-2,Miramar,dgi_dist_01_03
+dgi_corr_01_03_03,1-3-3,Punta Peña,dgi_dist_01_03
+dgi_corr_01_03_04,1-3-4,Punta Robalo,dgi_dist_01_03
+dgi_corr_01_03_05,1-3-5,Rambala,dgi_dist_01_03
+dgi_corr_02_01_01,2-1-1,Aguadulce (Cabecera),dgi_dist_02_01
+dgi_corr_02_01_02,2-1-2,El Cristo,dgi_dist_02_01
+dgi_corr_02_01_03,2-1-3,El Roble,dgi_dist_02_01
+dgi_corr_02_01_04,2-1-4,Pocri,dgi_dist_02_01
+dgi_corr_02_01_05,2-1-5,Barrios Unidos,dgi_dist_02_01
+dgi_corr_02_02_01,2-2-1,Anton (Cabecera),dgi_dist_02_02
+dgi_corr_02_02_02,2-2-2,Cabuya,dgi_dist_02_02
+dgi_corr_02_02_03,2-2-3,El Chiru,dgi_dist_02_02
+dgi_corr_02_02_04,2-2-4,El Retiro,dgi_dist_02_02
+dgi_corr_02_02_05,2-2-5,El Valle,dgi_dist_02_02
+dgi_corr_02_02_06,2-2-6,Juan Diaz,dgi_dist_02_02
+dgi_corr_02_02_07,2-2-7,Rio Hato,dgi_dist_02_02
+dgi_corr_02_02_08,2-2-8,San Juan de Dios,dgi_dist_02_02
+dgi_corr_02_02_09,2-2-9,Santa Rita,dgi_dist_02_02
+dgi_corr_02_02_10,2-2-10,Caballero,dgi_dist_02_02
+dgi_corr_02_03_01,2-3-1,La Pintada (Cabecera),dgi_dist_02_03
+dgi_corr_02_03_02,2-3-2,El Harino,dgi_dist_02_03
+dgi_corr_02_03_03,2-3-3,El Potrero,dgi_dist_02_03
+dgi_corr_02_03_04,2-3-4,Llano Grande,dgi_dist_02_03
+dgi_corr_02_03_05,2-3-5,Piedras Gordas,dgi_dist_02_03
+dgi_corr_02_03_06,2-3-6,Las Lomas,dgi_dist_02_03
+dgi_corr_02_04_01,2-4-1,Nata (Cabecera),dgi_dist_02_04
+dgi_corr_02_04_02,2-4-2,Capellania,dgi_dist_02_04
+dgi_corr_02_04_03,2-4-3,El Caño,dgi_dist_02_04
+dgi_corr_02_04_04,2-4-4,Guzman,dgi_dist_02_04
+dgi_corr_02_04_05,2-4-5,Las Huacas,dgi_dist_02_04
+dgi_corr_02_04_06,2-4-6,Toza,dgi_dist_02_04
+dgi_corr_02_05_01,2-5-1,Ola (Cabecera),dgi_dist_02_05
+dgi_corr_02_05_02,2-5-2,El Cope,dgi_dist_02_05
+dgi_corr_02_05_03,2-5-3,El Palmar,dgi_dist_02_05
+dgi_corr_02_05_04,2-5-4,El Picacho,dgi_dist_02_05
+dgi_corr_02_05_05,2-5-5,La Pava,dgi_dist_02_05
+dgi_corr_02_06_01,2-6-1,Penonome (Cabecera),dgi_dist_02_06
+dgi_corr_02_06_02,2-6-2,Cañaveral,dgi_dist_02_06
+dgi_corr_02_06_03,2-6-3,Cocle,dgi_dist_02_06
+dgi_corr_02_06_04,2-6-4,Chiguiri Arriba,dgi_dist_02_06
+dgi_corr_02_06_05,2-6-5,El Coco,dgi_dist_02_06
+dgi_corr_02_06_06,2-6-6,Pajonal,dgi_dist_02_06
+dgi_corr_02_06_07,2-6-7,Rio Grande,dgi_dist_02_06
+dgi_corr_02_06_08,2-6-8,Rio Indio,dgi_dist_02_06
+dgi_corr_02_06_09,2-6-9,Toabre,dgi_dist_02_06
+dgi_corr_02_06_10,2-6-10,Tulu,dgi_dist_02_06
+dgi_corr_03_01_01,3-1-1,Barrio Norte,dgi_dist_03_01
+dgi_corr_03_01_02,3-1-2,Barrio Sur,dgi_dist_03_01
+dgi_corr_03_01_03,3-1-3,Buena Vista,dgi_dist_03_01
+dgi_corr_03_01_04,3-1-4,Cativa,dgi_dist_03_01
+dgi_corr_03_01_05,3-1-5,Ciricito,dgi_dist_03_01
+dgi_corr_03_01_06,3-1-6,Cristobal,dgi_dist_03_01
+dgi_corr_03_01_07,3-1-7,Escobal,dgi_dist_03_01
+dgi_corr_03_01_08,3-1-8,Limon,dgi_dist_03_01
+dgi_corr_03_01_09,3-1-9,Nueva Providencia,dgi_dist_03_01
+dgi_corr_03_01_10,3-1-10,Puerto Pilon,dgi_dist_03_01
+dgi_corr_03_01_11,3-1-11,Sabanitas,dgi_dist_03_01
+dgi_corr_03_01_12,3-1-12,Salamanca,dgi_dist_03_01
+dgi_corr_03_01_13,3-1-13,San Juan,dgi_dist_03_01
+dgi_corr_03_01_14,3-1-14,Santa Rosa,dgi_dist_03_01
+dgi_corr_03_01_15,3-1-15,Cristobal Este,dgi_dist_03_01
+dgi_corr_03_02_01,3-2-1,Nuevo Chagres (Cabecera),dgi_dist_03_02
+dgi_corr_03_02_02,3-2-2,Achiote,dgi_dist_03_02
+dgi_corr_03_02_03,3-2-3,El Guabo,dgi_dist_03_02
+dgi_corr_03_02_04,3-2-4,La Encantada,dgi_dist_03_02
+dgi_corr_03_02_05,3-2-5,Palmas Bellas,dgi_dist_03_02
+dgi_corr_03_02_06,3-2-6,Piña,dgi_dist_03_02
+dgi_corr_03_02_07,3-2-7,Salud,dgi_dist_03_02
+dgi_corr_03_03_01,3-3-1,Miguel de la Borda (Cabecera),dgi_dist_03_03
+dgi_corr_03_03_02,3-3-2,Cocle del Norte,dgi_dist_03_03
+dgi_corr_03_03_03,3-3-3,El Guasimo,dgi_dist_03_03
+dgi_corr_03_03_04,3-3-4,Gobea,dgi_dist_03_03
+dgi_corr_03_03_05,3-3-5,Rio Indio,dgi_dist_03_03
+dgi_corr_03_03_06,3-3-6,San Jose del General,dgi_dist_03_03
+dgi_corr_03_04_01,3-4-1,Portobelo (Cabecera),dgi_dist_03_04
+dgi_corr_03_04_02,3-4-2,Cacique,dgi_dist_03_04
+dgi_corr_03_04_03,3-4-3,Garrote,dgi_dist_03_04
+dgi_corr_03_04_04,3-4-4,Isla Grande,dgi_dist_03_04
+dgi_corr_03_04_05,3-4-5,Maria Chiquita,dgi_dist_03_04
+dgi_corr_03_05_01,3-5-1,Palenque (Cabecera),dgi_dist_03_05
+dgi_corr_03_05_02,3-5-2,Cuango,dgi_dist_03_05
+dgi_corr_03_05_03,3-5-3,Miramar,dgi_dist_03_05
+dgi_corr_03_05_04,3-5-4,Nombre de Dios,dgi_dist_03_05
+dgi_corr_03_05_05,3-5-5,Palmira,dgi_dist_03_05
+dgi_corr_03_05_06,3-5-6,Playa Chiquita,dgi_dist_03_05
+dgi_corr_03_05_07,3-5-7,Santa Isabel,dgi_dist_03_05
+dgi_corr_03_05_08,3-5-8,Viento Frio,dgi_dist_03_05
+dgi_corr_04_01_01,4-1-1,Alanje (Cabecera),dgi_dist_04_01
+dgi_corr_04_01_02,4-1-2,Divala,dgi_dist_04_01
+dgi_corr_04_01_03,4-1-3,El Tejar,dgi_dist_04_01
+dgi_corr_04_01_04,4-1-4,Guarumal,dgi_dist_04_01
+dgi_corr_04_01_05,4-1-5,Palo Grande,dgi_dist_04_01
+dgi_corr_04_01_06,4-1-6,Querevalo,dgi_dist_04_01
+dgi_corr_04_01_07,4-1-7,Santo Tomas,dgi_dist_04_01
+dgi_corr_04_01_08,4-1-8,Canta Gallo,dgi_dist_04_01
+dgi_corr_04_01_09,4-1-9,Nuevo Mexico,dgi_dist_04_01
+dgi_corr_04_02_01,4-2-1,Puerto Armuelles (Cabecera),dgi_dist_04_02
+dgi_corr_04_02_02,4-2-2,Limones,dgi_dist_04_02
+dgi_corr_04_02_03,4-2-3,Progreso,dgi_dist_04_02
+dgi_corr_04_02_04,4-2-4,Baco,dgi_dist_04_02
+dgi_corr_04_02_05,4-2-5,Rodolfo Aguilar Delgado,dgi_dist_04_02
+dgi_corr_04_03_01,4-3-1,Boqueron (Cabecera),dgi_dist_04_03
+dgi_corr_04_03_02,4-3-2,Bagala,dgi_dist_04_03
+dgi_corr_04_03_03,4-3-3,Cordillera,dgi_dist_04_03
+dgi_corr_04_03_04,4-3-4,Guabal,dgi_dist_04_03
+dgi_corr_04_03_05,4-3-5,Guayabal,dgi_dist_04_03
+dgi_corr_04_03_06,4-3-6,Paraiso,dgi_dist_04_03
+dgi_corr_04_03_07,4-3-7,Pedregal,dgi_dist_04_03
+dgi_corr_04_03_08,4-3-8,Tijeras,dgi_dist_04_03
+dgi_corr_04_04_01,4-4-1,Bajo Boquete (Cabecera),dgi_dist_04_04
+dgi_corr_04_04_02,4-4-2,Caldera,dgi_dist_04_04
+dgi_corr_04_04_03,4-4-3,Palmira,dgi_dist_04_04
+dgi_corr_04_04_04,4-4-4,Alto Boquete,dgi_dist_04_04
+dgi_corr_04_04_05,4-4-5,Jaramillo,dgi_dist_04_04
+dgi_corr_04_04_06,4-4-6,Los Naranjos,dgi_dist_04_04
+dgi_corr_04_05_01,4-5-1,La Concepcion (Cabecera),dgi_dist_04_05
+dgi_corr_04_05_02,4-5-2,Aserrio de Gariche,dgi_dist_04_05
+dgi_corr_04_05_03,4-5-3,Bugaba,dgi_dist_04_05
+dgi_corr_04_05_04,4-5-4,Cerro Punta,dgi_dist_04_05
+dgi_corr_04_05_05,4-5-5,Gomez,dgi_dist_04_05
+dgi_corr_04_05_06,4-5-6,La Estrella,dgi_dist_04_05
+dgi_corr_04_05_07,4-5-7,San Andres,dgi_dist_04_05
+dgi_corr_04_05_08,4-5-8,Santa Marta,dgi_dist_04_05
+dgi_corr_04_05_09,4-5-9,Santa Rosa,dgi_dist_04_05
+dgi_corr_04_05_10,4-5-10,Santo Domingo,dgi_dist_04_05
+dgi_corr_04_05_11,4-5-11,Sortova,dgi_dist_04_05
+dgi_corr_04_05_12,4-5-12,INVALIDO,dgi_dist_04_05
+dgi_corr_04_05_13,4-5-13,El Bongo,dgi_dist_04_05
+dgi_corr_04_06_01,4-6-1,David (Cabecera),dgi_dist_04_06
+dgi_corr_04_06_02,4-6-2,Bijagual,dgi_dist_04_06
+dgi_corr_04_06_03,4-6-3,Cochea,dgi_dist_04_06
+dgi_corr_04_06_04,4-6-4,Chiriqui,dgi_dist_04_06
+dgi_corr_04_06_05,4-6-5,Guaca,dgi_dist_04_06
+dgi_corr_04_06_06,4-6-6,Las Lomas,dgi_dist_04_06
+dgi_corr_04_06_07,4-6-7,Pedregal,dgi_dist_04_06
+dgi_corr_04_06_08,4-6-8,San Carlos,dgi_dist_04_06
+dgi_corr_04_06_09,4-6-9,San Pablo Nuevo,dgi_dist_04_06
+dgi_corr_04_06_10,4-6-10,San Pablo Viejo,dgi_dist_04_06
+dgi_corr_04_07_01,4-7-1,Dolega (Cabecera),dgi_dist_04_07
+dgi_corr_04_07_02,4-7-2,Dos Rios,dgi_dist_04_07
+dgi_corr_04_07_03,4-7-3,Los Anastacios,dgi_dist_04_07
+dgi_corr_04_07_04,4-7-4,Potrerillos,dgi_dist_04_07
+dgi_corr_04_07_05,4-7-5,Potrerillos Abajo,dgi_dist_04_07
+dgi_corr_04_07_06,4-7-6,Rovira,dgi_dist_04_07
+dgi_corr_04_07_07,4-7-7,Tinajas,dgi_dist_04_07
+dgi_corr_04_07_08,4-7-8,Los Algarrrobos,dgi_dist_04_07
+dgi_corr_04_08_01,4-8-1,Gualaca (Cabecera),dgi_dist_04_08
+dgi_corr_04_08_02,4-8-2,Hornito,dgi_dist_04_08
+dgi_corr_04_08_03,4-8-3,Los Angeles,dgi_dist_04_08
+dgi_corr_04_08_04,4-8-4,Paja de Sombrero,dgi_dist_04_08
+dgi_corr_04_08_05,4-8-5,Rincon,dgi_dist_04_08
+dgi_corr_04_09_01,4-9-1,Remedios (Cabecera),dgi_dist_04_09
+dgi_corr_04_09_02,4-9-2,El Nancito,dgi_dist_04_09
+dgi_corr_04_09_03,4-9-3,El Porvenir,dgi_dist_04_09
+dgi_corr_04_09_04,4-9-4,El Puerto,dgi_dist_04_09
+dgi_corr_04_09_05,4-9-5,Santa Lucia,dgi_dist_04_09
+dgi_corr_04_10_01,4-10-1,Rio Sereno (Cabecera),dgi_dist_04_10
+dgi_corr_04_10_02,4-10-2,Breñon,dgi_dist_04_10
+dgi_corr_04_10_03,4-10-3,Cañas Gordas,dgi_dist_04_10
+dgi_corr_04_10_04,4-10-4,Monte Lirio,dgi_dist_04_10
+dgi_corr_04_10_05,4-10-5,Plaza Caisan,dgi_dist_04_10
+dgi_corr_04_10_06,4-10-6,Santa Cruz,dgi_dist_04_10
+dgi_corr_04_10_07,4-10-7,Dominical,dgi_dist_04_10
+dgi_corr_04_10_08,4-10-8,Santa Clara,dgi_dist_04_10
+dgi_corr_04_11_01,4-11-1,Las Lajas (Cabecera),dgi_dist_04_11
+dgi_corr_04_11_02,4-11-2,Juay,dgi_dist_04_11
+dgi_corr_04_11_03,4-11-3,Lajas Adentro,dgi_dist_04_11
+dgi_corr_04_11_04,4-11-4,San Felix,dgi_dist_04_11
+dgi_corr_04_11_05,4-11-5,Santa Cruz,dgi_dist_04_11
+dgi_corr_04_12_01,4-12-1,Horconcitos (Cabecera),dgi_dist_04_12
+dgi_corr_04_12_02,4-12-2,Boca Chica,dgi_dist_04_12
+dgi_corr_04_12_03,4-12-3,Boca del Monte,dgi_dist_04_12
+dgi_corr_04_12_04,4-12-4,San Juan,dgi_dist_04_12
+dgi_corr_04_12_05,4-12-5,San Lorenzo,dgi_dist_04_12
+dgi_corr_04_13_01,4-13-1,Tole (Cabecera),dgi_dist_04_13
+dgi_corr_04_13_02,4-13-2,Bella Vista,dgi_dist_04_13
+dgi_corr_04_13_03,4-13-3,Cerro Viejo,dgi_dist_04_13
+dgi_corr_04_13_04,4-13-4,El Cristo,dgi_dist_04_13
+dgi_corr_04_13_05,4-13-5,Justo Fidel Palacios,dgi_dist_04_13
+dgi_corr_04_13_06,4-13-6,Lajas de Tole,dgi_dist_04_13
+dgi_corr_04_13_07,4-13-7,Potrero de Caña,dgi_dist_04_13
+dgi_corr_04_13_08,4-13-8,Quebrada de Piedra,dgi_dist_04_13
+dgi_corr_04_13_09,4-13-9,Veladero,dgi_dist_04_13
+dgi_corr_04_15_01,4-15-1,Cerro Punta,dgi_dist_04_15
+dgi_corr_04_15_02,4-15-2,Cuesta de Piedra,dgi_dist_04_15
+dgi_corr_04_15_03,4-15-3,Nueva California,dgi_dist_04_15
+dgi_corr_04_15_04,4-15-4,Paso Ancho,dgi_dist_04_15
+dgi_corr_04_15_05,4-15-5,Volcan,dgi_dist_04_15
+dgi_corr_05_01_01,5-1-1,La Palma (Cabecera),dgi_dist_05_01
+dgi_corr_05_01_02,5-1-2,Camoganti,dgi_dist_05_01
+dgi_corr_05_01_03,5-1-3,Chepigana,dgi_dist_05_01
+dgi_corr_05_01_04,5-1-4,Garachine,dgi_dist_05_01
+dgi_corr_05_01_05,5-1-5,Jaque,dgi_dist_05_01
+dgi_corr_05_01_06,5-1-6,Puerto Piña,dgi_dist_05_01
+dgi_corr_05_01_07,5-1-7,Rio Congo,dgi_dist_05_01
+dgi_corr_05_01_08,5-1-8,Rio Iglesias,dgi_dist_05_01
+dgi_corr_05_01_09,5-1-9,Sambu,dgi_dist_05_01
+dgi_corr_05_01_10,5-1-10,Seteganti,dgi_dist_05_01
+dgi_corr_05_01_11,5-1-11,Taimati,dgi_dist_05_01
+dgi_corr_05_01_12,5-1-12,Tucuti,dgi_dist_05_01
+dgi_corr_05_01_13,5-1-13,Agua Fria,dgi_dist_05_01
+dgi_corr_05_01_14,5-1-14,Cucunati,dgi_dist_05_01
+dgi_corr_05_01_15,5-1-15,Rio Congo Arriba,dgi_dist_05_01
+dgi_corr_05_01_16,5-1-16,Santa Fe,dgi_dist_05_01
+dgi_corr_05_02_01,5-2-1,El Real de Santa Maria (Cabecera),dgi_dist_05_02
+dgi_corr_05_02_02,5-2-2,Boca de Cupe,dgi_dist_05_02
+dgi_corr_05_02_03,5-2-3,Paya,dgi_dist_05_02
+dgi_corr_05_02_04,5-2-4,Pinogana,dgi_dist_05_02
+dgi_corr_05_02_05,5-2-5,Pucuro,dgi_dist_05_02
+dgi_corr_05_02_06,5-2-6,Yape,dgi_dist_05_02
+dgi_corr_05_02_07,5-2-7,Yaviza,dgi_dist_05_02
+dgi_corr_05_02_08,5-2-8,Meteti,dgi_dist_05_02
+dgi_corr_05_02_09,5-2-9,Comarca Kuna de Wargandi,dgi_dist_05_02
+dgi_corr_05_03_01,5-3-1,Agua Fria,dgi_dist_05_03
+dgi_corr_05_03_02,5-3-2,Cucunati,dgi_dist_05_03
+dgi_corr_05_03_03,5-3-3,Rio Congo,dgi_dist_05_03
+dgi_corr_05_03_04,5-3-4,Rio Congo Arriba,dgi_dist_05_03
+dgi_corr_05_03_05,5-3-5,Rio Iglesia,dgi_dist_05_03
+dgi_corr_05_03_06,5-3-6,Santa Fe,dgi_dist_05_03
+dgi_corr_05_03_07,5-3-7,Zapallal,dgi_dist_05_03
+dgi_corr_06_01_01,6-1-1,Chitre (Cabecera),dgi_dist_06_01
+dgi_corr_06_01_02,6-1-2,La Arena,dgi_dist_06_01
+dgi_corr_06_01_03,6-1-3,Monagrillo,dgi_dist_06_01
+dgi_corr_06_01_04,6-1-4,Llano Bonito,dgi_dist_06_01
+dgi_corr_06_01_05,6-1-5,San Juan Bautista,dgi_dist_06_01
+dgi_corr_06_02_01,6-2-1,Las Minas (Cabecera),dgi_dist_06_02
+dgi_corr_06_02_02,6-2-2,Chepo,dgi_dist_06_02
+dgi_corr_06_02_03,6-2-3,Chumical,dgi_dist_06_02
+dgi_corr_06_02_04,6-2-4,El Toro,dgi_dist_06_02
+dgi_corr_06_02_05,6-2-5,Leones,dgi_dist_06_02
+dgi_corr_06_02_06,6-2-6,Quebrada del Rosario,dgi_dist_06_02
+dgi_corr_06_02_07,6-2-7,Quebrada el Ciprian,dgi_dist_06_02
+dgi_corr_06_03_01,6-3-1,Los Pozos (Cabecera),dgi_dist_06_03
+dgi_corr_06_03_02,6-3-2,Capuri,dgi_dist_06_03
+dgi_corr_06_03_03,6-3-3,El Calabacito,dgi_dist_06_03
+dgi_corr_06_03_04,6-3-4,El Cedro,dgi_dist_06_03
+dgi_corr_06_03_05,6-3-5,La Arena,dgi_dist_06_03
+dgi_corr_06_03_06,6-3-6,La Pitalosa,dgi_dist_06_03
+dgi_corr_06_03_07,6-3-7,Los Cerritos,dgi_dist_06_03
+dgi_corr_06_03_08,6-3-8,Los Cerros de Paja,dgi_dist_06_03
+dgi_corr_06_03_09,6-3-9,Las Llanas,dgi_dist_06_03
+dgi_corr_06_04_01,6-4-1,Ocu (Cabecera),dgi_dist_06_04
+dgi_corr_06_04_02,6-4-2,Cerro Largo,dgi_dist_06_04
+dgi_corr_06_04_03,6-4-3,Los Llanos,dgi_dist_06_04
+dgi_corr_06_04_04,6-4-4,Llano Grande,dgi_dist_06_04
+dgi_corr_06_04_05,6-4-5,Peñas Chatas,dgi_dist_06_04
+dgi_corr_06_04_06,6-4-6,El Tijera,dgi_dist_06_04
+dgi_corr_06_04_07,6-4-7,Menchaca,dgi_dist_06_04
+dgi_corr_06_05_01,6-5-1,Parita (Cabecera),dgi_dist_06_05
+dgi_corr_06_05_02,6-5-2,Cabuya,dgi_dist_06_05
+dgi_corr_06_05_03,6-5-3,Los Castillos,dgi_dist_06_05
+dgi_corr_06_05_04,6-5-4,Llano de la Cruz,dgi_dist_06_05
+dgi_corr_06_05_05,6-5-5,Paris,dgi_dist_06_05
+dgi_corr_06_05_06,6-5-6,Portobelillo,dgi_dist_06_05
+dgi_corr_06_05_07,6-5-7,Potuga,dgi_dist_06_05
+dgi_corr_06_06_01,6-6-1,Pese (Cabecera),dgi_dist_06_06
+dgi_corr_06_06_02,6-6-2,Las Cabras,dgi_dist_06_06
+dgi_corr_06_06_03,6-6-3,El Pajaro,dgi_dist_06_06
+dgi_corr_06_06_04,6-6-4,El Barrero,dgi_dist_06_06
+dgi_corr_06_06_05,6-6-5,El Pedregoso,dgi_dist_06_06
+dgi_corr_06_06_06,6-6-6,El Ciruelo,dgi_dist_06_06
+dgi_corr_06_06_07,6-6-7,Sabanagrande,dgi_dist_06_06
+dgi_corr_06_06_08,6-6-8,Rincon Hondo,dgi_dist_06_06
+dgi_corr_06_07_01,6-7-1,Santa Maria (Cabecera),dgi_dist_06_07
+dgi_corr_06_07_02,6-7-2,Chupampa,dgi_dist_06_07
+dgi_corr_06_07_03,6-7-3,El Rincon,dgi_dist_06_07
+dgi_corr_06_07_04,6-7-4,El Limon,dgi_dist_06_07
+dgi_corr_06_07_05,6-7-5,Los Canelos,dgi_dist_06_07
+dgi_corr_07_01_01,7-1-1,Guarare (Cabecera),dgi_dist_07_01
+dgi_corr_07_01_02,7-1-2,El Espinal,dgi_dist_07_01
+dgi_corr_07_01_03,7-1-3,El Macano,dgi_dist_07_01
+dgi_corr_07_01_04,7-1-4,Guarare Arriba,dgi_dist_07_01
+dgi_corr_07_01_05,7-1-5,La Enea,dgi_dist_07_01
+dgi_corr_07_01_06,7-1-6,La Pasera,dgi_dist_07_01
+dgi_corr_07_01_07,7-1-7,Las Trancas,dgi_dist_07_01
+dgi_corr_07_01_08,7-1-8,Llano Abajo,dgi_dist_07_01
+dgi_corr_07_01_09,7-1-9,El Hato,dgi_dist_07_01
+dgi_corr_07_01_10,7-1-10,Perales,dgi_dist_07_01
+dgi_corr_07_02_01,7-2-1,Las Tablas (Cabecera),dgi_dist_07_02
+dgi_corr_07_02_02,7-2-2,Bajo Corral,dgi_dist_07_02
+dgi_corr_07_02_03,7-2-3,Bayano,dgi_dist_07_02
+dgi_corr_07_02_04,7-2-4,El Carate,dgi_dist_07_02
+dgi_corr_07_02_05,7-2-5,El Cocal,dgi_dist_07_02
+dgi_corr_07_02_06,7-2-6,El Manantial,dgi_dist_07_02
+dgi_corr_07_02_07,7-2-7,El Muñoz,dgi_dist_07_02
+dgi_corr_07_02_08,7-2-8,El Pedregoso,dgi_dist_07_02
+dgi_corr_07_02_09,7-2-9,La Laja,dgi_dist_07_02
+dgi_corr_07_02_10,7-2-10,La Miel,dgi_dist_07_02
+dgi_corr_07_02_11,7-2-11,La Palma,dgi_dist_07_02
+dgi_corr_07_02_12,7-2-12,La Tiza,dgi_dist_07_02
+dgi_corr_07_02_13,7-2-13,Las Palmitas,dgi_dist_07_02
+dgi_corr_07_02_14,7-2-14,Las Tablas Abajo,dgi_dist_07_02
+dgi_corr_07_02_15,7-2-15,Nuario,dgi_dist_07_02
+dgi_corr_07_02_16,7-2-16,Palmira,dgi_dist_07_02
+dgi_corr_07_02_17,7-2-17,Peña Blanca,dgi_dist_07_02
+dgi_corr_07_02_18,7-2-18,Rio Hondo,dgi_dist_07_02
+dgi_corr_07_02_19,7-2-19,San Jose,dgi_dist_07_02
+dgi_corr_07_02_20,7-2-20,San Miguel,dgi_dist_07_02
+dgi_corr_07_02_21,7-2-21,Santo Domingo,dgi_dist_07_02
+dgi_corr_07_02_22,7-2-22,Sesteadero,dgi_dist_07_02
+dgi_corr_07_02_23,7-2-23,Valle Rico,dgi_dist_07_02
+dgi_corr_07_02_24,7-2-24,Valleriquito,dgi_dist_07_02
+dgi_corr_07_03_01,7-3-1,La Villa de los Santos (Cabecera),dgi_dist_07_03
+dgi_corr_07_03_02,7-3-2,El Guasimo,dgi_dist_07_03
+dgi_corr_07_03_03,7-3-3,La Colorada,dgi_dist_07_03
+dgi_corr_07_03_04,7-3-4,La Espigadilla,dgi_dist_07_03
+dgi_corr_07_03_05,7-3-5,Las Cruces,dgi_dist_07_03
+dgi_corr_07_03_06,7-3-6,Las Guabas,dgi_dist_07_03
+dgi_corr_07_03_07,7-3-7,Los Angeles,dgi_dist_07_03
+dgi_corr_07_03_08,7-3-8,Los Olivos,dgi_dist_07_03
+dgi_corr_07_03_09,7-3-9,Llano Largo,dgi_dist_07_03
+dgi_corr_07_03_10,7-3-10,Sabanagrande,dgi_dist_07_03
+dgi_corr_07_03_11,7-3-11,Santa Ana,dgi_dist_07_03
+dgi_corr_07_03_12,7-3-12,Tres Quebradas,dgi_dist_07_03
+dgi_corr_07_03_13,7-3-13,Agua Buena,dgi_dist_07_03
+dgi_corr_07_03_14,7-3-14,Villa Lourdes,dgi_dist_07_03
+dgi_corr_07_04_01,7-4-1,Macaracas (Cabecera),dgi_dist_07_04
+dgi_corr_07_04_02,7-4-2,Bahia Honda,dgi_dist_07_04
+dgi_corr_07_04_03,7-4-3,Bajos de Guera,dgi_dist_07_04
+dgi_corr_07_04_04,7-4-4,Corozal,dgi_dist_07_04
+dgi_corr_07_04_05,7-4-5,Chupa,dgi_dist_07_04
+dgi_corr_07_04_06,7-4-6,El Cedro,dgi_dist_07_04
+dgi_corr_07_04_07,7-4-7,Espino Amarillo,dgi_dist_07_04
+dgi_corr_07_04_08,7-4-8,La Mesa,dgi_dist_07_04
+dgi_corr_07_04_09,7-4-9,Las Palmas,dgi_dist_07_04
+dgi_corr_07_04_10,7-4-10,Llano de Piedra,dgi_dist_07_04
+dgi_corr_07_04_11,7-4-11,Mogollon,dgi_dist_07_04
+dgi_corr_07_05_01,7-5-1,Pedasi (Cabecera),dgi_dist_07_05
+dgi_corr_07_05_02,7-5-2,Los Asientos,dgi_dist_07_05
+dgi_corr_07_05_03,7-5-3,Mariabe,dgi_dist_07_05
+dgi_corr_07_05_04,7-5-4,Purio,dgi_dist_07_05
+dgi_corr_07_05_05,7-5-5,Oria Arriba,dgi_dist_07_05
+dgi_corr_07_06_01,7-6-1,Pocri,dgi_dist_07_06
+dgi_corr_07_06_02,7-6-2,El Cañafistulo,dgi_dist_07_06
+dgi_corr_07_06_03,7-6-3,Lajamina,dgi_dist_07_06
+dgi_corr_07_06_04,7-6-4,Paraiso,dgi_dist_07_06
+dgi_corr_07_06_05,7-6-5,Paritilla,dgi_dist_07_06
+dgi_corr_07_07_01,7-7-1,Tonosi (Cabecera),dgi_dist_07_07
+dgi_corr_07_07_02,7-7-2,Altos de Guera,dgi_dist_07_07
+dgi_corr_07_07_03,7-7-3,Cañas,dgi_dist_07_07
+dgi_corr_07_07_04,7-7-4,El Bebedero,dgi_dist_07_07
+dgi_corr_07_07_05,7-7-5,El Cacao,dgi_dist_07_07
+dgi_corr_07_07_06,7-7-6,El Cortezo,dgi_dist_07_07
+dgi_corr_07_07_07,7-7-7,Flores,dgi_dist_07_07
+dgi_corr_07_07_08,7-7-8,Guanico,dgi_dist_07_07
+dgi_corr_07_07_09,7-7-9,La Tronosa,dgi_dist_07_07
+dgi_corr_07_07_10,7-7-10,Cambutal,dgi_dist_07_07
+dgi_corr_07_07_11,7-7-11,Isla de Caqas,dgi_dist_07_07
+dgi_corr_08_02_01,8-2-1,San Miguel (Cabecera),dgi_dist_08_02
+dgi_corr_08_02_02,8-2-2,La Ensenada,dgi_dist_08_02
+dgi_corr_08_02_03,8-2-3,La Esmeralda,dgi_dist_08_02
+dgi_corr_08_02_04,8-2-4,La Guinea,dgi_dist_08_02
+dgi_corr_08_02_05,8-2-5,Pedro Gonzalez,dgi_dist_08_02
+dgi_corr_08_02_06,8-2-6,Saboga,dgi_dist_08_02
+dgi_corr_08_05_01,8-5-1,Chepo (Cabecera),dgi_dist_08_05
+dgi_corr_08_05_02,8-5-2,Cañita,dgi_dist_08_05
+dgi_corr_08_05_03,8-5-3,Chepillo,dgi_dist_08_05
+dgi_corr_08_05_04,8-5-4,El Llano,dgi_dist_08_05
+dgi_corr_08_05_05,8-5-5,Las Margaritas,dgi_dist_08_05
+dgi_corr_08_05_06,8-5-6,Santa Cruz de Chinina,dgi_dist_08_05
+dgi_corr_08_05_07,8-5-7,Comarca Kuna de Madungandi,dgi_dist_08_05
+dgi_corr_08_05_08,8-5-8,Torti,dgi_dist_08_05
+dgi_corr_08_06_01,8-6-1,Chiman (Cabecera),dgi_dist_08_06
+dgi_corr_08_06_02,8-6-2,Brujas,dgi_dist_08_06
+dgi_corr_08_06_03,8-6-3,Gonzalo Vasquez,dgi_dist_08_06
+dgi_corr_08_06_04,8-6-4,Pasiga,dgi_dist_08_06
+dgi_corr_08_06_05,8-6-5,Union Santeña,dgi_dist_08_06
+dgi_corr_08_08_01,8-8-1,San Felipe,dgi_dist_08_08
+dgi_corr_08_08_02,8-8-2,El Chorrillo,dgi_dist_08_08
+dgi_corr_08_08_03,8-8-3,Santa Ana,dgi_dist_08_08
+dgi_corr_08_08_04,8-8-4,La Exposicion o Calidonia,dgi_dist_08_08
+dgi_corr_08_08_05,8-8-5,Curundu,dgi_dist_08_08
+dgi_corr_08_08_06,8-8-6,Betania,dgi_dist_08_08
+dgi_corr_08_08_07,8-8-7,Bella Vista,dgi_dist_08_08
+dgi_corr_08_08_08,8-8-8,Pueblo Nuevo,dgi_dist_08_08
+dgi_corr_08_08_09,8-8-9,San Francisco,dgi_dist_08_08
+dgi_corr_08_08_10,8-8-10,Parque Lefevre,dgi_dist_08_08
+dgi_corr_08_08_11,8-8-11,Rio Abajo,dgi_dist_08_08
+dgi_corr_08_08_12,8-8-12,Juan Diaz,dgi_dist_08_08
+dgi_corr_08_08_13,8-8-13,Pedregal,dgi_dist_08_08
+dgi_corr_08_08_14,8-8-14,Ancon,dgi_dist_08_08
+dgi_corr_08_08_15,8-8-15,Chilibre,dgi_dist_08_08
+dgi_corr_08_08_16,8-8-16,Las Cumbres,dgi_dist_08_08
+dgi_corr_08_08_17,8-8-17,Pacora,dgi_dist_08_08
+dgi_corr_08_08_18,8-8-18,San Martin,dgi_dist_08_08
+dgi_corr_08_08_19,8-8-19,Tocumen,dgi_dist_08_08
+dgi_corr_08_08_20,8-8-20,Las Mañanitas,dgi_dist_08_08
+dgi_corr_08_08_21,8-8-21,24 de Diciembre,dgi_dist_08_08
+dgi_corr_08_08_22,8-8-22,Ernesto Cordoba Campos,dgi_dist_08_08
+dgi_corr_08_08_23,8-8-23,Alcalde Diaz,dgi_dist_08_08
+dgi_corr_08_08_24,8-8-24,Caimitillo,dgi_dist_08_08
+dgi_corr_08_08_25,8-8-25,Don Bosco,dgi_dist_08_08
+dgi_corr_08_08_26,8-8-26,Las Garzas,dgi_dist_08_08
+dgi_corr_08_10_01,8-10-1,Amelia Denis de Icaza,dgi_dist_08_10
+dgi_corr_08_10_02,8-10-2,Belisario Porras,dgi_dist_08_10
+dgi_corr_08_10_03,8-10-3,Jose Domingo Espinar,dgi_dist_08_10
+dgi_corr_08_10_04,8-10-4,Mateo Iturralde,dgi_dist_08_10
+dgi_corr_08_10_05,8-10-5,Victoriano Lorenzo,dgi_dist_08_10
+dgi_corr_08_10_06,8-10-6,Arnulfo Arias,dgi_dist_08_10
+dgi_corr_08_10_07,8-10-7,Belisario Frias,dgi_dist_08_10
+dgi_corr_08_10_08,8-10-8,Omar Torrijos,dgi_dist_08_10
+dgi_corr_08_10_09,8-10-9,Rufina Alfaro,dgi_dist_08_10
+dgi_corr_08_11_01,8-11-1,Taboga (Cabecera),dgi_dist_08_11
+dgi_corr_08_11_02,8-11-2,Otoque Oriente,dgi_dist_08_11
+dgi_corr_08_11_03,8-11-3,Otoque Occidente,dgi_dist_08_11
+dgi_corr_09_01_01,9-1-1,Atalaya (Cabecera),dgi_dist_09_01
+dgi_corr_09_01_02,9-1-2,El Barrito,dgi_dist_09_01
+dgi_corr_09_01_03,9-1-3,La Montañuela,dgi_dist_09_01
+dgi_corr_09_01_04,9-1-4,La Carrillo,dgi_dist_09_01
+dgi_corr_09_01_05,9-1-5,San Antonio,dgi_dist_09_01
+dgi_corr_09_02_01,9-2-1,Calobre (Cabecera),dgi_dist_09_02
+dgi_corr_09_02_02,9-2-2,Barnizal,dgi_dist_09_02
+dgi_corr_09_02_03,9-2-3,Chitra,dgi_dist_09_02
+dgi_corr_09_02_04,9-2-4,El Cocla,dgi_dist_09_02
+dgi_corr_09_02_05,9-2-5,El Potrero,dgi_dist_09_02
+dgi_corr_09_02_06,9-2-6,La Laguna,dgi_dist_09_02
+dgi_corr_09_02_07,9-2-7,La Raya de Calobre,dgi_dist_09_02
+dgi_corr_09_02_08,9-2-8,La Tetilla,dgi_dist_09_02
+dgi_corr_09_02_09,9-2-9,La Yeguada,dgi_dist_09_02
+dgi_corr_09_02_10,9-2-10,Las Guias,dgi_dist_09_02
+dgi_corr_09_02_11,9-2-11,Monjaras,dgi_dist_09_02
+dgi_corr_09_02_12,9-2-12,San Jose,dgi_dist_09_02
+dgi_corr_09_03_01,9-3-1,Cañazas (Cabecera),dgi_dist_09_03
+dgi_corr_09_03_02,9-3-2,Cerro Plata,dgi_dist_09_03
+dgi_corr_09_03_03,9-3-3,El Picador,dgi_dist_09_03
+dgi_corr_09_03_04,9-3-4,Los Valles,dgi_dist_09_03
+dgi_corr_09_03_05,9-3-5,San Jose,dgi_dist_09_03
+dgi_corr_09_03_06,9-3-6,San Marcelo,dgi_dist_09_03
+dgi_corr_09_03_07,9-3-7,El Aromillo,dgi_dist_09_03
+dgi_corr_09_03_08,9-3-8,Las Cruces,dgi_dist_09_03
+dgi_corr_09_04_01,9-4-1,La Mesa (Cabecera),dgi_dist_09_04
+dgi_corr_09_04_02,9-4-2,Bisvalles,dgi_dist_09_04
+dgi_corr_09_04_03,9-4-3,Boro,dgi_dist_09_04
+dgi_corr_09_04_04,9-4-4,Llano Grande,dgi_dist_09_04
+dgi_corr_09_04_05,9-4-5,San Bartolo,dgi_dist_09_04
+dgi_corr_09_04_06,9-4-6,Los Milagros,dgi_dist_09_04
+dgi_corr_09_05_01,9-5-1,Las Palmas (Cabecera),dgi_dist_09_05
+dgi_corr_09_05_02,9-5-2,Cerro de Casa,dgi_dist_09_05
+dgi_corr_09_05_03,9-5-3,Corozal,dgi_dist_09_05
+dgi_corr_09_05_04,9-5-4,El Maria,dgi_dist_09_05
+dgi_corr_09_05_05,9-5-5,El Prado,dgi_dist_09_05
+dgi_corr_09_05_06,9-5-6,El Rincon,dgi_dist_09_05
+dgi_corr_09_05_07,9-5-7,Lola,dgi_dist_09_05
+dgi_corr_09_05_08,9-5-8,Pixvae,dgi_dist_09_05
+dgi_corr_09_05_09,9-5-9,Puerto Vidal,dgi_dist_09_05
+dgi_corr_09_05_10,9-5-10,San Martin de Porres,dgi_dist_09_05
+dgi_corr_09_05_11,9-5-11,Vigui,dgi_dist_09_05
+dgi_corr_09_05_12,9-5-12,Zapotillo,dgi_dist_09_05
+dgi_corr_09_05_13,9-5-13,Altamira,dgi_dist_09_05
+dgi_corr_09_06_01,9-6-1,Montijo (Cabecera),dgi_dist_09_06
+dgi_corr_09_06_02,9-6-2,Arenas,dgi_dist_09_06
+dgi_corr_09_06_03,9-6-3,Gobernadora,dgi_dist_09_06
+dgi_corr_09_06_04,9-6-4,La Garceana,dgi_dist_09_06
+dgi_corr_09_06_05,9-6-5,Leones,dgi_dist_09_06
+dgi_corr_09_06_06,9-6-6,Cebaco,dgi_dist_09_06
+dgi_corr_09_06_07,9-6-7,Costa Hermosa,dgi_dist_09_06
+dgi_corr_09_06_08,9-6-8,Union del Norte,dgi_dist_09_06
+dgi_corr_09_06_09,9-6-9,Tebario,dgi_dist_09_06
+dgi_corr_09_06_10,9-6-10,El Pilon,dgi_dist_09_06
+dgi_corr_09_07_01,9-7-1,Rio de Jesus (Cabecera),dgi_dist_09_07
+dgi_corr_09_07_02,9-7-2,Las Huacas,dgi_dist_09_07
+dgi_corr_09_07_03,9-7-3,Los Castillos,dgi_dist_09_07
+dgi_corr_09_07_04,9-7-4,Utira,dgi_dist_09_07
+dgi_corr_09_07_05,9-7-5,Catorce de Noviembre,dgi_dist_09_07
+dgi_corr_09_08_01,9-8-1,San Francisco (Cabecera),dgi_dist_09_08
+dgi_corr_09_08_02,9-8-2,Corral Falso,dgi_dist_09_08
+dgi_corr_09_08_03,9-8-3,Los Hatillos,dgi_dist_09_08
+dgi_corr_09_08_04,9-8-4,Remance,dgi_dist_09_08
+dgi_corr_09_08_05,9-8-5,San Juan,dgi_dist_09_08
+dgi_corr_09_08_06,9-8-6,San Jose,dgi_dist_09_08
+dgi_corr_09_09_01,9-9-1,Santa Fe (Cabecera),dgi_dist_09_09
+dgi_corr_09_09_02,9-9-2,Calovebora,dgi_dist_09_09
+dgi_corr_09_09_03,9-9-3,El Alto,dgi_dist_09_09
+dgi_corr_09_09_04,9-9-4,El Cuay,dgi_dist_09_09
+dgi_corr_09_09_05,9-9-5,El Pantano,dgi_dist_09_09
+dgi_corr_09_09_06,9-9-6,Gatu o Gatucito,dgi_dist_09_09
+dgi_corr_09_09_07,9-9-7,Rio Luis,dgi_dist_09_09
+dgi_corr_09_10_01,9-10-1,Santiago (Cabecera),dgi_dist_09_10
+dgi_corr_09_10_02,9-10-2,La Colorada,dgi_dist_09_10
+dgi_corr_09_10_03,9-10-3,La Peña,dgi_dist_09_10
+dgi_corr_09_10_04,9-10-4,La Raya de Santa Maria,dgi_dist_09_10
+dgi_corr_09_10_05,9-10-5,Ponuga,dgi_dist_09_10
+dgi_corr_09_10_06,9-10-6,San Pedro del Espino,dgi_dist_09_10
+dgi_corr_09_10_07,9-10-7,Canto del Llano,dgi_dist_09_10
+dgi_corr_09_10_08,9-10-8,Los Algarrobos,dgi_dist_09_10
+dgi_corr_09_10_09,9-10-9,Carlos Santana Avila,dgi_dist_09_10
+dgi_corr_09_10_10,9-10-10,Edwin Fabrega,dgi_dist_09_10
+dgi_corr_09_10_11,9-10-11,San Martin de Porres,dgi_dist_09_10
+dgi_corr_09_10_12,9-10-12,Urraca,dgi_dist_09_10
+dgi_corr_09_11_01,9-11-1,Sona (Cabecera),dgi_dist_09_11
+dgi_corr_09_11_02,9-11-2,Bahia Honda,dgi_dist_09_11
+dgi_corr_09_11_03,9-11-3,Calidonia,dgi_dist_09_11
+dgi_corr_09_11_04,9-11-4,Cative,dgi_dist_09_11
+dgi_corr_09_11_05,9-11-5,El Marañon,dgi_dist_09_11
+dgi_corr_09_11_06,9-11-6,Guarumal,dgi_dist_09_11
+dgi_corr_09_11_07,9-11-7,La Soledad,dgi_dist_09_11
+dgi_corr_09_11_08,9-11-8,Quebrada de Oro,dgi_dist_09_11
+dgi_corr_09_11_09,9-11-9,Rio Grande,dgi_dist_09_11
+dgi_corr_09_11_10,9-11-10,Rodeo Viejo,dgi_dist_09_11
+dgi_corr_09_12_01,9-12-1,Llano de Catival o Mariato (Cabecera),dgi_dist_09_12
+dgi_corr_09_12_02,9-12-2,Arenas,dgi_dist_09_12
+dgi_corr_09_12_03,9-12-3,El Cacao,dgi_dist_09_12
+dgi_corr_09_12_04,9-12-4,Quebro,dgi_dist_09_12
+dgi_corr_09_12_05,9-12-5,Tebario,dgi_dist_09_12
+dgi_corr_10_01_01,10-1-1,Nargana (Cabecera),dgi_dist_10_01
+dgi_corr_10_01_02,10-1-2,Ailigandi,dgi_dist_10_01
+dgi_corr_10_01_03,10-1-3,Puerto Obaldia,dgi_dist_10_01
+dgi_corr_10_01_04,10-1-4,Tubuala,dgi_dist_10_01
+dgi_corr_11_01_01,11-1-1,Cirilo Guainora (Cabecera),dgi_dist_11_01
+dgi_corr_11_01_02,11-1-2,Lajas Blancas,dgi_dist_11_01
+dgi_corr_11_01_03,11-1-3,Manuel Ortega,dgi_dist_11_01
+dgi_corr_11_02_01,11-2-1,Rio Sabalo,dgi_dist_11_02
+dgi_corr_11_02_02,11-2-2,Jingurudo,dgi_dist_11_02
+dgi_corr_12_01_01,12-1-1,Soloy (Cabecera),dgi_dist_12_01
+dgi_corr_12_01_02,12-1-2,Boca de Balsa,dgi_dist_12_01
+dgi_corr_12_01_03,12-1-3,Camaron Arriba,dgi_dist_12_01
+dgi_corr_12_01_04,12-1-4,Cerro Banco,dgi_dist_12_01
+dgi_corr_12_01_05,12-1-5,Cerro de Patena,dgi_dist_12_01
+dgi_corr_12_01_06,12-1-6,Emplanada de Chorcha,dgi_dist_12_01
+dgi_corr_12_01_07,12-1-7,Namnoni,dgi_dist_12_01
+dgi_corr_12_01_08,12-1-8,Niba,dgi_dist_12_01
+dgi_corr_12_02_01,12-2-1,Hato Pilon (Cabecera),dgi_dist_12_02
+dgi_corr_12_02_02,12-2-2,Cascabel,dgi_dist_12_02
+dgi_corr_12_02_03,12-2-3,Hato Corotu,dgi_dist_12_02
+dgi_corr_12_02_04,12-2-4,Hato Culantro,dgi_dist_12_02
+dgi_corr_12_02_05,12-2-5,Hato Jobo,dgi_dist_12_02
+dgi_corr_12_02_06,12-2-6,Hato Juli,dgi_dist_12_02
+dgi_corr_12_02_07,12-2-7,Quebrada de Loro,dgi_dist_12_02
+dgi_corr_12_02_08,12-2-8,Salto Dupi,dgi_dist_12_02
+dgi_corr_12_03_01,12-3-1,Chichica (Cabecera),dgi_dist_12_03
+dgi_corr_12_03_02,12-3-2,Alto Caballero,dgi_dist_12_03
+dgi_corr_12_03_03,12-3-3,Bakama,dgi_dist_12_03
+dgi_corr_12_03_04,12-3-4,Cerro Caña,dgi_dist_12_03
+dgi_corr_12_03_05,12-3-5,Cerro Puerco,dgi_dist_12_03
+dgi_corr_12_03_06,12-3-6,Krua,dgi_dist_12_03
+dgi_corr_12_03_07,12-3-7,Maraca,dgi_dist_12_03
+dgi_corr_12_03_08,12-3-8,Nibra,dgi_dist_12_03
+dgi_corr_12_03_09,12-3-9,Peña Blanca,dgi_dist_12_03
+dgi_corr_12_03_10,12-3-10,Roka,dgi_dist_12_03
+dgi_corr_12_03_11,12-3-11,Sitio Prado,dgi_dist_12_03
+dgi_corr_12_03_12,12-3-12,Umani,dgi_dist_12_03
+dgi_corr_12_04_01,12-4-1,Cerro Iglesias (Cabecera),dgi_dist_12_04
+dgi_corr_12_04_02,12-4-2,Hato Chami,dgi_dist_12_04
+dgi_corr_12_04_03,12-4-3,Jadeberi,dgi_dist_12_04
+dgi_corr_12_04_04,12-4-4,Lajero,dgi_dist_12_04
+dgi_corr_12_04_05,12-4-5,Susama,dgi_dist_12_04
+dgi_corr_12_05_01,12-5-1,Buenos Aires (Cabecera),dgi_dist_12_05
+dgi_corr_12_05_02,12-5-2,Agua de Salud,dgi_dist_12_05
+dgi_corr_12_05_03,12-5-3,Alto de Jesus,dgi_dist_12_05
+dgi_corr_12_05_04,12-5-4,Cerro Pelado,dgi_dist_12_05
+dgi_corr_12_05_05,12-5-5,El Bale,dgi_dist_12_05
+dgi_corr_12_05_06,12-5-6,El Paredon,dgi_dist_12_05
+dgi_corr_12_05_07,12-5-7,El Piro,dgi_dist_12_05
+dgi_corr_12_05_08,12-5-8,Guayabito,dgi_dist_12_05
+dgi_corr_12_05_09,12-5-9,Guibale,dgi_dist_12_05
+dgi_corr_12_06_01,12-6-1,Bisira (Cabecera),dgi_dist_12_06
+dgi_corr_12_06_02,12-6-2,Buri,dgi_dist_12_06
+dgi_corr_12_06_03,12-6-3,Guariviara,dgi_dist_12_06
+dgi_corr_12_06_04,12-6-4,Guoroni,dgi_dist_12_06
+dgi_corr_12_06_05,12-6-5,Kankintu,dgi_dist_12_06
+dgi_corr_12_06_06,12-6-6,Mununi,dgi_dist_12_06
+dgi_corr_12_06_07,12-6-7,Piedra Roja,dgi_dist_12_06
+dgi_corr_12_06_08,12-6-8,Tuwai,dgi_dist_12_06
+dgi_corr_12_06_09,12-6-9,Man Creek,dgi_dist_12_06
+dgi_corr_12_07_01,12-7-1,Kusapin (Cabecera),dgi_dist_12_07
+dgi_corr_12_07_02,12-7-2,Bahia Azul,dgi_dist_12_07
+dgi_corr_12_07_03,12-7-3,Calovebora o Santa Catalina,dgi_dist_12_07
+dgi_corr_12_07_04,12-7-4,Loma Yuca,dgi_dist_12_07
+dgi_corr_12_07_05,12-7-5,Rio Chiriqui,dgi_dist_12_07
+dgi_corr_12_07_06,12-7-6,Tobobe,dgi_dist_12_07
+dgi_corr_12_07_07,12-7-7,Valle Bonito,dgi_dist_12_07
+dgi_corr_12_08_01,12-8-1,Samboa,dgi_dist_12_08
+dgi_corr_12_08_02,12-8-2,Buri,dgi_dist_12_08
+dgi_corr_12_08_03,12-8-3,Guariviara,dgi_dist_12_08
+dgi_corr_12_08_04,12-8-4,Man Creek,dgi_dist_12_08
+dgi_corr_12_08_05,12-8-5,Tuwai,dgi_dist_12_08
+dgi_corr_12_09_01,12-9-1,Santa Catalina o Calovebora (Bledeshia)(Cabecera),dgi_dist_12_09
+dgi_corr_12_09_02,12-9-2,Alto Bilingue (Gdogueshia),dgi_dist_12_09
+dgi_corr_12_09_03,12-9-3,Loma Yuka (Ljuicho),dgi_dist_12_09
+dgi_corr_12_09_04,12-9-4,San Pedrito,dgi_dist_12_09
+dgi_corr_12_09_05,12-9-5,Valle Bonito(Dogata),dgi_dist_12_09
+dgi_corr_13_01_01,13-1-1,Arraijan (Cabecera),dgi_dist_13_01
+dgi_corr_13_01_02,13-1-2,Burunga,dgi_dist_13_01
+dgi_corr_13_01_03,13-1-3,Cerro Silvestre,dgi_dist_13_01
+dgi_corr_13_01_04,13-1-4,Juan Demostenes Arosemena,dgi_dist_13_01
+dgi_corr_13_01_05,13-1-5,Nuevo Emperador,dgi_dist_13_01
+dgi_corr_13_01_06,13-1-6,Santa Clara,dgi_dist_13_01
+dgi_corr_13_01_07,13-1-7,Veracruz,dgi_dist_13_01
+dgi_corr_13_01_08,13-1-8,Vista Alegre,dgi_dist_13_01
+dgi_corr_13_02_01,13-2-1,Capira (Cabecera),dgi_dist_13_02
+dgi_corr_13_02_02,13-2-2,Caimito,dgi_dist_13_02
+dgi_corr_13_02_03,13-2-3,Campana,dgi_dist_13_02
+dgi_corr_13_02_04,13-2-4,Cermeño,dgi_dist_13_02
+dgi_corr_13_02_05,13-2-5,Ciri de los Sotos,dgi_dist_13_02
+dgi_corr_13_02_06,13-2-6,Ciri Grande,dgi_dist_13_02
+dgi_corr_13_02_07,13-2-7,El Cacao,dgi_dist_13_02
+dgi_corr_13_02_08,13-2-8,La Trinidad,dgi_dist_13_02
+dgi_corr_13_02_09,13-2-9,Las Ollas Arriba,dgi_dist_13_02
+dgi_corr_13_02_10,13-2-10,Lidice,dgi_dist_13_02
+dgi_corr_13_02_11,13-2-11,Villa Carmen,dgi_dist_13_02
+dgi_corr_13_02_12,13-2-12,Villa Rosario,dgi_dist_13_02
+dgi_corr_13_02_13,13-2-13,Santa Rosa,dgi_dist_13_02
+dgi_corr_13_03_01,13-3-1,Chame (Cabecera),dgi_dist_13_03
+dgi_corr_13_03_02,13-3-2,Bejuco,dgi_dist_13_03
+dgi_corr_13_03_03,13-3-3,Buenos Aires,dgi_dist_13_03
+dgi_corr_13_03_04,13-3-4,Cabuya,dgi_dist_13_03
+dgi_corr_13_03_05,13-3-5,Chica,dgi_dist_13_03
+dgi_corr_13_03_06,13-3-6,El Libano,dgi_dist_13_03
+dgi_corr_13_03_07,13-3-7,Las Lajas,dgi_dist_13_03
+dgi_corr_13_03_08,13-3-8,Nueva Gorgona,dgi_dist_13_03
+dgi_corr_13_03_09,13-3-9,Punta Chame,dgi_dist_13_03
+dgi_corr_13_03_10,13-3-10,Sajalices,dgi_dist_13_03
+dgi_corr_13_03_11,13-3-11,Sora,dgi_dist_13_03
+dgi_corr_13_04_01,13-4-1,Barrio Balboa,dgi_dist_13_04
+dgi_corr_13_04_02,13-4-2,Barrio Colon,dgi_dist_13_04
+dgi_corr_13_04_03,13-4-3,Amador,dgi_dist_13_04
+dgi_corr_13_04_04,13-4-4,Arosemena,dgi_dist_13_04
+dgi_corr_13_04_05,13-4-5,El Arado,dgi_dist_13_04
+dgi_corr_13_04_06,13-4-6,El Coco,dgi_dist_13_04
+dgi_corr_13_04_07,13-4-7,Feuillet,dgi_dist_13_04
+dgi_corr_13_04_08,13-4-8,Guadalupe,dgi_dist_13_04
+dgi_corr_13_04_09,13-4-9,Herrera,dgi_dist_13_04
+dgi_corr_13_04_10,13-4-10,Hurtado,dgi_dist_13_04
+dgi_corr_13_04_11,13-4-11,Iturralde,dgi_dist_13_04
+dgi_corr_13_04_12,13-4-12,La Represa,dgi_dist_13_04
+dgi_corr_13_04_13,13-4-13,Los Diaz,dgi_dist_13_04
+dgi_corr_13_04_14,13-4-14,Mendoza,dgi_dist_13_04
+dgi_corr_13_04_15,13-4-15,Obaldia,dgi_dist_13_04
+dgi_corr_13_04_16,13-4-16,Playa Leona,dgi_dist_13_04
+dgi_corr_13_04_17,13-4-17,Puerto Caimito,dgi_dist_13_04
+dgi_corr_13_04_18,13-4-18,Santa Rita,dgi_dist_13_04
+dgi_corr_13_05_01,13-5-1,San Carlos (Cabecera),dgi_dist_13_05
+dgi_corr_13_05_02,13-5-2,El Espino,dgi_dist_13_05
+dgi_corr_13_05_03,13-5-3,El Higo,dgi_dist_13_05
+dgi_corr_13_05_04,13-5-4,Guayabito,dgi_dist_13_05
+dgi_corr_13_05_05,13-5-5,La Ermita,dgi_dist_13_05
+dgi_corr_13_05_06,13-5-6,La Laguna,dgi_dist_13_05
+dgi_corr_13_05_07,13-5-7,Las Uvas,dgi_dist_13_05
+dgi_corr_13_05_08,13-5-8,Los Llanitos,dgi_dist_13_05
+dgi_corr_13_05_09,13-5-9,San Jose,dgi_dist_13_05

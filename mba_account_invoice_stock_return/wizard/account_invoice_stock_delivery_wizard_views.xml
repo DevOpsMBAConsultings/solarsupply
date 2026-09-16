@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_account_invoice_stock_delivery_wizard_form" model="ir.ui.view">
+        <field name="name">account.invoice.stock.delivery.wizard.form</field>
+        <field name="model">account.invoice.stock.delivery.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Despacho de Productos desde Bodega">
+                <sheet>
+                    <div class="alert alert-info" role="alert">
+                        Esta factura fue creada directamente en el módulo de facturación. A continuación se listan los productos para rebajar del inventario de bodega.
+                    </div>
+
+                    <group>
+                        <group>
+                            <field name="invoice_id" readonly="1" options="{'no_open': True}"/>
+                        </group>
+                        <group>
+                            <field name="warehouse_id" options="{'no_create': True}"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page string="Productos a Despachar" name="products_delivery">
+                            <field name="line_ids">
+                                <list editable="bottom" create="1">
+                                    <field name="product_id" force_save="1"/>
+                                    <field name="quantity"/>
+                                    <field name="uom_id" force_save="1"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <footer>
+                    <button name="action_confirm_delivery" string="Sí, Procesar Despacho de Bodega" type="object" class="btn-primary" data-hotkey="q"/>
+                    <button string="No / Salir" class="btn-secondary" special="cancel" data-hotkey="x"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

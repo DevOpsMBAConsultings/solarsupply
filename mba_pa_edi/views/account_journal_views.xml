@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    <record id="view_account_journal_form_inherit_mba_pa_edi" model="ir.ui.view">
+        <field name="name">account.journal.form.inherit.mba.pa.edi</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='advanced_settings']" position="after">
+                <page string="Facturación Electrónica DGI" name="dgi_fe_page" invisible="type != 'sale'">
+                    <group>
+                        <group string="Datos de Sucursal y Punto de Facturación">
+                            <field name="l10n_pa_sucursal_code"/>
+                            <field name="l10n_pa_pto_fact_df"/>
+                            <div colspan="2" class="text-muted">
+                                Si estos campos se dejan vacíos, se usarán los configurados en la Compañía.
+                            </div>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+    </data>
+</odoo>

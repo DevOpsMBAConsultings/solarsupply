@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_account_invoice_stock_return_wizard_form" model="ir.ui.view">
+        <field name="name">account.invoice.stock.return.wizard.form</field>
+        <field name="model">account.invoice.stock.return.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Devolución de Productos a Bodega">
+                <sheet>
+                    <div class="alert alert-info" role="alert" invisible="not has_picking">
+                        Se detectó la orden de despacho <strong><field name="picking_id" readonly="1" options="{'no_open': True}"/></strong> asociada a la factura original. ¿Desea registrar el reingreso de estos productos a bodega?
+                    </div>
+                    <div class="alert alert-warning" role="alert" invisible="has_picking">
+                        La factura original no cuenta con una orden de despacho previa en el sistema. A continuación se listan los productos de la factura para ingresar a bodega.
+                    </div>
+
+                    <group>
+                        <group>
+                            <field name="credit_note_id" readonly="1" options="{'no_open': True}"/>
+                            <field name="original_invoice_id" readonly="1" options="{'no_open': True}"/>
+                        </group>
+                        <group>
+                            <field name="warehouse_id" options="{'no_create': True}"/>
+                            <field name="has_picking" invisible="1"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page string="Productos a Recibir" name="products_return">
+                            <field name="line_ids">
+                                <list editable="bottom" create="1">
+                                    <field name="product_id" force_save="1"/>
+                                    <field name="quantity"/>
+                                    <field name="uom_id" force_save="1"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <footer>
+                    <button name="action_confirm_return" string="Sí, Procesar Devolución a Bodega" type="object" class="btn-primary" data-hotkey="q"/>
+                    <button string="No / Salir" class="btn-secondary" special="cancel" data-hotkey="x"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

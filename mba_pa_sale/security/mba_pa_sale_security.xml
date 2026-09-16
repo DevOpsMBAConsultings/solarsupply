@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="group_edit_sale_line_tax" model="res.groups">
+            <field name="name">Permiso para editar impuestos en cotización</field>
+            <field name="comment">Los usuarios pertenecientes a este grupo pueden modificar los impuestos de los productos en las líneas de cotización de ventas.</field>
+        </record>
+    </data>
+</odoo>

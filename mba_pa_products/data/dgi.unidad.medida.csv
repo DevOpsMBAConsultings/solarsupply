@@ -1,0 +1,166 @@
+id,measure,system,name,code,comment
+facturacion_electronica.um,Longitud,Metrico,um,um,Micrometro: 10-6 m
+facturacion_electronica.mm,Longitud,Metrico,mm,mm,Milimetro: 10-3 m
+facturacion_electronica.cm,Longitud,Metrico,cm,cm,Centimetro: 10-2 m
+facturacion_electronica.dm,Longitud,Metrico,dm,dm,Decimetro: 10-1 m
+facturacion_electronica.m,Longitud,Metrico,m,m,Metro
+facturacion_electronica.dam,Longitud,Metrico,dam,dam,Decametro: 10 m
+facturacion_electronica.hm,Longitud,Metrico,hm,hm,Hectometro: 100 m
+facturacion_electronica.km,Longitud,Metrico,km,km,Kilometro: 1000 m
+facturacion_electronica.mi,Longitud,Otros,mi,mi,Milla internacional: 1609.3 m
+facturacion_electronica.nmi,Longitud,Otros,nmi,nmi,Milla nautica: 1.852 m
+facturacion_electronica.in,Longitud,Otros,in,in,Pulgada: 2.54 cm
+facturacion_electronica.ft,Longitud,Otros,ft,ft,"Pie: 12 in, o 30.48 cm"
+facturacion_electronica.yd,Longitud,Otros,yd,yd,"Yarda: 3 ft, o 91.44cm"
+facturacion_electronica.mm2,area,Metrico,mm2,mm2,Milimetro cuadrado
+facturacion_electronica.cm2,area,Metrico,cm2,cm2,Centimetro cuadrado
+facturacion_electronica.dm2,area,Metrico,dm2,dm2,Decimetro cuadrado
+facturacion_electronica.m2,area,Metrico,m2,m2,Metro cuadrado
+facturacion_electronica.ha,area,Metrico,ha,ha,Hectarea: 1000. Sinonimo: hectometro cuadrado
+facturacion_electronica.km2,area,Metrico,km2,km2,Kilometro cuadrado
+facturacion_electronica.acre,area,Brit,acre,acre,Acre: 4046.87260987 m2
+facturacion_electronica.mi2,area,Brit,mi2,mi2,Milla cuadrada
+facturacion_electronica.Ping,area,Brit,Ping,Ping,Unidad de area equivalente a 3.3 metros cuadrados.
+facturacion_electronica.in2,area,Brit,in2,in2,Pulgada cuadrada
+facturacion_electronica.Ft2,area,Brit,ft2,Ft2,Pie cuadrado
+facturacion_electronica.yd2,area,Brit,yd2,yd2,Yarda cuadrada
+facturacion_electronica.ul,Volumen,Metrico,ul,ul,Microlitro: 10-6 l
+facturacion_electronica.ml,Volumen,Metrico,ml,ml,Mililitro: 10-3 l
+facturacion_electronica.cl,Volumen,Metrico,cl,cl,Centilitro: 10-2 l
+facturacion_electronica.dl,Volumen,Metrico,dl,dl,Decilitro: 10-1 l
+facturacion_electronica.l,Volumen,Metrico,l,l,Litro
+facturacion_electronica.dal,Volumen,Metrico,dal,dal,Decalitro: 10 l
+facturacion_electronica.hl,Volumen,Metrico,hl,hl,Hectolitro: 100 l
+facturacion_electronica.kl,Volumen,Metrico,kl,kl,Kilolitro: 1000 l
+facturacion_electronica.mm3,Volumen,Metrico,mm3,mm3,Milimetro cubico: 10-6 l
+facturacion_electronica.cm3,Volumen,Metrico,cm3,cm3,Centimetro cubico: 10-3 l
+facturacion_electronica.dm3,Volumen,Metrico,dm3,dm3,Decimetro cubico: 1 l
+facturacion_electronica.m3,Volumen,Metrico,m3,m3,Metro cubico: 1000 l
+facturacion_electronica.oz,Volumen,EUA,fl,oz,fl oz Onza liquida EUA: 29.5735295625 ml
+facturacion_electronica.gill,Volumen,EUA,gill,gill,"Gill: 4 fl oz, o 118.29411825 ml"
+facturacion_electronica.pint,Volumen,EUA,pint,pint,"Pinta liquida EUA: 4 gills, 16 fl oz o 473.17647 ml"
+facturacion_electronica.quart,Volumen,EUA,quart ,quart,"Cuarto EUA: 2 pt, 8 gills, 32 fl oz o 0.94635295 l"
+facturacion_electronica.gal,Volumen,EUA,gal,gal,"Galon EUA: 4 qt, 8 pt, 32 gills, 128 fl u oz 3.875 l"
+facturacion_electronica.fl_oz_UK,Volumen,Brit,fl oz UK,fl oz UK,Onza liquida UK: 28.4130625 ml
+facturacion_electronica.gill_UK,Volumen,Brit,gill UK,gill UK,"Gill UK: 4 fl oz UK, o 142.0653125 ml"
+facturacion_electronica.pint_UK,Volumen,Brit,pint UK,pint UK,Pinta liquida UK: 568.26125 ml
+facturacion_electronica.quart_UK,Volumen,Brit,quart UK,quart UK,Cuarto UK: 1.1365225 l
+facturacion_electronica.gal_UK,Volumen,Brit,gal UK,gal UK,Galon UK: 4.54609 l
+facturacion_electronica.pinta_seca,Volumen,EUA aridos,pinta seca,pinta seca,Pinta seca: 550.610471358 ml
+facturacion_electronica.cuarto_seco,Volumen,EUA aridos,cuarto seco,cuarto seco,"Cuarto seco: 2 pinta seca, o 1.10122094272 l"
+facturacion_electronica.galon_seco,Volumen,EUA aridos,galon seco,galon seco,"Galon seco: 4 cuarto seco, 8 pinta seca, o 4.40488377086 l"
+facturacion_electronica.pk,Volumen,EUA aridos,pk,pk,"Peck: 2 galon seco, 8 cuarto seco, 16 pinta seca, o8.80976754172 l"
+facturacion_electronica.bu,Volumen,EUA aridos,bu,bu,"Bushel (EUA): 8 gal, o 35.23907 l"
+facturacion_electronica.seca,Volumen,Brit aridos,pinta,seca,UK pinta seca UK Pinta seca UK:661.25560456 ml
+facturacion_electronica.cuarto_seco_UK,Volumen,Brit aridos,cuarto seco UK,cuarto seco UK,"Cuarto seco UK: 2 pinta seca UK, o1,32251120912 l"
+facturacion_electronica.pk_UK,Volumen,Brit aridos,pk UK,pk UK,"Peck: 8 cuarto seco UK, 16 pinta seca UK, o10.5800896729 l"
+facturacion_electronica.bu_UK,Volumen,Brit aridos,bu UK,bu UK,"Bushel (UK): 4 pk UK, o 42.3203586918l"
+facturacion_electronica.in3,Volumen,EUA/Brit solidos,in3,in3,"Pulgada cubica: 16,387064 cmn"
+facturacion_electronica.Ft3,Volumen,EUA/Brit solidos,ft3,Ft3,"Pie cubico: 1728 inn, o 28,316846592 dmn"
+facturacion_electronica.yd3,Volumen,EUA/Brit solidos,yd3,yd3,"Yarda cubica: 27 ftn, 46656 inn o 764.554857984 dmn"
+facturacion_electronica.ug,Masa,Metrico,ug,ug,Microgramo: 10-6 g
+facturacion_electronica.mg,Masa,Metrico,mg,mg,Miligramo: 10-3 g
+facturacion_electronica.cg,Masa,Metrico,cg,cg,Centigramo: 10-2 g
+facturacion_electronica.dg,Masa,Metrico,dg,dg,Decigramo: 10-1 g
+facturacion_electronica.g,Masa,Metrico,g,g,Gramo
+facturacion_electronica.dag,Masa,Metrico,dag,dag,Decagramo: 10 g
+facturacion_electronica.hg,Masa,Metrico,hg,hg,Hectogramo: 100 g
+facturacion_electronica.kg,Masa,Metrico,kg,kg,Kilogramo: 1000 g
+facturacion_electronica.t,Masa,Metrico,t,t,Tonelada: 1000 kg
+facturacion_electronica.ton,Masa,Brit,ton,ton,Tonelada Curta: 907.18474 Kg
+facturacion_electronica.LTN,Masa,Brit,LTN,LTN,Tonelada Longa: 1016.0469088 Kg
+facturacion_electronica.TN,Masa,Brit,TN,TN,"Tonelada de carga: Unidad de informacion que normalmente se utiliza para la facturacion, que se define como sea el numero de toneladas metricas o el numero de metros cubicos, lo que sea mayor"
+facturacion_electronica.gr,Masa,Avoirdupois,gr,gr,"Grain (1/7000 lb, o 64.79mg)"
+facturacion_electronica.dr,Masa,Avoirdupois,dr,dr,"Dram (1/256 lb, 1/16 oz, o 1.772 g)"
+facturacion_electronica.oz,Masa,Avoirdupois,oz,oz,"Onza (1/16 lb, o 28.35 g)"
+facturacion_electronica.lb,Masa,Avoirdupois,lb,lb,Libra (453.6 g)
+facturacion_electronica.st,Masa,Avoirdupois,st,st,"Stone (14 lb, 1/2 qr, o 6.3504 kg)"
+facturacion_electronica.qr,Masa,Avoirdupois,qr,qr,"Quarter (28 lb, o 12.708 kg)"
+facturacion_electronica.cwt,Masa,Avoirdupois,cwt,cwt,Hundredweight (50.8 kg)
+facturacion_electronica.ozt,Masa,Avoirdupois,ozt,ozt,Onza troy: 31.103g
+facturacion_electronica.lbt,Masa,Avoirdupois,lbt,lbt,Libra troy: 373.24 g
+facturacion_electronica.dwt,Masa,Avoirdupois,dwt,dwt,Pennyweight: 1.55 g
+facturacion_electronica.ct,Masa,Troy,ct,ct,"Quilate metrico: 200 mg (se utiliza para la medicion de oro, piedras preciosas y perlas)"
+facturacion_electronica.und,Contaje,Agrupamiento,Unidad,und,
+facturacion_electronica.Persona,Contaje,Agrupamiento,Persona,Persona,
+facturacion_electronica.Cabeza,Contaje,Agrupamiento,Cabeza,Cabeza,Cabeza: animal considerado como un numero
+facturacion_electronica.Grupo,Contaje,Agrupamiento,Grupo,Grupo,Grupo: conjunto de elementos clasificados juntos
+facturacion_electronica.Bobina,Contaje,Agrupamiento,Bobina,Bobina,
+facturacion_electronica.Decena,Contaje,Agrupamiento,Decena,Decena,Unidad de recuento de definir el numero de unidades en multiplos de 10
+facturacion_electronica.Docena,Contaje,Agrupamiento,Docena,Docena,Unidad de recuento de definir el numero de unidades en multiplos de 12
+facturacion_electronica.Ciento,Contaje,Agrupamiento,Ciento,Ciento,Unidad de cuenta que define el numero de unidades contadas en multiplos de 100
+facturacion_electronica.Millar,Contaje,Agrupamiento,Millar,Millar,Unidad de cuenta que define el numero de unidades contadas en multiplos de 1000
+facturacion_electronica.Viaje,Contaje,Agrupamiento,Viaje,Viaje,
+facturacion_electronica.Visita,Contaje,Agrupamiento,Visita,Visita,
+facturacion_electronica.Paquete,Contaje,Agrupamiento,Paquete,Paquete,Unidad de empaque
+facturacion_electronica.Kit,Contaje,Agrupamiento,Kit,Kit,Conjunto de piezas
+facturacion_electronica.Barrica,Contaje,Agrupamiento,Barrica,Barrica,
+facturacion_electronica.Barril,Contaje,Envase,Barril,Barril,
+facturacion_electronica.Blanco,Contaje,Envase,Blanco,Blanco,Unidad de conteo que define el numero de blancos
+facturacion_electronica.Bolso,Contaje,Envase,Bolso,Bolso,Recipiente de material flexible con tapa abierta o cerrada
+facturacion_electronica.Caja,Contaje,Envase,Caja,Caja,
+facturacion_electronica.Cesta,Contaje,Envase,Cesta,Cesta,
+facturacion_electronica.BTU,Calor,Brit,BTU,BTU,Unidad termica britanica
+facturacion_electronica.bit,Informatica,Bit,bit,bit,Unidad de informacion igual a un digito binario
+facturacion_electronica.bit/s,Informatica,Bit,bit/s,bit/s,Bits por segundo: Unidad de informacion igual a un digito binario por segundo
+facturacion_electronica.kbit,Informatica,Bit,kbit,kbit,Kilobits: Unidad de informacion
+facturacion_electronica.kbit/s,Informatica,Bit,kbit/s,kbit/s,Kilobits por segundo: Unidad de informacion
+facturacion_electronica.Kibit,Informatica,Bit,Kibit,Kibit,Kibibit: Unidad de informacion
+facturacion_electronica.Mbit,Informatica,Bit,Mbit,Mbit,Megabit: Unidad de informacion
+facturacion_electronica.Mbit/s,Informatica,Bit,Mbit/s,Mbit/s,Megabit por segundo: Unidad de informacion
+facturacion_electronica.Mibit,Informatica,Bit,Mibit,Mibit,Mebibit: Unidad de informacion
+facturacion_electronica.Gbit,Informatica,Bit,Gbit,Gbit,Gigabit: Unidad de informacion
+facturacion_electronica.Gbit/s,Informatica,Bit,Gbit/s,Gbit/s,Gigabit por segundo: Unidad de informacion
+facturacion_electronica.Gibit,Informatica,Bit,Gibit,Gibit,Gibibit: Unidad de informacion
+facturacion_electronica.Pbit,Informatica,Bit,Pbit,Pbit,Petabit: Unidad de informacion 
+facturacion_electronica.Tbit,Informatica,Bit,Tbit,Tbit,Tebibit: Unidad de informacion
+facturacion_electronica.byte,Informatica,Byte,byte,byte,Byte: Unidad de informacion igual a 8 bits
+facturacion_electronica.kbyte,Informatica,Byte,kbyte,kbyte,Kilobyte: Unidad de informacion igual a 103 bytes
+facturacion_electronica.Mbyte,Informatica,Byte,Mbyte,Mbyte,Mbyte: Unidad de informacion igual a 106 bytes
+facturacion_electronica.Gbyte,Informatica,Byte,Gbyte,Gbyte,Gigabyte: Unidad de informacion igual a 109 bytes
+facturacion_electronica.Tbyte,Informatica,Byte,Tbyte,Tbyte,Terabyte: Unidad de informacion igual a 1012 bytes
+facturacion_electronica.Pbyte,Informatica,Byte,Pbyte,Pbyte,Petabyte: Unidad de informacion igual a 1015bytes
+facturacion_electronica.Ebyte,Informatica,Byte,Ebyte,Ebyte,Exbibyte: Unidad de informacion igual a 1018 bytes
+facturacion_electronica.Kibyte,Informatica,Byte,Kibyte,Kibyte,Kibibyte: Unidad de informacion
+facturacion_electronica.Mibyte,Informatica,Byte,Mibyte,Mibyte,Mebibyte: Unidad de informacion
+facturacion_electronica.Gibyte,Informatica,Byte,Gibyte,Gibyte,Gibibyte: Unidad de informacion
+facturacion_electronica.Tibyte,Informatica,Byte,Tibyte,Tibyte,Tebibyte: Unidad de informacion
+facturacion_electronica.Kcaracter,Informatica,Otro,Kcaracter,Kcaracter,Kilocaracter: Unidad de informacion
+facturacion_electronica.Pixel,Informatica,Otro,Pixel,Pixel,Unidad de recuento de definir el numero de pixeles (pixel: elemento de imagen)
+facturacion_electronica.Mpixel,Informatica,Otro,Mpixel,Mpixel,Megapixeles: Unidad de recuento
+facturacion_electronica.dpi,Informatica,Otro,dpi,dpi,Puntos por pulgada: Numero de puntos por pulgada lineal
+facturacion_electronica.Lineas_acceso,Comunicacion,,Lineas de acceso,Lineas acceso,Numero de lineas de acceso telefonico
+facturacion_electronica.Lineas_servicio,Comunicacion,,Lineas en servicio,Lineas servicio,Numero de lineas de servicio
+facturacion_electronica.Llamada,Comunicacion,,Llamada,Llamada,Una unidad de recuento de definir el numero de llamadas
+facturacion_electronica.MML,Comunicacion,,MML,MML,Minuto y medio por llamada: Numero de minutos (para el intervalo medio de una llamada)
+facturacion_electronica.Puerto,Comunicacion,,Puerto,Puerto,Puerto de telecomunicaciones: Numero de puerto de acceso a la red
+facturacion_electronica.W,Potencia,,W,W,Watt
+facturacion_electronica.kW,Potencia,,kW,kW,Kilowatt
+facturacion_electronica.MW,Potencia,,MW,MW,Megawatt
+facturacion_electronica.GW,Potencia,,GW,GW,Gigawatt
+facturacion_electronica.TW,Potencia,,TW,TW,Terawatt
+facturacion_electronica.Wh,Potencia,,Wh,Wh,Watt hora
+facturacion_electronica.kWh,Potencia,,kWh,kWh,Kilowatt hora
+facturacion_electronica.MWh,Potencia,,MWh,MWh,Megawatt hora
+facturacion_electronica.GWh,Potencia,,GWh,GWh,Gigawatt hora
+facturacion_electronica.TWh,Potencia,,TWh,TWh,Terawatt hora
+facturacion_electronica.VA,Potencia,,VA,VA,Voltio-amperio
+facturacion_electronica.kVA,Potencia,,kVA,kVA,Kilooltio-amperio
+facturacion_electronica.MVA,Potencia,,MVA,MVA,Megavoltio-amperio
+facturacion_electronica.Denier,Textil,,Denier,Denier,Unidad tradicional para la indicacion de la masa lineal de fibras e hilados textiles
+facturacion_electronica.lbb,Textil,,lbb,lbb,Libra de bateo: Unidad de masa que define el numero de libras de fibra acolchada
+facturacion_electronica.Madeja,Textil,,Madeja,Madeja,"Unidad de longitud, tipicamente para el hilado"
+facturacion_electronica.Ano,Textil,,Ano,Ano,Unidad de tiempo equivalente a 365.25 dias
+facturacion_electronica.Ano_comun,Tiempo,,Ano comun,Ano comun,"Es un ano civil de 365 dias, uno menos que el ano bisiesto, por lo que tiene exactamente 52 semanas y un dia El reparto de los anos civiles entre anos comunes y anos bisiestos se hace de acuerdo con el calendario gregoriano: en cada periodo de 400 anos hay 303 comunes y 97 bisiestos"
+facturacion_electronica.Mes,Tiempo,,Mes,Mes,
+facturacion_electronica.Dia,Tiempo,,Dia,Dia,
+facturacion_electronica.Hora,Tiempo,,Hora,Hora,
+facturacion_electronica.Min,Tiempo,,Minuto,Min,
+facturacion_electronica.Seg,Tiempo,,Segundo,Seg,
+facturacion_electronica.Semana,Trabajo,,Semana,Semana,Periodo de tiempo estandar utilizado para los ciclos de dias de trabajo y de descanso
+facturacion_electronica.Actividad,Trabajo,,Actividad,Actividad,Actividad: una unidad de trabajo o accion
+facturacion_electronica.Hora_trabajo,Trabajo,,Hora de trabajo,Hora trabajo,Numero de horas de trabajo
+facturacion_electronica.Hora_extra,Trabajo,,Hora extra,Hora extra,Numero de horas extras
+facturacion_electronica.Mes_trabajo,Trabajo,,Mes de trabajo,Mes trabajo,Numero de meses de trabajo
+facturacion_electronica.Personas,Trabajo,,Personas,Personas,Numero de personas
+facturacion_electronica.Puesto,Trabajo,,Puesto,Puesto,Numero de puestos de trabajo

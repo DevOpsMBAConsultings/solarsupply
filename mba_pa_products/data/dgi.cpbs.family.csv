@@ -1,0 +1,422 @@
+id,code,name,segment_id/id
+facturacion_electronica.cpbs.fam_1010,1010,Animales vivos,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1011,1011,Productos para animales domesticos,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1012,1012,Comida de animales,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1013,1013,Recipientes y habitat para animales,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1014,1014,Productos de talabarteria y arreo,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1015,1015,"Semillas, bulbos, plantulas y esquejes",facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1016,1016,Productos de floricultura y silvicultura,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1017,1017,Fertilizantes y nutrientes para plantas y herbicidas,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1019,1019,Productos para el control de plagas,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1020,1020,Rosales vivos,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1021,1021,Plantas vivas de especies o variedades de flores altas,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1022,1022,Plantas vivas de especies o variedades de flores bajas,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1023,1023,Crisantemos vivos,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1024,1024,Claveles vivos,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1025,1025,Orquideas vivas,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1030,1030,Rosas frescas cortadas,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1031,1031,Bouquets cortados frescos de especies o variedades de flores altas,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1032,1032,Bouquets cortados frescos de especies o variedades de flores,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1033,1033,Crisantemos cortados frescos,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1034,1034,Bouquets florales cortados frescos,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1035,1035,Claveles cortados frescos,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1036,1036,Orquideas cortadas frescas,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1040,1040,Rosas cortadas secas,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1041,1041,Bouquets cortados secos de especies o variedades de flores altas,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1042,1042,Bouquets cortados secos de especies o variedades de flores bajas,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1043,1043,Crisantemos cortados secos,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1044,1044,Claveles cortados secos,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1045,1045,Orquideas cortadas secas,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1050,1050,Follaje cortado fresco,facturacion_electronica.cpbs.seg_10
+facturacion_electronica.cpbs.fam_1110,1110,"Minerales, minerales metalicos y metales",facturacion_electronica.cpbs.seg_11
+facturacion_electronica.cpbs.fam_1111,1111,Tierra y piedra,facturacion_electronica.cpbs.seg_11
+facturacion_electronica.cpbs.fam_1112,1112,Productos no comestibles de planta y silvicultura,facturacion_electronica.cpbs.seg_11
+facturacion_electronica.cpbs.fam_1113,1113,Productos animales no comestibles,facturacion_electronica.cpbs.seg_11
+facturacion_electronica.cpbs.fam_1114,1114,Chatarra y materiales de desecho,facturacion_electronica.cpbs.seg_11
+facturacion_electronica.cpbs.fam_1115,1115,"Fibra, hilos e hilados",facturacion_electronica.cpbs.seg_11
+facturacion_electronica.cpbs.fam_1116,1116,Tejidos y materiales de cuero,facturacion_electronica.cpbs.seg_11
+facturacion_electronica.cpbs.fam_1117,1117,Aleaciones,facturacion_electronica.cpbs.seg_11
+facturacion_electronica.cpbs.fam_1118,1118,oxido metalico,facturacion_electronica.cpbs.seg_11
+facturacion_electronica.cpbs.fam_1119,1119,Desechos metalicos y chatarra,facturacion_electronica.cpbs.seg_11
+facturacion_electronica.cpbs.fam_1213,1213,Materiales explosivos,facturacion_electronica.cpbs.seg_12
+facturacion_electronica.cpbs.fam_1214,1214,Elementos y gases,facturacion_electronica.cpbs.seg_12
+facturacion_electronica.cpbs.fam_1216,1216,Aditivos,facturacion_electronica.cpbs.seg_12
+facturacion_electronica.cpbs.fam_1217,1217,Colorantes,facturacion_electronica.cpbs.seg_12
+facturacion_electronica.cpbs.fam_1218,1218,Ceras y aceites,facturacion_electronica.cpbs.seg_12
+facturacion_electronica.cpbs.fam_1219,1219,Solventes,facturacion_electronica.cpbs.seg_12
+facturacion_electronica.cpbs.fam_1235,1235,Compuestos y mezclas,facturacion_electronica.cpbs.seg_12
+facturacion_electronica.cpbs.fam_1310,1310,Caucho y elastomeros,facturacion_electronica.cpbs.seg_13
+facturacion_electronica.cpbs.fam_1311,1311,Resinas y colofonias y otros materiales derivados de resina,facturacion_electronica.cpbs.seg_13
+facturacion_electronica.cpbs.fam_1400,1400,Materiales y Productos de Papel,facturacion_electronica.cpbs.seg_14
+facturacion_electronica.cpbs.fam_1410,1410,Materiales de papel,facturacion_electronica.cpbs.seg_14
+facturacion_electronica.cpbs.fam_1411,1411,Productos de papel,facturacion_electronica.cpbs.seg_14
+facturacion_electronica.cpbs.fam_1412,1412,Papel para uso industrial,facturacion_electronica.cpbs.seg_14
+facturacion_electronica.cpbs.fam_1510,1510,Combustibles,facturacion_electronica.cpbs.seg_15
+facturacion_electronica.cpbs.fam_1511,1511,Combustibles gaseosos y aditivos,facturacion_electronica.cpbs.seg_15
+facturacion_electronica.cpbs.fam_1512,1512,"Lubricantes, aceites, grasas y anticorrosivos",facturacion_electronica.cpbs.seg_15
+facturacion_electronica.cpbs.fam_1513,1513,Combustible para reactores nucleares,facturacion_electronica.cpbs.seg_15
+facturacion_electronica.cpbs.fam_2010,2010,Maquinaria y equipo de mineria y explotacion de canteras,facturacion_electronica.cpbs.seg_20
+facturacion_electronica.cpbs.fam_2011,2011,Equipo de perforacion y explotacion de pozos,facturacion_electronica.cpbs.seg_20
+facturacion_electronica.cpbs.fam_2012,2012,Equipo para perforacion y exploracion de petroleo y gas,facturacion_electronica.cpbs.seg_20
+facturacion_electronica.cpbs.fam_2013,2013,Materiales para perforacion y operaciones de petroleo y gas,facturacion_electronica.cpbs.seg_20
+facturacion_electronica.cpbs.fam_2014,2014,Equipo de produccion y operacion de petroleo y gas,facturacion_electronica.cpbs.seg_20
+facturacion_electronica.cpbs.fam_2110,2110,"Maquinaria y equipo para agricultura, silvicultura y paisajismo",facturacion_electronica.cpbs.seg_21
+facturacion_electronica.cpbs.fam_2111,2111,Equipo de pesca y acuicultura,facturacion_electronica.cpbs.seg_21
+facturacion_electronica.cpbs.fam_2210,2210,Maquinaria y equipo pesado de construccion,facturacion_electronica.cpbs.seg_22
+facturacion_electronica.cpbs.fam_2310,2310,Maquinaria para el procesamiento de materias primas,facturacion_electronica.cpbs.seg_23
+facturacion_electronica.cpbs.fam_2311,2311,Maquinaria para el procesamiento de petroleo,facturacion_electronica.cpbs.seg_23
+facturacion_electronica.cpbs.fam_2312,2312,Maquinaria y accesorios de textiles y tejidos,facturacion_electronica.cpbs.seg_23
+facturacion_electronica.cpbs.fam_2313,2313,Maquinaria y equipos lapidarios,facturacion_electronica.cpbs.seg_23
+facturacion_electronica.cpbs.fam_2314,2314,Maquinaria de reparacion y accesorios para marroquineria,facturacion_electronica.cpbs.seg_23
+facturacion_electronica.cpbs.fam_2315,2315,"Maquinaria, equipo y suministros de procesos industriales",facturacion_electronica.cpbs.seg_23
+facturacion_electronica.cpbs.fam_2316,2316,"Maquinas, equipo y suministros para fundicion",facturacion_electronica.cpbs.seg_23
+facturacion_electronica.cpbs.fam_2318,2318,Equipo industrial para alimentos y bebidas,facturacion_electronica.cpbs.seg_23
+facturacion_electronica.cpbs.fam_2319,2319,Mezcladores y sus partes y accesorios,facturacion_electronica.cpbs.seg_23
+facturacion_electronica.cpbs.fam_2320,2320,Equipamiento para transferencia de masa,facturacion_electronica.cpbs.seg_23
+facturacion_electronica.cpbs.fam_2321,2321,"Maquinaria de fabricacion electronica, equipo y accesorios",facturacion_electronica.cpbs.seg_23
+facturacion_electronica.cpbs.fam_2322,2322,Equipo y maquinaria de procesamiento de pollos,facturacion_electronica.cpbs.seg_23
+facturacion_electronica.cpbs.fam_2323,2323,Equipo y maquinaria de procesamiento de madera y aserrado,facturacion_electronica.cpbs.seg_23
+facturacion_electronica.cpbs.fam_2324,2324,Maquinaria y accesorios para cortar metales,facturacion_electronica.cpbs.seg_23
+facturacion_electronica.cpbs.fam_2325,2325,Maquinaria y accesorios para el formado de metales,facturacion_electronica.cpbs.seg_23
+facturacion_electronica.cpbs.fam_2326,2326,Maquinaria y accesorios para hacer prototipos rapidos,facturacion_electronica.cpbs.seg_23
+facturacion_electronica.cpbs.fam_2327,2327,Maquinaria y accesorios y suministros para soldadura de todas las clases,facturacion_electronica.cpbs.seg_23
+facturacion_electronica.cpbs.fam_2328,2328,Maquinaria para el tratamiento de metal,facturacion_electronica.cpbs.seg_23
+facturacion_electronica.cpbs.fam_2329,2329,Herramientas de maquinado industrial,facturacion_electronica.cpbs.seg_23
+facturacion_electronica.cpbs.fam_2330,2330,Maquinaria y equipo para cable,facturacion_electronica.cpbs.seg_23
+facturacion_electronica.cpbs.fam_2410,2410,Maquinaria y equipo para manejo de materiales,facturacion_electronica.cpbs.seg_24
+facturacion_electronica.cpbs.fam_2411,2411,Recipientes y almacenamiento,facturacion_electronica.cpbs.seg_24
+facturacion_electronica.cpbs.fam_2412,2412,Materiales de empaque,facturacion_electronica.cpbs.seg_24
+facturacion_electronica.cpbs.fam_2413,2413,Refrigeracion industrial,facturacion_electronica.cpbs.seg_24
+facturacion_electronica.cpbs.fam_2414,2414,Suministros de embalaje,facturacion_electronica.cpbs.seg_24
+facturacion_electronica.cpbs.fam_2510,2510,Vehiculos de motor,facturacion_electronica.cpbs.seg_25
+facturacion_electronica.cpbs.fam_2511,2511,Transporte maritimo,facturacion_electronica.cpbs.seg_25
+facturacion_electronica.cpbs.fam_2512,2512,Maquinaria y equipo para ferrocarril y tranvias,facturacion_electronica.cpbs.seg_25
+facturacion_electronica.cpbs.fam_2513,2513,Aeronaves,facturacion_electronica.cpbs.seg_25
+facturacion_electronica.cpbs.fam_2515,2515,Naves espaciales,facturacion_electronica.cpbs.seg_25
+facturacion_electronica.cpbs.fam_2516,2516,Bicicletas no motorizadas,facturacion_electronica.cpbs.seg_25
+facturacion_electronica.cpbs.fam_2517,2517,Componentes y sistemas de transporte,facturacion_electronica.cpbs.seg_25
+facturacion_electronica.cpbs.fam_2518,2518,Carrocerias y remolques,facturacion_electronica.cpbs.seg_25
+facturacion_electronica.cpbs.fam_2519,2519,Equipo para servicios de transporte,facturacion_electronica.cpbs.seg_25
+facturacion_electronica.cpbs.fam_2520,2520,Sistemas componentes y equipos aeroespaciales,facturacion_electronica.cpbs.seg_25
+facturacion_electronica.cpbs.fam_2610,2610,Fuentes de energia,facturacion_electronica.cpbs.seg_26
+facturacion_electronica.cpbs.fam_2611,2611,Baterias y generadores y transmision de energia cinetica,facturacion_electronica.cpbs.seg_26
+facturacion_electronica.cpbs.fam_2612,2612,"Alambres, cables y arneses",facturacion_electronica.cpbs.seg_26
+facturacion_electronica.cpbs.fam_2613,2613,Generacion de energia,facturacion_electronica.cpbs.seg_26
+facturacion_electronica.cpbs.fam_2614,2614,Maquinaria y equipo para energia atomica o nuclear,facturacion_electronica.cpbs.seg_26
+facturacion_electronica.cpbs.fam_2711,2711,Herramientas de mano,facturacion_electronica.cpbs.seg_27
+facturacion_electronica.cpbs.fam_2712,2712,Maquinaria y equipo hidraulico,facturacion_electronica.cpbs.seg_27
+facturacion_electronica.cpbs.fam_2713,2713,Maquinaria y equipo neumatico,facturacion_electronica.cpbs.seg_27
+facturacion_electronica.cpbs.fam_2714,2714,Herramientas especializadas automotrices,facturacion_electronica.cpbs.seg_27
+facturacion_electronica.cpbs.fam_3010,3010,Componentes estructurales y formas basicas,facturacion_electronica.cpbs.seg_30
+facturacion_electronica.cpbs.fam_3011,3011,"Hormigon, cemento y yeso",facturacion_electronica.cpbs.seg_30
+facturacion_electronica.cpbs.fam_3012,3012,Carreteras y paisaje,facturacion_electronica.cpbs.seg_30
+facturacion_electronica.cpbs.fam_3013,3013,Productos de construccion estructurales,facturacion_electronica.cpbs.seg_30
+facturacion_electronica.cpbs.fam_3014,3014,Aislamiento,facturacion_electronica.cpbs.seg_30
+facturacion_electronica.cpbs.fam_3015,3015,Materiales para acabado de exteriores,facturacion_electronica.cpbs.seg_30
+facturacion_electronica.cpbs.fam_3016,3016,Materiales de acabado de interiores,facturacion_electronica.cpbs.seg_30
+facturacion_electronica.cpbs.fam_3017,3017,Puertas y ventanas y vidrio,facturacion_electronica.cpbs.seg_30
+facturacion_electronica.cpbs.fam_3018,3018,Instalaciones de plomeria,facturacion_electronica.cpbs.seg_30
+facturacion_electronica.cpbs.fam_3019,3019,Equipo de apoyo para Construccion y Mantenimiento,facturacion_electronica.cpbs.seg_30
+facturacion_electronica.cpbs.fam_3024,3024,Componentes de construccion de estructura portatil,facturacion_electronica.cpbs.seg_30
+facturacion_electronica.cpbs.fam_3025,3025,Estructuras y materiales de mineria subterranea,facturacion_electronica.cpbs.seg_30
+facturacion_electronica.cpbs.fam_3026,3026,Materiales estructurales,facturacion_electronica.cpbs.seg_30
+facturacion_electronica.cpbs.fam_3110,3110,Piezas de fundicion y ensambles de piezas de fundicion,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3111,3111,Extrusiones,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3112,3112,Piezas fundidas maquinadas,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3113,3113,Forjaduras,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3114,3114,Molduras,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3115,3115,"Cuerda, cadena, cable, alambre y correa",facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3116,3116,Ferreteria,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3117,3117,"Rodamientos, cojinetes ruedas y engranajes",facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3118,3118,"Empaques, glandulas, fundas y cubiertas",facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3119,3119,Materiales de afilado pulido y alisado,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3120,3120,Adhesivos y selladores,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3121,3121,Pinturas y bases y acabados,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3122,3122,Extractos de tenir y de curtir,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3123,3123,Materia prima en placas o barras labradas,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3124,3124,optica industrial,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3125,3125,"Sistemas de control neumatico, hidraulico o electrico",facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3126,3126,"Cubiertas, cajas y envolturas",facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3127,3127,Piezas hechas a maquina,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3128,3128,Componentes de placa y estampados,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3129,3129,Extrusiones maquinadas,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3130,3130,Forjas labradas,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3131,3131,Ensambles de tuberia fabricada,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3132,3132,Ensambles fabricados de material en barras,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3133,3133,Ensambles estructurales fabricados,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3134,3134,Ensambles de lamina fabricado,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3135,3135,Ensambles de tuberia fabricada,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3136,3136,Ensambles de placa fabricados,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3137,3137,Refractarios,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3138,3138,Imanes y materiales magneticos,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3139,3139,Maquinados,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3140,3140,Empaques,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3141,3141,Sellos,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3142,3142,Partes sinterizadas,facturacion_electronica.cpbs.seg_31
+facturacion_electronica.cpbs.fam_3210,3210,"Circuitos impresos, circuitos integrados y micro ensamblajes",facturacion_electronica.cpbs.seg_32
+facturacion_electronica.cpbs.fam_3211,3211,Dispositivo semiconductor discreto,facturacion_electronica.cpbs.seg_32
+facturacion_electronica.cpbs.fam_3212,3212,Componentes pasivos discretos,facturacion_electronica.cpbs.seg_32
+facturacion_electronica.cpbs.fam_3213,3213,Piezas de componentes y hardware electronicos y accesorios,facturacion_electronica.cpbs.seg_32
+facturacion_electronica.cpbs.fam_3214,3214,Dispositivos de tubo electronico y accesorios,facturacion_electronica.cpbs.seg_32
+facturacion_electronica.cpbs.fam_3215,3215,Dispositivos y componentes y accesorios de control de automatizacion,facturacion_electronica.cpbs.seg_32
+facturacion_electronica.cpbs.fam_3910,3910,Lamparas y bombillas y componentes para lamparas,facturacion_electronica.cpbs.seg_39
+facturacion_electronica.cpbs.fam_3911,3911,"Iluminacion, artefactos y accesorios",facturacion_electronica.cpbs.seg_39
+facturacion_electronica.cpbs.fam_3912,3912,"Equipos, suministros y componentes electricos",facturacion_electronica.cpbs.seg_39
+facturacion_electronica.cpbs.fam_3913,3913,Dispositivos y accesorios y suministros de manejo de cable electrico,facturacion_electronica.cpbs.seg_39
+facturacion_electronica.cpbs.fam_4010,4010,"Calefaccion, ventilacion y circulacion del aire",facturacion_electronica.cpbs.seg_40
+facturacion_electronica.cpbs.fam_4014,4014,Distribucion de fluidos y gas,facturacion_electronica.cpbs.seg_40
+facturacion_electronica.cpbs.fam_4015,4015,Bombas y compresores industriales,facturacion_electronica.cpbs.seg_40
+facturacion_electronica.cpbs.fam_4016,4016,Filtrado y purificacion industrial,facturacion_electronica.cpbs.seg_40
+facturacion_electronica.cpbs.fam_4017,4017,Instalaciones de tubos y entubamientos,facturacion_electronica.cpbs.seg_40
+facturacion_electronica.cpbs.fam_4018,4018,Instalaciones de tubos y tuberias,facturacion_electronica.cpbs.seg_40
+facturacion_electronica.cpbs.fam_4110,4110,Equipo de laboratorio y cientifico,facturacion_electronica.cpbs.seg_41
+facturacion_electronica.cpbs.fam_4111,4111,"Instrumentos de medida, observacion y ensayo",facturacion_electronica.cpbs.seg_41
+facturacion_electronica.cpbs.fam_4112,4112,Suministros y accesorios de laboratorio,facturacion_electronica.cpbs.seg_41
+facturacion_electronica.cpbs.fam_4212,4212,Equipos y suministros veterinarios,facturacion_electronica.cpbs.seg_42
+facturacion_electronica.cpbs.fam_4213,4213,Telas y vestidos medicos,facturacion_electronica.cpbs.seg_42
+facturacion_electronica.cpbs.fam_4214,4214,"Suministros, productos de tratamiento y cuidado del enfermo",facturacion_electronica.cpbs.seg_42
+facturacion_electronica.cpbs.fam_4215,4215,Equipos y suministros dentales,facturacion_electronica.cpbs.seg_42
+facturacion_electronica.cpbs.fam_4216,4216,Equipo de dialisis y suministros,facturacion_electronica.cpbs.seg_42
+facturacion_electronica.cpbs.fam_4217,4217,Productos para los servicios medicos de urgencias y campo,facturacion_electronica.cpbs.seg_42
+facturacion_electronica.cpbs.fam_4218,4218,Productos de examen y control del paciente,facturacion_electronica.cpbs.seg_42
+facturacion_electronica.cpbs.fam_4219,4219,Productos de centro medico,facturacion_electronica.cpbs.seg_42
+facturacion_electronica.cpbs.fam_4220,4220,Productos de hacer imagenes diagnosticas medicas y de medicina nuclear,facturacion_electronica.cpbs.seg_42
+facturacion_electronica.cpbs.fam_4221,4221,Ayuda para personas con desafios fisicos para vivir independiente,facturacion_electronica.cpbs.seg_42
+facturacion_electronica.cpbs.fam_4222,4222,Productos para administracion intravenosa y arterial,facturacion_electronica.cpbs.seg_42
+facturacion_electronica.cpbs.fam_4223,4223,Nutricion clinica,facturacion_electronica.cpbs.seg_42
+facturacion_electronica.cpbs.fam_4224,4224,Productos medicinales de deportes y ortopedicos y protesis,facturacion_electronica.cpbs.seg_42
+facturacion_electronica.cpbs.fam_4225,4225,Productos de rehabilitacion y terapia ocupacional y fisica,facturacion_electronica.cpbs.seg_42
+facturacion_electronica.cpbs.fam_4226,4226,Equipo y suministros post mortem y funerarios,facturacion_electronica.cpbs.seg_42
+facturacion_electronica.cpbs.fam_4227,4227,"Productos de resucitacion, anestesia y respiratorio",facturacion_electronica.cpbs.seg_42
+facturacion_electronica.cpbs.fam_4228,4228,Productos para la esterilizacion medica,facturacion_electronica.cpbs.seg_42
+facturacion_electronica.cpbs.fam_4229,4229,Productos quirurgicos,facturacion_electronica.cpbs.seg_42
+facturacion_electronica.cpbs.fam_4230,4230,Suministros para formacion y estudios de medicina,facturacion_electronica.cpbs.seg_42
+facturacion_electronica.cpbs.fam_4231,4231,Productos para el cuidado de heridas,facturacion_electronica.cpbs.seg_42
+facturacion_electronica.cpbs.fam_4232,4232,Implantes ortopedicos quirurgicos,facturacion_electronica.cpbs.seg_42
+facturacion_electronica.cpbs.fam_4319,4319,Dispositivos de comunicaciones y accesorios,facturacion_electronica.cpbs.seg_43
+facturacion_electronica.cpbs.fam_4320,4320,"Componentes para tecnologia de la informacion, difusion o telecomunicaciones",facturacion_electronica.cpbs.seg_43
+facturacion_electronica.cpbs.fam_4321,4321,Equipo informatico y accesorios,facturacion_electronica.cpbs.seg_43
+facturacion_electronica.cpbs.fam_4322,4322,Equipos o plataformas y accesorios de redes multimedia o de voz y datos,facturacion_electronica.cpbs.seg_43
+facturacion_electronica.cpbs.fam_4323,4323,Software,facturacion_electronica.cpbs.seg_43
+facturacion_electronica.cpbs.fam_4410,4410,"Maquinaria, suministros y accesorios de oficina",facturacion_electronica.cpbs.seg_44
+facturacion_electronica.cpbs.fam_4411,4411,Accesorios de oficina y escritorio,facturacion_electronica.cpbs.seg_44
+facturacion_electronica.cpbs.fam_4412,4412,Suministros de oficina,facturacion_electronica.cpbs.seg_44
+facturacion_electronica.cpbs.fam_4510,4510,Equipo de imprenta y publicacion,facturacion_electronica.cpbs.seg_45
+facturacion_electronica.cpbs.fam_4511,4511,Equipos de audio y video para presentacion y composicion,facturacion_electronica.cpbs.seg_45
+facturacion_electronica.cpbs.fam_4512,4512,"Equipo de video, filmacion o fotografia",facturacion_electronica.cpbs.seg_45
+facturacion_electronica.cpbs.fam_4513,4513,Medios fotograficos y de grabacion,facturacion_electronica.cpbs.seg_45
+facturacion_electronica.cpbs.fam_4514,4514,Suministros fotograficos para cine,facturacion_electronica.cpbs.seg_45
+facturacion_electronica.cpbs.fam_4610,4610,Armas ligeras y municion,facturacion_electronica.cpbs.seg_46
+facturacion_electronica.cpbs.fam_4611,4611,Armas de guerra convencionales,facturacion_electronica.cpbs.seg_46
+facturacion_electronica.cpbs.fam_4612,4612,Misiles,facturacion_electronica.cpbs.seg_46
+facturacion_electronica.cpbs.fam_4613,4613,Cohetes y subsistemas,facturacion_electronica.cpbs.seg_46
+facturacion_electronica.cpbs.fam_4614,4614,Lanzadores,facturacion_electronica.cpbs.seg_46
+facturacion_electronica.cpbs.fam_4615,4615,Proteccion del Orden Publico,facturacion_electronica.cpbs.seg_46
+facturacion_electronica.cpbs.fam_4616,4616,Seguridad y control publico,facturacion_electronica.cpbs.seg_46
+facturacion_electronica.cpbs.fam_4617,4617,"Seguridad, vigilancia y deteccion",facturacion_electronica.cpbs.seg_46
+facturacion_electronica.cpbs.fam_4618,4618,Seguridad y proteccion personal,facturacion_electronica.cpbs.seg_46
+facturacion_electronica.cpbs.fam_4619,4619,Proteccion contra incendios,facturacion_electronica.cpbs.seg_46
+facturacion_electronica.cpbs.fam_4620,4620,"Equipo de entrenamiento de seguridad fisica e industrial, defensa residuales",facturacion_electronica.cpbs.seg_46
+facturacion_electronica.cpbs.fam_4710,4710,"Tratamiento, suministros y eliminacion de agua y aguas",facturacion_electronica.cpbs.seg_47
+facturacion_electronica.cpbs.fam_4711,4711,Equipo industrial de lavanderia y lavado en seco,facturacion_electronica.cpbs.seg_47
+facturacion_electronica.cpbs.fam_4712,4712,Equipo de aseo,facturacion_electronica.cpbs.seg_47
+facturacion_electronica.cpbs.fam_4713,4713,Suministros de aseo y limpieza,facturacion_electronica.cpbs.seg_47
+facturacion_electronica.cpbs.fam_4810,4810,Equipos de servicios de alimentacion para instituciones,facturacion_electronica.cpbs.seg_48
+facturacion_electronica.cpbs.fam_4811,4811,Maquinas expendedoras,facturacion_electronica.cpbs.seg_48
+facturacion_electronica.cpbs.fam_4812,4812,Equipo de Juego o de Apostar,facturacion_electronica.cpbs.seg_48
+facturacion_electronica.cpbs.fam_4813,4813,Equipo y materiales funerarios,facturacion_electronica.cpbs.seg_48
+facturacion_electronica.cpbs.fam_4910,4910,Coleccionables y condecoraciones,facturacion_electronica.cpbs.seg_49
+facturacion_electronica.cpbs.fam_4912,4912,Equipos y accesorios para acampada y exteriores,facturacion_electronica.cpbs.seg_49
+facturacion_electronica.cpbs.fam_4913,4913,Equipos de pesca y caza,facturacion_electronica.cpbs.seg_49
+facturacion_electronica.cpbs.fam_4914,4914,Equipos para deportes acuaticos,facturacion_electronica.cpbs.seg_49
+facturacion_electronica.cpbs.fam_4915,4915,Equipos para deportes de invierno,facturacion_electronica.cpbs.seg_49
+facturacion_electronica.cpbs.fam_4916,4916,Equipos deportivos para campos y canchas,facturacion_electronica.cpbs.seg_49
+facturacion_electronica.cpbs.fam_4917,4917,Equipos de gimnasia y boxeo,facturacion_electronica.cpbs.seg_49
+facturacion_electronica.cpbs.fam_4918,4918,"Juegos, equipo de tiro y mesa",facturacion_electronica.cpbs.seg_49
+facturacion_electronica.cpbs.fam_4920,4920,Equipo para entrenamiento fisico,facturacion_electronica.cpbs.seg_49
+facturacion_electronica.cpbs.fam_4921,4921,Otros deportes,facturacion_electronica.cpbs.seg_49
+facturacion_electronica.cpbs.fam_4922,4922,Equipo y accesorios para deportes,facturacion_electronica.cpbs.seg_49
+facturacion_electronica.cpbs.fam_4924,4924,"Equipo de recreo, parques infantiles y equipo y suministros de natacion y de spa",facturacion_electronica.cpbs.seg_49
+facturacion_electronica.cpbs.fam_5010,5010,Frutos secos,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5011,5011,Productos de carne y aves de corral,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5012,5012,Pescados y mariscos,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5013,5013,Productos lacteos y huevos,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5015,5015,Aceites y grasas comestibles,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5016,5016,"Chocolates, azucares, edulcorantes y productos de confiteria",facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5017,5017,Condimentos y conservantes,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5018,5018,Productos de panaderia,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5019,5019,Alimentos preparados y conservados,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5020,5020,Bebidas,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5021,5021,Tabaco y productos de fumar y substitutos,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5022,5022,Productos de cereales y legumbres,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5030,5030,Fruta fresca,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5031,5031,Fruta organica fresca,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5032,5032,Fruta seca,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5033,5033,Fruta organica seca,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5034,5034,Fruta congelada,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5035,5035,Fruta organica congelada,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5036,5036,Fruta en lata o en frasco,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5037,5037,Fruta organica en lata o en frasco,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5038,5038,Pure de frutas,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5040,5040,Vegetales frescos,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5041,5041,Vegetales organicos frescos,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5042,5042,Vegetales secos,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5043,5043,Vegetales organicos secos,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5044,5044,Vegetales congelados,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5045,5045,Vegetales organicos congelados,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5046,5046,Vegetales en lata o en frasco,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5047,5047,Vegetales organicos en lata o en frasco,facturacion_electronica.cpbs.seg_50
+facturacion_electronica.cpbs.fam_5110,5110,Medicamentos anti infecciosos,facturacion_electronica.cpbs.seg_51
+facturacion_electronica.cpbs.fam_5111,5111,Agentes antitumorales,facturacion_electronica.cpbs.seg_51
+facturacion_electronica.cpbs.fam_5112,5112,Medicamentos cardiovasculares,facturacion_electronica.cpbs.seg_51
+facturacion_electronica.cpbs.fam_5113,5113,Medicamentos hematologos,facturacion_electronica.cpbs.seg_51
+facturacion_electronica.cpbs.fam_5114,5114,Medicamentos para el sistema nervioso central,facturacion_electronica.cpbs.seg_51
+facturacion_electronica.cpbs.fam_5115,5115,Medicamentos para el sistema nervioso autonomo,facturacion_electronica.cpbs.seg_51
+facturacion_electronica.cpbs.fam_5116,5116,Medicamentos que afectan al sistema respiratorio,facturacion_electronica.cpbs.seg_51
+facturacion_electronica.cpbs.fam_5117,5117,Medicamentos que afectan al sistema gastrointestinal,facturacion_electronica.cpbs.seg_51
+facturacion_electronica.cpbs.fam_5118,5118,Hormonas y antagonistas hormonales,facturacion_electronica.cpbs.seg_51
+facturacion_electronica.cpbs.fam_5119,5119,Agentes que afectan el agua y los electrolitos,facturacion_electronica.cpbs.seg_51
+facturacion_electronica.cpbs.fam_5120,5120,Medicamentos inmunomoduladores,facturacion_electronica.cpbs.seg_51
+facturacion_electronica.cpbs.fam_5121,5121,Categorias de medicamentos varios,facturacion_electronica.cpbs.seg_51
+facturacion_electronica.cpbs.fam_5124,5124,"Farmacos que afectan a los oidos, los ojos, la nariz y la piel",facturacion_electronica.cpbs.seg_51
+facturacion_electronica.cpbs.fam_5125,5125,Suplementos alimenticios veterinarios,facturacion_electronica.cpbs.seg_51
+facturacion_electronica.cpbs.fam_5210,5210,Revestimientos de suelos,facturacion_electronica.cpbs.seg_52
+facturacion_electronica.cpbs.fam_5212,5212,"Ropa de cama, mantelerias, panos de cocina y toallas",facturacion_electronica.cpbs.seg_52
+facturacion_electronica.cpbs.fam_5213,5213,Tratamientos de ventanas,facturacion_electronica.cpbs.seg_52
+facturacion_electronica.cpbs.fam_5214,5214,Aparatos electrodomesticos,facturacion_electronica.cpbs.seg_52
+facturacion_electronica.cpbs.fam_5215,5215,Utensilios de cocina domesticos,facturacion_electronica.cpbs.seg_52
+facturacion_electronica.cpbs.fam_5216,5216,Electronica de consumo,facturacion_electronica.cpbs.seg_52
+facturacion_electronica.cpbs.fam_5217,5217,Tratamientos de pared domestica,facturacion_electronica.cpbs.seg_52
+facturacion_electronica.cpbs.fam_5310,5310,Ropa,facturacion_electronica.cpbs.seg_53
+facturacion_electronica.cpbs.fam_5311,5311,Calzado,facturacion_electronica.cpbs.seg_53
+facturacion_electronica.cpbs.fam_5312,5312,"Maletas, bolsos de mano, mochilas y estuches",facturacion_electronica.cpbs.seg_53
+facturacion_electronica.cpbs.fam_5313,5313,Articulos de tocador y cuidado personal,facturacion_electronica.cpbs.seg_53
+facturacion_electronica.cpbs.fam_5314,5314,Fuentes y accesorios de costura,facturacion_electronica.cpbs.seg_53
+facturacion_electronica.cpbs.fam_5410,5410,Joyeria,facturacion_electronica.cpbs.seg_54
+facturacion_electronica.cpbs.fam_5411,5411,Relojes,facturacion_electronica.cpbs.seg_54
+facturacion_electronica.cpbs.fam_5412,5412,Gemas,facturacion_electronica.cpbs.seg_54
+facturacion_electronica.cpbs.fam_5510,5510,Medios impresos,facturacion_electronica.cpbs.seg_55
+facturacion_electronica.cpbs.fam_5511,5511,Material electronico de referencia,facturacion_electronica.cpbs.seg_55
+facturacion_electronica.cpbs.fam_5512,5512,Etiquetado y accesorios,facturacion_electronica.cpbs.seg_55
+facturacion_electronica.cpbs.fam_5610,5610,Muebles de alojamiento,facturacion_electronica.cpbs.seg_56
+facturacion_electronica.cpbs.fam_5611,5611,Muebles comerciales e industriales,facturacion_electronica.cpbs.seg_56
+facturacion_electronica.cpbs.fam_5612,5612,"Mobiliario institucional, escolar y educativo y accesorios",facturacion_electronica.cpbs.seg_56
+facturacion_electronica.cpbs.fam_5613,5613,Muebles y accesorios para mercadeo,facturacion_electronica.cpbs.seg_56
+facturacion_electronica.cpbs.fam_5614,5614,Adornos para el hogar,facturacion_electronica.cpbs.seg_56
+facturacion_electronica.cpbs.fam_6010,6010,Materiales didacticos profesionales y de desarrollo y accesorios y suministros,facturacion_electronica.cpbs.seg_60
+facturacion_electronica.cpbs.fam_6011,6011,Decoraciones y suministros del aula,facturacion_electronica.cpbs.seg_60
+facturacion_electronica.cpbs.fam_6012,6012,"Equipo, accesorios y suministros de arte y manualidades",facturacion_electronica.cpbs.seg_60
+facturacion_electronica.cpbs.fam_6013,6013,"Instrumentos musicales, piezas y accesorios",facturacion_electronica.cpbs.seg_60
+facturacion_electronica.cpbs.fam_6014,6014,Juguetes y juegos,facturacion_electronica.cpbs.seg_60
+facturacion_electronica.cpbs.fam_7010,7010,Pesquerias y acuicultura,facturacion_electronica.cpbs.seg_70
+facturacion_electronica.cpbs.fam_7011,7011,Horticultura,facturacion_electronica.cpbs.seg_70
+facturacion_electronica.cpbs.fam_7012,7012,Servicios de animales vivos,facturacion_electronica.cpbs.seg_70
+facturacion_electronica.cpbs.fam_7013,7013,"Preparacion, gestion y proteccion del terreno y del suelo",facturacion_electronica.cpbs.seg_70
+facturacion_electronica.cpbs.fam_7014,7014,"Produccion, gestion y proteccion de cultivos",facturacion_electronica.cpbs.seg_70
+facturacion_electronica.cpbs.fam_7015,7015,Silvicultura,facturacion_electronica.cpbs.seg_70
+facturacion_electronica.cpbs.fam_7016,7016,Fauna y flora silvestres,facturacion_electronica.cpbs.seg_70
+facturacion_electronica.cpbs.fam_7017,7017,Desarrollo y vigilancia de recursos hidraulicos,facturacion_electronica.cpbs.seg_70
+facturacion_electronica.cpbs.fam_7110,7110,Servicios de mineria,facturacion_electronica.cpbs.seg_71
+facturacion_electronica.cpbs.fam_7111,7111,Servicios de perforacion y prospeccion petrolifera y de gas,facturacion_electronica.cpbs.seg_71
+facturacion_electronica.cpbs.fam_7112,7112,Servicios de construccion y perforacion de pozos,facturacion_electronica.cpbs.seg_71
+facturacion_electronica.cpbs.fam_7113,7113,Servicios de aumento de la extraccion y produccion de gas y petroleo,facturacion_electronica.cpbs.seg_71
+facturacion_electronica.cpbs.fam_7114,7114,Servicios de restauracion y recuperacion de gas y petroleo,facturacion_electronica.cpbs.seg_71
+facturacion_electronica.cpbs.fam_7115,7115,Servicios de procesamiento y gestion de datos de petroleo y gas,facturacion_electronica.cpbs.seg_71
+facturacion_electronica.cpbs.fam_7116,7116,Servicios de gerencia de proyectos en pozos de petroleo y gas,facturacion_electronica.cpbs.seg_71
+facturacion_electronica.cpbs.fam_7210,7210,Servicios de mantenimiento y reparaciones de construcciones e instalaciones,facturacion_electronica.cpbs.seg_72
+facturacion_electronica.cpbs.fam_7211,7211,Servicios de construccion de edificaciones residenciales,facturacion_electronica.cpbs.seg_72
+facturacion_electronica.cpbs.fam_7212,7212,Servicios de construccion de edificaciones no residenciales,facturacion_electronica.cpbs.seg_72
+facturacion_electronica.cpbs.fam_7214,7214,Servicios de construccion pesada,facturacion_electronica.cpbs.seg_72
+facturacion_electronica.cpbs.fam_7215,7215,Servicios de mantenimiento y construccion de comercio especializado,facturacion_electronica.cpbs.seg_72
+facturacion_electronica.cpbs.fam_7310,7310,Industrias de plasticos y productos quimicos,facturacion_electronica.cpbs.seg_73
+facturacion_electronica.cpbs.fam_7311,7311,Industrias de la madera y el papel,facturacion_electronica.cpbs.seg_73
+facturacion_electronica.cpbs.fam_7312,7312,Industrias del metal y de minerales,facturacion_electronica.cpbs.seg_73
+facturacion_electronica.cpbs.fam_7313,7313,Industrias de alimentos y bebidas,facturacion_electronica.cpbs.seg_73
+facturacion_electronica.cpbs.fam_7314,7314,"Industrias de fibras, textiles y de tejidos",facturacion_electronica.cpbs.seg_73
+facturacion_electronica.cpbs.fam_7315,7315,Servicios de apoyo a la fabricacion,facturacion_electronica.cpbs.seg_73
+facturacion_electronica.cpbs.fam_7316,7316,Fabricacion de maquinaria y equipo de transporte,facturacion_electronica.cpbs.seg_73
+facturacion_electronica.cpbs.fam_7317,7317,Fabricacion de productos electricos e instrumentos de precision,facturacion_electronica.cpbs.seg_73
+facturacion_electronica.cpbs.fam_7318,7318,Servicios de maquinado y procesado,facturacion_electronica.cpbs.seg_73
+facturacion_electronica.cpbs.fam_7610,7610,Servicios de descontaminacion,facturacion_electronica.cpbs.seg_76
+facturacion_electronica.cpbs.fam_7611,7611,Servicios de aseo y limpieza,facturacion_electronica.cpbs.seg_76
+facturacion_electronica.cpbs.fam_7612,7612,Eliminacion y tratamiento de desechos,facturacion_electronica.cpbs.seg_76
+facturacion_electronica.cpbs.fam_7613,7613,Limpieza de residuos toxicos y peligrosos,facturacion_electronica.cpbs.seg_76
+facturacion_electronica.cpbs.fam_7710,7710,Gestion medioambiental,facturacion_electronica.cpbs.seg_77
+facturacion_electronica.cpbs.fam_7711,7711,Proteccion medioambiental,facturacion_electronica.cpbs.seg_77
+facturacion_electronica.cpbs.fam_7712,7712,"Seguimiento, control y rehabilitacion de la contaminacion",facturacion_electronica.cpbs.seg_77
+facturacion_electronica.cpbs.fam_7713,7713,"Servicios de seguimiento, control o rehabilitacion de contaminantes",facturacion_electronica.cpbs.seg_77
+facturacion_electronica.cpbs.fam_7810,7810,Transporte de correo y carga,facturacion_electronica.cpbs.seg_78
+facturacion_electronica.cpbs.fam_7811,7811,Transporte de pasajeros,facturacion_electronica.cpbs.seg_78
+facturacion_electronica.cpbs.fam_7812,7812,Manejo y embalaje de material,facturacion_electronica.cpbs.seg_78
+facturacion_electronica.cpbs.fam_7813,7813,Almacenaje,facturacion_electronica.cpbs.seg_78
+facturacion_electronica.cpbs.fam_7814,7814,Servicios de transporte,facturacion_electronica.cpbs.seg_78
+facturacion_electronica.cpbs.fam_7818,7818,Servicios de mantenimiento o reparaciones de transportes,facturacion_electronica.cpbs.seg_78
+facturacion_electronica.cpbs.fam_8010,8010,Servicios de asesoria de gestion,facturacion_electronica.cpbs.seg_80
+facturacion_electronica.cpbs.fam_8011,8011,Servicios de recursos humanos,facturacion_electronica.cpbs.seg_80
+facturacion_electronica.cpbs.fam_8012,8012,Servicios legales,facturacion_electronica.cpbs.seg_80
+facturacion_electronica.cpbs.fam_8013,8013,Servicios inmobiliarios,facturacion_electronica.cpbs.seg_80
+facturacion_electronica.cpbs.fam_8014,8014,Comercializacion y distribucion,facturacion_electronica.cpbs.seg_80
+facturacion_electronica.cpbs.fam_8015,8015,Politica comercial y servicios,facturacion_electronica.cpbs.seg_80
+facturacion_electronica.cpbs.fam_8016,8016,Servicios de administracion de empresas,facturacion_electronica.cpbs.seg_80
+facturacion_electronica.cpbs.fam_8110,8110,Servicios profesionales de ingenieria,facturacion_electronica.cpbs.seg_81
+facturacion_electronica.cpbs.fam_8111,8111,Servicios informaticos,facturacion_electronica.cpbs.seg_81
+facturacion_electronica.cpbs.fam_8112,8112,Economia,facturacion_electronica.cpbs.seg_81
+facturacion_electronica.cpbs.fam_8113,8113,Estadistica,facturacion_electronica.cpbs.seg_81
+facturacion_electronica.cpbs.fam_8114,8114,Tecnologias de fabricacion,facturacion_electronica.cpbs.seg_81
+facturacion_electronica.cpbs.fam_8115,8115,Servicios de pedologia,facturacion_electronica.cpbs.seg_81
+facturacion_electronica.cpbs.fam_8116,8116,Entrega de servicios de tecnologia de informacion,facturacion_electronica.cpbs.seg_81
+facturacion_electronica.cpbs.fam_8210,8210,Publicidad,facturacion_electronica.cpbs.seg_82
+facturacion_electronica.cpbs.fam_8211,8211,Escritura y traducciones,facturacion_electronica.cpbs.seg_82
+facturacion_electronica.cpbs.fam_8212,8212,Servicios de reproduccion,facturacion_electronica.cpbs.seg_82
+facturacion_electronica.cpbs.fam_8213,8213,Servicios fotograficos,facturacion_electronica.cpbs.seg_82
+facturacion_electronica.cpbs.fam_8214,8214,Diseno grafico,facturacion_electronica.cpbs.seg_82
+facturacion_electronica.cpbs.fam_8215,8215,Artistas e interpretes profesionales,facturacion_electronica.cpbs.seg_82
+facturacion_electronica.cpbs.fam_8310,8310,Servicios publicos,facturacion_electronica.cpbs.seg_83
+facturacion_electronica.cpbs.fam_8311,8311,Servicios de medios de telecomunicaciones,facturacion_electronica.cpbs.seg_83
+facturacion_electronica.cpbs.fam_8312,8312,Servicios de informacion,facturacion_electronica.cpbs.seg_83
+facturacion_electronica.cpbs.fam_8410,8410,Finanzas de desarrollo,facturacion_electronica.cpbs.seg_84
+facturacion_electronica.cpbs.fam_8411,8411,Servicios de contabilidad y auditorias,facturacion_electronica.cpbs.seg_84
+facturacion_electronica.cpbs.fam_8412,8412,Banca e inversiones,facturacion_electronica.cpbs.seg_84
+facturacion_electronica.cpbs.fam_8413,8413,Servicios de seguros y pensiones,facturacion_electronica.cpbs.seg_84
+facturacion_electronica.cpbs.fam_8414,8414,Agencias de credito,facturacion_electronica.cpbs.seg_84
+facturacion_electronica.cpbs.fam_8510,8510,Servicios integrales de salud,facturacion_electronica.cpbs.seg_85
+facturacion_electronica.cpbs.fam_8511,8511,Prevencion y control de enfermedades,facturacion_electronica.cpbs.seg_85
+facturacion_electronica.cpbs.fam_8512,8512,Practica medica,facturacion_electronica.cpbs.seg_85
+facturacion_electronica.cpbs.fam_8513,8513,"Ciencia medica, investigacion y experimentacion",facturacion_electronica.cpbs.seg_85
+facturacion_electronica.cpbs.fam_8514,8514,Medicina alternativa y holistica,facturacion_electronica.cpbs.seg_85
+facturacion_electronica.cpbs.fam_8515,8515,Servicios alimenticios y de nutricion,facturacion_electronica.cpbs.seg_85
+facturacion_electronica.cpbs.fam_8516,8516,"Servicios de mantenimiento, renovacion y reparacion de equipo medico quirurgico",facturacion_electronica.cpbs.seg_85
+facturacion_electronica.cpbs.fam_8517,8517,Servicios de muerte y soporte al fallecimiento,facturacion_electronica.cpbs.seg_85
+facturacion_electronica.cpbs.fam_8610,8610,Formacion profesional,facturacion_electronica.cpbs.seg_86
+facturacion_electronica.cpbs.fam_8611,8611,Sistemas educativos alternativos,facturacion_electronica.cpbs.seg_86
+facturacion_electronica.cpbs.fam_8612,8612,Instituciones educativas,facturacion_electronica.cpbs.seg_86
+facturacion_electronica.cpbs.fam_8613,8613,Servicios educativos especializados,facturacion_electronica.cpbs.seg_86
+facturacion_electronica.cpbs.fam_8614,8614,Instalaciones educativas,facturacion_electronica.cpbs.seg_86
+facturacion_electronica.cpbs.fam_9010,9010,Restaurantes y catering (servicios de comidas y bebidas),facturacion_electronica.cpbs.seg_90
+facturacion_electronica.cpbs.fam_9011,9011,"Instalaciones hoteleras, alojamientos y centros de encuentros",facturacion_electronica.cpbs.seg_90
+facturacion_electronica.cpbs.fam_9012,9012,Facilitacion de viajes,facturacion_electronica.cpbs.seg_90
+facturacion_electronica.cpbs.fam_9013,9013,Artes interpretativas,facturacion_electronica.cpbs.seg_90
+facturacion_electronica.cpbs.fam_9014,9014,Deportes comerciales,facturacion_electronica.cpbs.seg_90
+facturacion_electronica.cpbs.fam_9015,9015,Servicios de entretenimiento,facturacion_electronica.cpbs.seg_90
+facturacion_electronica.cpbs.fam_9110,9110,Aspecto personal,facturacion_electronica.cpbs.seg_91
+facturacion_electronica.cpbs.fam_9111,9111,Asistencia domestica y personal,facturacion_electronica.cpbs.seg_91
+facturacion_electronica.cpbs.fam_9210,9210,Orden publico y seguridad,facturacion_electronica.cpbs.seg_92
+facturacion_electronica.cpbs.fam_9211,9211,Servicios militares o defensa nacional,facturacion_electronica.cpbs.seg_92
+facturacion_electronica.cpbs.fam_9212,9212,Seguridad y proteccion personal,facturacion_electronica.cpbs.seg_92
+facturacion_electronica.cpbs.fam_9310,9310,Sistemas e instituciones politicas,facturacion_electronica.cpbs.seg_93
+facturacion_electronica.cpbs.fam_9311,9311,Condiciones sociopoliticas,facturacion_electronica.cpbs.seg_93
+facturacion_electronica.cpbs.fam_9312,9312,Relaciones internacionales,facturacion_electronica.cpbs.seg_93
+facturacion_electronica.cpbs.fam_9313,9313,Ayuda y asistencia humanitaria,facturacion_electronica.cpbs.seg_93
+facturacion_electronica.cpbs.fam_9314,9314,Servicios comunitarios y sociales,facturacion_electronica.cpbs.seg_93
+facturacion_electronica.cpbs.fam_9315,9315,Servicios de administracion y financiacion publica,facturacion_electronica.cpbs.seg_93
+facturacion_electronica.cpbs.fam_9316,9316,Tributacion,facturacion_electronica.cpbs.seg_93
+facturacion_electronica.cpbs.fam_9317,9317,Politica y regulacion comercial,facturacion_electronica.cpbs.seg_93
+facturacion_electronica.cpbs.fam_9410,9410,Organizaciones laborales,facturacion_electronica.cpbs.seg_94
+facturacion_electronica.cpbs.fam_9411,9411,Organizaciones religiosas,facturacion_electronica.cpbs.seg_94
+facturacion_electronica.cpbs.fam_9412,9412,Clubes,facturacion_electronica.cpbs.seg_94
+facturacion_electronica.cpbs.fam_9413,9413,"Organizaciones, asociaciones y movimientos civicos",facturacion_electronica.cpbs.seg_94
+facturacion_electronica.cpbs.fam_9510,9510,Parcelas de tierra,facturacion_electronica.cpbs.seg_95
+facturacion_electronica.cpbs.fam_9511,9511,Vias,facturacion_electronica.cpbs.seg_95
+facturacion_electronica.cpbs.fam_9512,9512,Estructuras y edificios permanentes,facturacion_electronica.cpbs.seg_95
+facturacion_electronica.cpbs.fam_9513,9513,Estructuras y edificios moviles,facturacion_electronica.cpbs.seg_95
+facturacion_electronica.cpbs.fam_9514,9514,Estructuras y edificios prefabricados,facturacion_electronica.cpbs.seg_95

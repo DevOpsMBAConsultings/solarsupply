@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_company_form_inherit_l10n_pa_hka" model="ir.ui.view">
+            <field name="name">res.company.form.inherit.l10n.pa.hka</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="mba_pa_base.view_company_form_facturacion_electronica" />
+            <field name="arch" type="xml">
+                <!-- Inyectar Credenciales -->
+                <xpath expr="//group[@name='pac_credentials']" position="inside">
+                    <group>
+                        <field name="l10n_pa_hka_user" placeholder="Usuario HKA" />
+                        <field name="l10n_pa_hka_password" password="1" placeholder="Contraseña HKA" />
+                        <field name="l10n_pa_hka_token" password="1" placeholder="Token HKA" readonly="1" force_save="1" />
+                        <field name="l10n_pa_hka_token_expires_at" readonly="1" string="Token Expira" force_save="1" />
+                    </group>
+                    <group>
+                        <field name="l10n_pa_hka_ambiente" />
+                        <field name="l10n_pa_hka_url" readonly="1" force_save="1" />
+                    </group>
+                </xpath>
+                
+                <!-- Inyectar Acciones HKA -->
+                <xpath expr="//group[@name='pac_actions']" position="inside">
+                    <group>
+                        <button name="action_hka_test_connection"
+                                type="object"
+                                string="Probar Conexión PAC"
+                                class="btn-primary"
+                                icon="fa-plug"/>
+                        <button name="action_hka_get_token"
+                                type="object"
+                                string="Obtener / Refrescar Token"
+                                class="btn-secondary"
+                                icon="fa-key"/>
+                    </group>
+                    <group>
+                        <div class="text-muted" style="padding: 8px 0;">
+                            Seleccione el ambiente (Pruebas/Producción). Luego use
+                            "Obtener / Refrescar Token" para autenticar y
+                            "Probar Conexión PAC" para validar conectividad.
+                        </div>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

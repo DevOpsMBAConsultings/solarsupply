@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hka_import_wizard,hka.import.wizard,model_hka_import_wizard,base.group_user,1,1,1,1
+access_hka_folios_wizard,hka.folios.wizard,model_hka_folios_wizard,base.group_user,1,1,1,1
+

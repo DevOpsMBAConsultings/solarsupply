@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    <!-- Orden en lista FE (DGI) para NC: 1) NC Genérica (default), 2) NC referente FE, 3) Reembolso, luego ND.
+         Sin noupdate para que se aplique al actualizar el módulo. -->
+    <record id="dgi_doc_nc_generica" model="dgi.document.type">
+        <field name="sequence">60</field>
+    </record>
+    <record id="dgi_doc_nc_referenciada_fe" model="dgi.document.type">
+        <field name="sequence">65</field>
+    </record>
+    <record id="dgi_doc_reembolso" model="dgi.document.type">
+        <field name="sequence">70</field>
+    </record>
+    <record id="dgi_doc_nd_referenciada_fe" model="dgi.document.type">
+        <field name="sequence">80</field>
+    </record>
+    <record id="dgi_doc_nd_generica" model="dgi.document.type">
+        <field name="sequence">90</field>
+    </record>
+    </data>
+</odoo>

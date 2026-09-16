@@ -1,0 +1,57 @@
+id,code,name
+facturacion_electronica.cpbs.seg_10,10,"Material Vivo Vegetal y Animal, Accesorios y Suministros"
+facturacion_electronica.cpbs.seg_11,11,"Material Mineral, Textil y Vegetal y Animal No Comestible"
+facturacion_electronica.cpbs.seg_12,12,Material Quimico incluyendo Bioquimicos y Materiales de Gas
+facturacion_electronica.cpbs.seg_13,13,"Materiales de Resina, Colofonia, Caucho, Espuma, Pelicula y Elastomericos"
+facturacion_electronica.cpbs.seg_14,14,Materiales y Productos de Papel
+facturacion_electronica.cpbs.seg_15,15,"Materiales Combustibles, Aditivos para Combustibles, Lubricantes y Anticorrosivos"
+facturacion_electronica.cpbs.seg_20,20,Maquinaria y Accesorios de Mineria y Perforacion de Pozos
+facturacion_electronica.cpbs.seg_21,21,"Maquinaria y Accesorios para Agricultura, Pesca, Silvicultura y Fauna"
+facturacion_electronica.cpbs.seg_22,22,Maquinaria y Accesorios para Construccion y Edificacion
+facturacion_electronica.cpbs.seg_23,23,Maquinaria y Accesorios para Manufactura y Procesamiento Industrial
+facturacion_electronica.cpbs.seg_24,24,"Maquinaria, Accesorios y Suministros para Manejo, Acondicionamiento y Almacenamiento de Materiales"
+facturacion_electronica.cpbs.seg_25,25,"Vehiculos Comerciales, Militares y Particulares, Accesorios y Componentes"
+facturacion_electronica.cpbs.seg_26,26,Maquinaria y Accesorios para Generacion y Distribucion de Energia
+facturacion_electronica.cpbs.seg_27,27,Herramientas y Maquinaria General
+facturacion_electronica.cpbs.seg_30,30,"Componentes y Suministros para Estructuras, Edificacion, Construccion y Obras Civiles"
+facturacion_electronica.cpbs.seg_31,31,Componentes y Suministros de Manufactura
+facturacion_electronica.cpbs.seg_32,32,Componentes y Suministros Electronicos
+facturacion_electronica.cpbs.seg_39,39,"Componentes, Accesorios y Suministros de Sistemas Electricos e Iluminacion"
+facturacion_electronica.cpbs.seg_40,40,Componentes y Equipos para Distribucion y Sistemas de Acondicionamiento
+facturacion_electronica.cpbs.seg_41,41,"Equipos y Suministros de Laboratorio, de Medicion, de Observacion y de Pruebas"
+facturacion_electronica.cpbs.seg_42,42,"Equipo Medico, Accesorios y Suministros"
+facturacion_electronica.cpbs.seg_43,43,Difusion de Tecnologias de Informacion y Telecomunicaciones
+facturacion_electronica.cpbs.seg_44,44,"Equipos de Oficina, Accesorios y Suministros"
+facturacion_electronica.cpbs.seg_45,45,"Equipos y Suministros para Impresion, Fotografia y Audiovisuales"
+facturacion_electronica.cpbs.seg_46,46,"Equipos y Suministros de Defensa, Orden Publico, Proteccion, Vigilancia y Seguridad"
+facturacion_electronica.cpbs.seg_47,47,Equipos de Limpieza y Suministros
+facturacion_electronica.cpbs.seg_48,48,"Maquinaria, Equipo y Suministros para la Industria de Servicios"
+facturacion_electronica.cpbs.seg_49,49,"Equipos, Suministros y Accesorios para Deportes y Recreacion"
+facturacion_electronica.cpbs.seg_50,50,"Alimentos, Bebidas y Tabaco"
+facturacion_electronica.cpbs.seg_51,51,Medicamentos y Productos Farmaceuticos
+facturacion_electronica.cpbs.seg_52,52,"Articulos Domesticos, Suministros y Productos Electronicos de Consumo"
+facturacion_electronica.cpbs.seg_53,53,"Ropa, Maletas y Productos de Aseo Personal"
+facturacion_electronica.cpbs.seg_54,54,"Productos para Relojeria, Joyeria y Piedras Preciosas"
+facturacion_electronica.cpbs.seg_55,55,"Publicaciones Impresas, Publicaciones Electronicas y Accesorios"
+facturacion_electronica.cpbs.seg_56,56,"Muebles, Mobiliario y Decoracion"
+facturacion_electronica.cpbs.seg_60,60,"Instrumentos Musicales, Juegos, Juguetes, Artes, Artesanias y Equipo educativo, Materiales, Accesorios y Suministros"
+facturacion_electronica.cpbs.seg_70,70,"Servicios de Contratacion Agricola, Pesquera, Forestal y de Fauna"
+facturacion_electronica.cpbs.seg_71,71,"Servicios de Mineria, Petroleo y Gas"
+facturacion_electronica.cpbs.seg_72,72,"Servicios de Edificacion, Construccion de Instalaciones y Mantenimiento"
+facturacion_electronica.cpbs.seg_73,73,Servicios de Produccion Industrial y Manufactura
+facturacion_electronica.cpbs.seg_76,76,"Servicios de Limpieza, Descontaminacion y Tratamiento de Residuos"
+facturacion_electronica.cpbs.seg_77,77,Servicios Medioambientales
+facturacion_electronica.cpbs.seg_78,78,"Servicios de Transporte, Almacenaje y Correo"
+facturacion_electronica.cpbs.seg_80,80,"Servicios de Gestion, Servicios Profesionales de Empresa y Servicios Administrativos"
+facturacion_electronica.cpbs.seg_81,81,"Servicios Basados en Ingenieria, Investigacion y Tecnologia"
+facturacion_electronica.cpbs.seg_82,82,"Servicios Editoriales, de Diseno, de Artes Graficas y Bellas Artes"
+facturacion_electronica.cpbs.seg_83,83,Servicios Publicos y Servicios Relacionados con el Sector Publico
+facturacion_electronica.cpbs.seg_84,84,Servicios Financieros y de Seguros
+facturacion_electronica.cpbs.seg_85,85,Servicios de Salud
+facturacion_electronica.cpbs.seg_86,86,Servicios Educativos y de Formacion
+facturacion_electronica.cpbs.seg_90,90,"Servicios de Viajes, Alimentacion, Alojamiento y Entretenimiento"
+facturacion_electronica.cpbs.seg_91,91,Servicios Personales y Domesticos
+facturacion_electronica.cpbs.seg_92,92,"Servicios de Defensa Nacional, Orden Publico, Seguridad y Vigilancia"
+facturacion_electronica.cpbs.seg_93,93,Servicios Politicos y de Asuntos Civicos
+facturacion_electronica.cpbs.seg_94,94,Organizaciones y Clubes
+facturacion_electronica.cpbs.seg_95,95,"Terrenos, Edificios, Estructuras y Vias"

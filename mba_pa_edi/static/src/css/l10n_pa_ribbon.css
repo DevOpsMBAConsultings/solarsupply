@@ -1,0 +1,19 @@
+/* ============================================================
+   mba_pa_edi — Ribbon "Anulado DGI"
+   Fuerza el ribbon al upper-right corner de la hoja de la factura,
+   independiente de su posición en el DOM.
+   ============================================================ */
+.o_form_view .o_form_sheet {
+    position: relative;
+    overflow: visible;
+}
+
+.o_form_view .o_form_sheet .o_ribbon_wrapper,
+.o_form_view .o_form_sheet .o_ribbon {
+    position: absolute !important;
+    top: -5px !important;
+    right: -5px !important;
+    bottom: auto !important;
+    left: auto !important;
+    z-index: 10;
+}

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_saleorder_document_custom" inherit_id="sale.report_saleorder_document" priority="30">
+
+        <xpath expr="//t[@t-call='web.external_layout']" position="attributes">
+            <attribute name="t-call">web.basic_layout</attribute>
+        </xpath>
+
+        <xpath expr="//t[@t-set='address']" position="replace">
+            <t t-set="address"/>
+        </xpath>
+
+        <xpath expr="//div[@class='page']" position="replace">
+            <div class="page" style="font-family: Arial, sans-serif; font-size: 10pt; color: #1a1a1a;">
+                <style>
+                    .header div[name="company_address"] {
+                        display: none !important;
+                    }
+                </style>
+
+                <div class="row mb-3 align-items-center">
+                    <div class="col-7">
+                        <img t-if="doc.company_id.logo" t-att-src="image_data_uri(doc.company_id.logo)" style="max-height: 85px; width: auto;" alt="Logo"/>
+                    </div>
+                    <div class="col-5 text-end" style="font-size: 9pt; color: #555;">
+                        <strong style="font-size: 12pt; color: #102B66;"><span t-field="doc.company_id.name"/></strong><br/>
+                        <span t-field="doc.company_id.street"/><br/>
+                        <span t-if="doc.company_id.vat">RUC / NIT: <span t-field="doc.company_id.vat"/></span><br t-if="doc.company_id.vat"/>
+                        <span t-if="doc.company_id.phone">Tel: <span t-field="doc.company_id.phone"/></span>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-6">
+                        <t t-if="doc.partner_id.parent_id">
+                            <strong style="font-size: 14pt; margin-bottom: 2px; display: block; color: #102B66;">Cliente: <span t-field="doc.partner_id.parent_id.name"/></strong>
+                            <hr style="border-top: 2px solid #102B66; opacity: 1; margin-top: 0px; margin-bottom: 8px;"/>
+                            <strong>Contacto:</strong> <span t-field="doc.partner_id.name"/><br/>
+                        </t>
+                        <t t-else="">
+                            <strong style="font-size: 14pt; margin-bottom: 2px; display: block; color: #102B66;">Cliente: <span t-field="doc.partner_id.name"/></strong>
+                            <hr style="border-top: 2px solid #102B66; opacity: 1; margin-top: 0px; margin-bottom: 8px;"/>
+                        </t>
+                        <span t-if="doc.partner_id.vat"><strong>RUC / ID:</strong> <span t-field="doc.partner_id.vat"/><br/></span>
+                        <span t-if="doc.partner_id.street"><strong>Dirección:</strong> <span t-field="doc.partner_id.street"/><br/></span>
+                        <span t-if="doc.partner_id.phone"><strong>Teléfono:</strong> <span t-field="doc.partner_id.phone"/><br/></span>
+                        <span t-if="doc.partner_id.email"><strong>Correo:</strong> <span t-field="doc.partner_id.email"/></span>
+                    </div>
+
+                    <div class="col-5 offset-1">
+                        <strong style="font-size: 14pt; margin-bottom: 2px; display: block; color: #102B66;">Cotización: <span t-field="doc.name"/></strong>
+                        <hr style="border-top: 2px solid #F39C12; opacity: 1; margin-top: 0px; margin-bottom: 8px;"/>
+                        <strong>Fecha:</strong> <span t-field="doc.date_order" t-options='{"widget": "date"}'/><br/>
+                        <span t-if="doc.validity_date"><strong>Válido hasta:</strong> <span t-field="doc.validity_date"/><br/></span>
+                        <span t-if="doc.payment_term_id"><strong>Condiciones de pago:</strong> <span t-field="doc.payment_term_id.name"/><br/></span>
+                        <span t-if="doc.user_id"><strong>Vendedor:</strong> <span t-field="doc.user_id.name"/></span>
+                    </div>
+                </div>
+
+                <div t-if="doc.client_order_ref" class="mt-2 mb-2">
+                    <strong style="font-size: 10pt; color: #102B66;">Ref. Cliente / P.O.#: </strong><span t-field="doc.client_order_ref"/>
+                </div>
+
+                <table class="mt-2" style="width: 100%; border-collapse: collapse;">
+                    <thead style="display: table-header-group;">
+                        <tr style="background-color: #102B66; color: white !important; font-weight: bold; border-bottom: 3px solid #F39C12;">
+                            <th class="text-center" style="padding: 7px; border: none; color: white !important; width: 75px;">Imagen</th>
+                            <th class="text-start" style="padding: 7px; border: none; color: white !important; width: 110px;">Referencia</th>
+                            <th class="text-start" style="padding: 7px; border: none; color: white !important;">Descripción</th>
+                            <th class="text-center" style="padding: 7px; border: none; color: white !important; width: 65px;">Cant.</th>
+                            <th class="text-end" style="padding: 7px; border: none; color: white !important; width: 95px;">Precio</th>
+                            <th class="text-center" style="padding: 7px; border: none; color: white !important; width: 85px;">Impuesto</th>
+                            <th class="text-end" style="padding: 7px; border: none; color: white !important; width: 100px;">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="doc.order_line" t-as="line">
+                            <tr t-if="not line.display_type" style="border-bottom: 1px solid #e0e0e0; page-break-inside: avoid;">
+                                <td class="text-center" style="padding: 4px; vertical-align: middle;">
+                                    <img t-if="line.product_id.image_128" t-att-src="image_data_uri(line.product_id.image_128)" style="max-height: 45px; max-width: 60px; object-fit: contain;" alt="Producto"/>
+                                    <img t-elif="line.product_template_id.image_128" t-att-src="image_data_uri(line.product_template_id.image_128)" style="max-height: 45px; max-width: 60px; object-fit: contain;" alt="Producto"/>
+                                </td>
+                                <td class="text-start" style="padding: 4px 6px; vertical-align: middle; font-weight: 500;">
+                                    <span t-esc="line.product_id.default_code"/>
+                                </td>
+                                <td class="text-start" style="padding: 4px 6px; vertical-align: middle;">
+                                    <t t-if="hasattr(line, '_get_dgi_item_description')">
+                                        <span t-esc="line._get_dgi_item_description()"/>
+                                    </t>
+                                    <t t-else="">
+                                        <span t-field="line.name"/>
+                                    </t>
+                                </td>
+                                <td class="text-center" style="padding: 4px 6px; vertical-align: middle;">
+                                    <span t-esc="int(line.product_uom_qty) if line.product_uom_qty.is_integer() else line.product_uom_qty"/>
+                                </td>
+                                <td class="text-end" style="padding: 4px 6px; vertical-align: middle;">
+                                    <t t-esc="doc.currency_id.symbol"/> <span t-field="line.price_unit" t-options='{"widget": "float", "precision": 2}'/>
+                                </td>
+                                <td class="text-center" style="padding: 4px 6px; vertical-align: middle;">
+                                    <t t-if="hasattr(line, '_get_dgi_line_tax')">
+                                        <t t-esc="doc.currency_id.symbol"/> <span t-esc="'%.2f' % line._get_dgi_line_tax()"/>
+                                    </t>
+                                    <t t-elif="'price_tax' in line">
+                                        <t t-esc="doc.currency_id.symbol"/> <span t-field="line.price_tax" t-options='{"widget": "float", "precision": 2}'/>
+                                    </t>
+                                </td>
+                                <td class="text-end" style="padding: 4px 6px; vertical-align: middle; font-weight: 500;">
+                                    <t t-esc="doc.currency_id.symbol"/> <span t-field="line.price_subtotal" t-options='{"widget": "float", "precision": 2}'/>
+                                </td>
+                            </tr>
+                            <tr t-elif="line.display_type == 'line_section'" style="background-color: #f4f6fa; border-left: 3px solid #102B66;">
+                                <td colspan="7" class="text-start" style="padding: 6px 10px;">
+                                    <strong style="font-size: 10pt; color: #102B66;"><span t-field="line.name"/></strong>
+                                </td>
+                            </tr>
+                            <tr t-elif="line.display_type == 'line_note'">
+                                <td colspan="7" class="text-start" style="padding: 4px 10px; font-style: italic; color: #666;">
+                                    <span t-field="line.name"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+
+                <div class="row justify-content-end mt-3" style="page-break-inside: avoid;">
+                    <div class="col-5">
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <t t-set="is_dgi_retention" t-value="'dgi_show_retention_block' in doc and doc.dgi_show_retention_block"/>
+                            <t t-if="not is_dgi_retention">
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td class="text-start" style="padding: 4px;"><strong>Subtotal</strong></td>
+                                    <td class="text-end" style="padding: 4px;"><t t-esc="doc.currency_id.symbol"/> <span t-field="doc.amount_untaxed" t-options='{"widget": "float", "precision": 2}'/></td>
+                                </tr>
+                                <t t-if="doc.tax_totals">
+                                    <t t-foreach="doc.tax_totals.get('subtotals', [])" t-as="subtotal">
+                                        <t t-foreach="subtotal.get('tax_groups', [])" t-as="tax_group">
+                                            <tr style="border-bottom: 1px solid #eee;">
+                                                <td class="text-start" style="padding: 4px;"><strong><t t-esc="tax_group['group_name']"/></strong></td>
+                                                <td class="text-end" style="padding: 4px;"><t t-esc="doc.currency_id.symbol"/> <t t-esc="'%.2f' % tax_group['tax_amount_currency']"/></td>
+                                            </tr>
+                                        </t>
+                                    </t>
+                                </t>
+                                <tr style="background-color: #102B66; color: white; font-weight: bold; border-top: 2px solid #F39C12;">
+                                    <td class="text-start" style="padding: 7px 8px; color: white !important;">TOTAL</td>
+                                    <td class="text-end" style="padding: 7px 8px; color: white !important;"><t t-esc="doc.currency_id.symbol"/> <span t-field="doc.amount_total" t-options='{"widget": "float", "precision": 2}'/></td>
+                                </tr>
+                            </t>
+                            <t t-else="">
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td class="text-start" style="padding: 4px;"><strong>Subtotal</strong></td>
+                                    <td class="text-end" style="padding: 4px;"><t t-esc="doc.currency_id.symbol"/> <span t-field="doc.dgi_amount_untaxed" t-options='{"widget": "float", "precision": 2}'/></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td class="text-start" style="padding: 4px;"><strong>Impuesto ITBMS</strong></td>
+                                    <td class="text-end" style="padding: 4px;"><t t-esc="doc.currency_id.symbol"/> <span t-field="doc.dgi_amount_taxes" t-options='{"widget": "float", "precision": 2}'/></td>
+                                </tr>
+                                <tr style="background-color: #102B66; color: white; font-weight: bold; border-top: 2px solid #F39C12;">
+                                    <td class="text-start" style="padding: 7px 8px; color: white !important;">TOTAL</td>
+                                    <td class="text-end" style="padding: 7px 8px; color: white !important;"><t t-esc="doc.currency_id.symbol"/> <span t-field="doc.dgi_amount_total" t-options='{"widget": "float", "precision": 2}'/></td>
+                                </tr>
+                            </t>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="mt-4" t-if="doc.note" style="font-size: 8.5pt; color: #444; border-top: 1px solid #ddd; padding-top: 8px;">
+                    <strong style="display: block; margin-bottom: 3px; color: #102B66;">Términos y condiciones:</strong>
+                    <span t-field="doc.note"/>
+                </div>
+
+            </div>
+        </xpath>
+    </template>
+</odoo>

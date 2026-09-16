@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="pos_order_view_form_dgi" model="ir.ui.view">
+        <field name="name">pos.order.form.dgi.panama</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="l10n_pa_is_fiscal_printer" invisible="1"/>
+                <group string="Facturación Electrónica DGI" invisible="l10n_pa_is_fiscal_printer"
+                       col="2">
+                    <group>
+                        <field name="l10n_pa_dgi_payment_method_id"
+                               options="{'no_create': True}"/>
+                        <field name="l10n_pa_dgi_payment_term_type"/>
+                    </group>
+                    <group>
+                        <field name="l10n_pa_dgi_payment_notes"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

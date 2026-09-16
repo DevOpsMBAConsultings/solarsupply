@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <!-- ============================================================ -->
+        <!-- LIST VIEW: Badge rojo "Cancelado" para facturas Anuladas DGI -->
+        <!-- ============================================================ -->
+        <record id="view_out_invoice_tree_inherit_l10n_pa" model="ir.ui.view">
+            <field name="name">account.move.list.inherit.l10n.pa</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_invoice_tree" />
+            <field name="priority" eval="99"/>
+            <field name="arch" type="xml">
+                <!-- Agregar l10n_pa_pac_status invisible para poder usarlo en decorations -->
+                <xpath expr="//list" position="inside">
+                    <field name="l10n_pa_pac_status" column_invisible="1" />
+                </xpath>
+                <!-- El badge de "Cancelado" en la lista viene de status_in_payment,
+                     lo pintamos rojo cuando el estado DGI es 'cancelled' -->
+                <xpath expr="//field[@name='status_in_payment']" position="attributes">
+                    <attribute name="decoration-danger">state == 'cancel' and l10n_pa_pac_status == 'cancelled'</attribute>
+                    <attribute name="decoration-muted">state == 'cancel' and l10n_pa_pac_status != 'cancelled'</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_move_form_inherit_l10n_pa" model="ir.ui.view">
+            <field name="name">account.move.form.inherit.l10n.pa</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form" />
+            <field name="priority" eval="99"/>
+            <field name="arch" type="xml">
+
+                <!-- ============================================================ -->
+                <!-- RIBBON: "Anulado DGI" para facturas anuladas ante el PAC/DGI -->
+                <!-- Va DESPUÉS de button_box, igual que los ribbons nativos de Odoo -->
+                <!-- ============================================================ -->
+                <xpath expr="//div[@name='button_box']" position="after">
+                    <widget name="web_ribbon"
+                            title="Anulado DGI"
+                            bg_color="text-bg-danger"
+                            invisible="l10n_pa_pac_status != 'cancelled' or move_type not in ('out_invoice', 'out_refund')" />
+                </xpath>
+
+                <!-- Ocultar botón Preview nativo de Odoo si está aceptada por el PAC -->
+                <xpath expr="//button[@name='preview_invoice']" position="attributes">
+                    <attribute name="invisible">l10n_pa_pac_status in ('accepted', 'cancelled')</attribute>
+                </xpath>
+
+                <!-- Campo invisible para lógica de readonly -->
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="dgi_is_from_sale" invisible="1"/>
+                </xpath>
+
+                <!-- Si la factura viene de una cotización, los campos clave son readonly en borrador -->
+                <xpath expr="//field[@name='invoice_payment_term_id']" position="attributes">
+                    <attribute name="readonly">dgi_is_from_sale</attribute>
+                </xpath>
+                <xpath expr="//field[@name='journal_id']" position="attributes">
+                    <attribute name="readonly">dgi_is_from_sale</attribute>
+                </xpath>
+
+                <!-- Si viene de cotización: no permitir crear ni borrar líneas, bloquear campos comerciales pero permitir editar analítica -->
+                <xpath expr="//field[@name='invoice_line_ids']/list" position="attributes">
+                    <attribute name="create">not dgi_is_from_sale</attribute>
+                    <attribute name="delete">not dgi_is_from_sale</attribute>
+                </xpath>
+                <xpath expr="//field[@name='invoice_line_ids']/list//field[@name='product_id']" position="attributes">
+                    <attribute name="readonly">parent.dgi_is_from_sale</attribute>
+                </xpath>
+                <xpath expr="//field[@name='invoice_line_ids']/list//field[@name='name']" position="attributes">
+                    <attribute name="readonly">parent.dgi_is_from_sale</attribute>
+                </xpath>
+                <xpath expr="//field[@name='invoice_line_ids']/list//field[@name='quantity']" position="attributes">
+                    <attribute name="readonly">parent.dgi_is_from_sale</attribute>
+                </xpath>
+                <xpath expr="//field[@name='invoice_line_ids']/list//field[@name='product_uom_id'][1]" position="attributes">
+                    <attribute name="readonly">parent.dgi_is_from_sale</attribute>
+                </xpath>
+                <xpath expr="//field[@name='invoice_line_ids']/list//field[@name='price_unit']" position="attributes">
+                    <attribute name="readonly">parent.dgi_is_from_sale</attribute>
+                </xpath>
+                <xpath expr="//field[@name='invoice_line_ids']/list//field[@name='discount']" position="attributes">
+                    <attribute name="readonly">parent.dgi_is_from_sale</attribute>
+                </xpath>
+                <xpath expr="//field[@name='invoice_line_ids']/list//field[@name='tax_ids']" position="attributes">
+                    <attribute name="readonly">parent.dgi_is_from_sale</attribute>
+                </xpath>
+
+                <!-- ============================================================ -->
+                <!-- BOTONES EN EL HEADER                                          -->
+                <!-- ============================================================ -->
+
+                <!-- Botón genérico para Enviar a DGI (solo en posted + no enviado aún) -->
+                <xpath expr="//header" position="inside">
+                    <button name="action_l10n_pa_send_to_pac"
+                            string="Enviar a DGI"
+                            type="object"
+                            class="oe_highlight"
+                            invisible="move_type not in ('out_invoice', 'out_refund') or state != 'posted' or l10n_pa_pac_status in ('sent', 'accepted')" />
+                </xpath>
+
+
+                <!-- ============================================================ -->
+                <!-- OCULTAR BOTONES IRREVERSIBLES cuando la factura fue ANULADA  -->
+                <!-- La DGI/HKA no permite revertir una anulación.                -->
+                <!-- ============================================================ -->
+
+                <!-- "Establecer como comprobado" — ocultar para out_invoice/out_refund -->
+                <xpath expr="//button[@name='button_draft']" position="attributes">
+                    <attribute name="invisible">move_type in ('out_invoice', 'out_refund')</attribute>
+                </xpath>
+
+                <!-- "Cancelar asiento" — ocultar cuando ya fue anulado por PAC o aceptado -->
+                <xpath expr="//button[@name='button_cancel'][1]" position="attributes">
+                    <attribute name="invisible">move_type in ('out_invoice', 'out_refund') and l10n_pa_pac_status in ('sent', 'accepted', 'cancelled')</attribute>
+                </xpath>
+
+                <!-- "Nota de crédito" — solo para facturas (out_invoice, in_invoice), ocultar si ya fue revertida al 100% o anulada en DGI -->
+                <xpath expr="//button[@name='action_reverse']" position="attributes">
+                    <attribute name="invisible">move_type not in ('out_invoice', 'in_invoice') or state != 'posted' or payment_state == 'reversed' or l10n_pa_pac_status == 'cancelled'</attribute>
+                </xpath>
+                <!-- Ocultar tax_totals y amount_residual estándar cuando aplica retención DGI -->
+                <xpath expr="//field[@name='tax_totals']" position="attributes">
+                    <attribute name="invisible">dgi_show_retention_block and move_type in ('out_invoice', 'out_refund')</attribute>
+                </xpath>
+                <xpath expr="//field[@name='amount_residual']" position="attributes">
+                    <attribute name="invisible">dgi_show_retention_block and move_type in ('out_invoice', 'out_refund')</attribute>
+                </xpath>
+                <!-- Totales DGI directamente en el subtotal_footer para alineación perfecta a la derecha -->
+                <xpath expr="//field[@name='tax_totals']" position="after">
+                    <field name="dgi_amount_untaxed" 
+                           string="Subtotal" 
+                           widget="monetary" 
+                           options="{'currency_field': 'currency_id'}"
+                           invisible="not dgi_show_retention_block or move_type not in ('out_invoice', 'out_refund')"/>
+                    <field name="dgi_amount_taxes" 
+                           string="Impuesto" 
+                           widget="monetary" 
+                           options="{'currency_field': 'currency_id'}"
+                           invisible="not dgi_show_retention_block or move_type not in ('out_invoice', 'out_refund')"/>
+                    <field name="dgi_amount_total" 
+                           string="Total" 
+                           widget="monetary" 
+                           options="{'currency_field': 'currency_id'}"
+                           class="oe_subtotal_footer_separator"
+                           invisible="not dgi_show_retention_block or move_type not in ('out_invoice', 'out_refund')"/>
+                </xpath>
+
+                <!-- ============================================================ -->
+                <!-- TAB: Soporte Técnico DGI                                   -->
+                <!-- ============================================================ -->
+                <xpath expr="//notebook" position="inside">
+                    <page string="Soporte Técnico DGI" name="dgi_billing" invisible="move_type not in ('out_invoice', 'out_refund')">
+                        <group>
+                            <group string="Datos del Documento">
+                                <field name="dgi_document_type_id" readonly="state != 'draft'" options="{'no_create': True, 'no_open': True}" />
+                                <field name="dgi_naturaleza_operacion" readonly="1" />
+                                <field name="dgi_tipo_operacion" readonly="1" />
+                            </group>
+                            <group string="Condiciones de Pago">
+                                <field name="dgi_payment_method_id" readonly="1" />
+                                <field name="dgi_payment_method_other_desc" readonly="1" invisible="dgi_payment_term_type != 'contado'" />
+                                <field name="dgi_payment_term_type" readonly="1" />
+                                <field name="dgi_plazo_option" readonly="1" invisible="dgi_payment_term_type != 'credito'" />
+                                <field name="dgi_plazo_due_date" readonly="1" invisible="dgi_payment_term_type != 'credito' or dgi_plazo_option != 'other'" />
+                            </group>
+                        </group>
+                        <group>
+                            <field name="dgi_show_retention_block" invisible="1" />
+                            <field name="dgi_retention_readonly" invisible="1" />
+                            <group string="Retenciones" invisible="not dgi_show_retention_block">
+                                <field name="dgi_retention_type_id"
+                                       readonly="state != 'draft' or dgi_retention_readonly"
+                                       options="{'no_create': True, 'no_open': True}" />
+                                <field name="dgi_retention_amount" readonly="1" />
+                            </group>
+                        </group>
+                        <group>
+                            <group string="Estado PAC / DGI">
+                                <field name="l10n_pa_pac_status" readonly="1" />
+                                <field name="l10n_pa_cufe" readonly="1" />
+                                <field name="l10n_pa_qr_url" readonly="1" widget="url" />
+                                <field name="l10n_pa_pac_error" readonly="1" invisible="l10n_pa_pac_status != 'error'" />
+                            </group>
+                            <group string="JSON Enviado (Troubleshooting)" invisible="not l10n_pa_pac_request">
+                                <field name="l10n_pa_pac_request" readonly="1" nolabel="1" colspan="2" />
+                            </group>
+                            <group string="Respuesta PAC" invisible="not l10n_pa_pac_response">
+                                <field name="l10n_pa_pac_response" readonly="1" nolabel="1" colspan="2" />
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Retención visible al usuario (entre Términos y Notas) -->
+        <record id="view_move_form_inherit_l10n_pa_retention_user" model="ir.ui.view">
+            <field name="name">account.move.form.inherit.l10n.pa.retention.user</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="priority" eval="101"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet//notebook" position="after">
+                    <group invisible="move_type not in ('out_invoice', 'out_refund') or not dgi_show_retention_block">
+                        <field name="dgi_show_retention_block" invisible="1"/>
+                        <field name="dgi_retention_readonly" invisible="1"/>
+                        <field name="dgi_retention_receptor_filter" invisible="1"/>
+                        <separator string="RETENCIONES"/>
+                        <group>
+                            <field name="dgi_retention_type_id"
+                                   string="Tipo de Retención"
+                                   domain="[('receptor_type', '=', dgi_retention_receptor_filter)]"
+                                   readonly="state != 'draft' or dgi_retention_readonly"
+                                   options="{'no_create': True, 'no_open': True}"/>
+                            <field name="dgi_retention_amount" readonly="1"/>
+                        </group>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Notas complementarias en el cuerpo principal de la factura (fuera de los tabs) -->
+        <record id="view_move_form_inherit_l10n_pa_notes" model="ir.ui.view">
+            <field name="name">account.move.form.inherit.l10n.pa.notes</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="priority" eval="100"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet//notebook" position="after">
+                    <group invisible="move_type not in ('out_invoice', 'out_refund')">
+                        <separator string="NOTAS COMPLEMENTARIAS"/>
+                        <field name="dgi_payment_notes"
+                               nolabel="1"
+                               colspan="2"
+                               readonly="state != 'draft'"
+                               placeholder="Notas complementarias para facturación electrónica (DGI). Se copian desde el cliente si está vacío."/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- ============================================================ -->
+        <!-- ACCIÓN Y MENÚ: Notas de Débito de Cliente                     -->
+        <!-- ============================================================ -->
+        <record id="account.action_move_out_invoice_type" model="ir.actions.act_window">
+            <field name="domain">[('move_type', '=', 'out_invoice'), ('l10n_pa_is_debit_note', '=', False)]</field>
+        </record>
+
+        <record id="action_move_out_debit_note_type" model="ir.actions.act_window">
+            <field name="name">Notas de Débito</field>
+            <field name="res_model">account.move</field>
+            <field name="view_mode">list,kanban,form</field>
+            <field name="view_id" ref="account.view_out_invoice_tree"/>
+            <field name="search_view_id" ref="account.view_account_invoice_filter"/>
+            <field name="domain">[('move_type', '=', 'out_invoice'), ('l10n_pa_is_debit_note', '=', True)]</field>
+            <field name="context">{'default_move_type': 'out_invoice', 'default_l10n_pa_is_debit_note': True, 'journal_type': 'sale'}</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Cree su primera Nota de Débito
+              </p><p>
+                Las Notas de Débito se utilizan para realizar ajustes en aumento a facturas previamente emitidas.
+              </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_action_move_out_debit_note_type"
+                  name="Notas de Débito"
+                  action="action_move_out_debit_note_type"
+                  parent="account.menu_finance_receivables"
+                  sequence="3"/>
+    </data>
+</odoo>
+

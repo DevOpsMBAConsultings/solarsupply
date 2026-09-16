@@ -1,0 +1,11 @@
+{
+    "name": "MBA PA Sale - DGI Warning",
+    "version": "1.0",
+    "summary": "DGI warning wizard trigger for sale.order form",
+    "depends": ["web", "sale_management"],
+    "assets": {
+        "web.assets_backend": [
+            "mba_pa_sale/static/src/js/sale_order_dgi_check.js"
+        ]
+    }
+}

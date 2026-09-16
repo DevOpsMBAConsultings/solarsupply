@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hka_anular_factura_wizard,hka.anular.factura.wizard,model_hka_anular_factura_wizard,base.group_user,1,1,1,1
+access_sale_order_credit_other_due_date_wizard,sale.order.credit.other.due.date.wizard,model_sale_order_credit_other_due_date_wizard,base.group_user,1,1,1,1
+access_sale_order_payment_other_desc_wizard,sale.order.payment.other.desc.wizard,model_sale_order_payment_other_desc_wizard,base.group_user,1,1,1,1
+

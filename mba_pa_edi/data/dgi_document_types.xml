@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+    <data>
+
+    <!-- Document types: order matches DGI reference (Factura list, then Nota de crédito list) -->
+    <!-- FACTURA (out_invoice): 10–50 -->
+    <record id="dgi_doc_factura_operacion_interna" model="dgi.document.type">
+        <field name="sequence">10</field>
+        <field name="code">factura_operacion_interna</field>
+        <field name="name">Factura de Operación Interna</field>
+    </record>
+    <record id="dgi_doc_factura_importacion" model="dgi.document.type">
+        <field name="sequence">20</field>
+        <field name="code">factura_importacion</field>
+        <field name="name">Factura de Importación</field>
+    </record>
+    <record id="dgi_doc_factura_exportacion" model="dgi.document.type">
+        <field name="sequence">30</field>
+        <field name="code">factura_exportacion</field>
+        <field name="name">Factura de Exportación</field>
+    </record>
+    <record id="dgi_doc_factura_zona_franca" model="dgi.document.type">
+        <field name="sequence">40</field>
+        <field name="code">factura_zona_franca</field>
+        <field name="name">Factura de Zona Franca</field>
+    </record>
+    <record id="dgi_doc_factura_operacion_extranjera" model="dgi.document.type">
+        <field name="sequence">50</field>
+        <field name="code">factura_operacion_extranjera</field>
+        <field name="name">Factura de Operación Extranjera</field>
+    </record>
+
+    <!-- NOTA DE CRÉDITO / DÉBITO (out_refund): 60–100. Orden en lista: 1) NC Genérica (default), 2) NC referente FE, 3) Reembolso, luego ND -->
+    <record id="dgi_doc_nc_generica" model="dgi.document.type">
+        <field name="sequence">60</field>
+        <field name="code">nc_generica</field>
+        <field name="name">Nota de Crédito Genérica</field>
+    </record>
+    <record id="dgi_doc_nc_referenciada_fe" model="dgi.document.type">
+        <field name="sequence">65</field>
+        <field name="code">nc_referenciada_fe</field>
+        <field name="name">Nota de Crédito referente a una o varias FE</field>
+    </record>
+    <record id="dgi_doc_reembolso" model="dgi.document.type">
+        <field name="sequence">70</field>
+        <field name="code">reembolso</field>
+        <field name="name">Reembolso</field>
+    </record>
+    <record id="dgi_doc_nd_referenciada_fe" model="dgi.document.type">
+        <field name="sequence">80</field>
+        <field name="code">nd_referenciada_fe</field>
+        <field name="name">Nota de débito referente a una o varias FE</field>
+    </record>
+    <record id="dgi_doc_nd_generica" model="dgi.document.type">
+        <field name="sequence">90</field>
+        <field name="code">nd_generica</field>
+        <field name="name">Nota de Débito Genérica</field>
+    </record>
+
+    <!-- Rules: Consumidor Final => interna + reembolso -->
+    <record id="rule_cf_interna" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_factura_operacion_interna"/>
+        <field name="receptor_type">consumidor_final</field>
+    </record>
+    <record id="rule_cf_reembolso" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_reembolso"/>
+        <field name="receptor_type">consumidor_final</field>
+    </record>
+    <record id="rule_cf_importacion" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_factura_importacion"/>
+        <field name="receptor_type">consumidor_final</field>
+    </record>
+    <record id="rule_cf_zona_franca" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_factura_zona_franca"/>
+        <field name="receptor_type">consumidor_final</field>
+    </record>
+
+    <!-- Rules: Contribuyente => interna + reembolso + importación + zona franca -->
+    <record id="rule_contrib_interna" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_factura_operacion_interna"/>
+        <field name="receptor_type">contribuyente</field>
+    </record>
+    <record id="rule_contrib_reembolso" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_reembolso"/>
+        <field name="receptor_type">contribuyente</field>
+    </record>
+
+    <!-- Rules: Gobierno => interna + reembolso -->
+    <record id="rule_gob_interna" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_factura_operacion_interna"/>
+        <field name="receptor_type">gobierno</field>
+    </record>
+    <record id="rule_gob_reembolso" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_reembolso"/>
+        <field name="receptor_type">gobierno</field>
+    </record>
+
+    <!-- Rules: Extranjero => interna + exportacion + reembolso + operacion extranjera -->
+    <record id="rule_ext_interna" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_factura_operacion_interna"/>
+        <field name="receptor_type">extranjero</field>
+    </record>
+    <record id="rule_ext_exportacion" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_factura_exportacion"/>
+        <field name="receptor_type">extranjero</field>
+    </record>
+    <record id="rule_ext_reembolso" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_reembolso"/>
+        <field name="receptor_type">extranjero</field>
+    </record>
+    <record id="rule_ext_oper_ext" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_factura_operacion_extranjera"/>
+        <field name="receptor_type">extranjero</field>
+    </record>
+    <record id="rule_ext_importacion" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_factura_importacion"/>
+        <field name="receptor_type">extranjero</field>
+    </record>
+    <record id="rule_ext_zona_franca" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_factura_zona_franca"/>
+        <field name="receptor_type">extranjero</field>
+    </record>
+    <record id="rule_contrib_importacion" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_factura_importacion"/>
+        <field name="receptor_type">contribuyente</field>
+    </record>
+    <record id="rule_contrib_zona_franca" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_factura_zona_franca"/>
+        <field name="receptor_type">contribuyente</field>
+    </record>
+    <record id="rule_gob_importacion" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_factura_importacion"/>
+        <field name="receptor_type">gobierno</field>
+    </record>
+    <record id="rule_gob_zona_franca" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_factura_zona_franca"/>
+        <field name="receptor_type">gobierno</field>
+    </record>
+    <!-- Rules: Nota de crédito/débito para todos los receptores -->
+    <record id="rule_cf_nc_ref" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_nc_referenciada_fe"/>
+        <field name="receptor_type">consumidor_final</field>
+    </record>
+    <record id="rule_cf_nd_ref" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_nd_referenciada_fe"/>
+        <field name="receptor_type">consumidor_final</field>
+    </record>
+    <record id="rule_cf_nc_gen" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_nc_generica"/>
+        <field name="receptor_type">consumidor_final</field>
+    </record>
+    <record id="rule_cf_nd_gen" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_nd_generica"/>
+        <field name="receptor_type">consumidor_final</field>
+    </record>
+    <record id="rule_contrib_nc_ref" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_nc_referenciada_fe"/>
+        <field name="receptor_type">contribuyente</field>
+    </record>
+    <record id="rule_contrib_nd_ref" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_nd_referenciada_fe"/>
+        <field name="receptor_type">contribuyente</field>
+    </record>
+    <record id="rule_contrib_nc_gen" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_nc_generica"/>
+        <field name="receptor_type">contribuyente</field>
+    </record>
+    <record id="rule_contrib_nd_gen" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_nd_generica"/>
+        <field name="receptor_type">contribuyente</field>
+    </record>
+    <record id="rule_gob_nc_ref" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_nc_referenciada_fe"/>
+        <field name="receptor_type">gobierno</field>
+    </record>
+    <record id="rule_gob_nd_ref" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_nd_referenciada_fe"/>
+        <field name="receptor_type">gobierno</field>
+    </record>
+    <record id="rule_gob_nc_gen" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_nc_generica"/>
+        <field name="receptor_type">gobierno</field>
+    </record>
+    <record id="rule_gob_nd_gen" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_nd_generica"/>
+        <field name="receptor_type">gobierno</field>
+    </record>
+    <record id="rule_ext_nc_ref" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_nc_referenciada_fe"/>
+        <field name="receptor_type">extranjero</field>
+    </record>
+    <record id="rule_ext_nd_ref" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_nd_referenciada_fe"/>
+        <field name="receptor_type">extranjero</field>
+    </record>
+    <record id="rule_ext_nc_gen" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_nc_generica"/>
+        <field name="receptor_type">extranjero</field>
+    </record>
+    <record id="rule_ext_nd_gen" model="dgi.document.type.rule">
+        <field name="doc_type_id" ref="dgi_doc_nd_generica"/>
+        <field name="receptor_type">extranjero</field>
+    </record>
+
+    </data>
+</odoo>

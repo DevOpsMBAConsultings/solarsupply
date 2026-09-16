@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="ReceiptScreen" t-inherit="point_of_sale.ReceiptScreen" t-inherit-mode="extension">
+        <!--
+            Botón "Imprimir Factura": primero y más prominente (btn-primary)
+            que los botones nativos de ticket, y solo visible cuando la
+            orden realmente generó una factura DGI (hasDgiInvoice).
+        -->
+        <xpath expr="//div[hasclass('receipt-options')]/div[hasclass('d-flex')][hasclass('gap-1')][1]/button[1]" position="before">
+            <button t-if="hasDgiInvoice"
+                    class="button print btn btn-lg btn-primary w-100 py-3"
+                    t-on-click="() => doPrintInvoice.call()">
+                <i t-attf-class="fa {{doPrintInvoice.status === 'loading' ? 'fa-fw fa-spin fa-circle-o-notch' : 'fa-file-text-o'}} me-1" />Imprimir Factura
+            </button>
+        </xpath>
+        <!--
+            "Imprimir recibo completo" y "Print Basic Receipt" (tickets genéricos)
+            dejan de tener sentido cuando la orden ya generó una factura DGI real:
+            se ocultan para dar prioridad al PDF oficial de la DGI.
+        -->
+        <xpath expr="//div[hasclass('receipt-options')]/div[hasclass('d-flex')][hasclass('gap-1')][1]/button[1]" position="attributes">
+            <attribute name="t-if">!hasDgiInvoice</attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('receipt-options')]/div[hasclass('d-flex')][hasclass('gap-1')][1]/button[2]" position="attributes">
+            <attribute name="t-if">!hasDgiInvoice and pos.config.basic_receipt</attribute>
+        </xpath>
+        <!--
+            Panel derecho del POS (pos-receipt-container):
+            Si la orden tiene una factura DGI, en lugar de mostrar el ticket genérico
+            de Odoo (<OrderReceipt />), mostramos el PDF oficial generado por la DGI
+            embebido dentro de un iframe que ocupa todo el contenedor.
+        -->
+        <xpath expr="//div[hasclass('pos-receipt-container')]" position="replace">
+            <div class="pos-receipt-container d-flex flex-grow-1 flex-lg-grow-0 w-100 w-lg-50 user-select-none justify-content-center bg-200 text-center overflow-hidden">
+                <t t-if="hasDgiInvoice">
+                    <div class="d-flex flex-column w-100 h-100 p-2 p-lg-3 bg-view overflow-hidden">
+                        <t t-if="dgiInvoiceState.loading">
+                            <div class="d-flex flex-column align-items-center justify-content-center h-100 text-muted">
+                                <i class="fa fa-spin fa-circle-o-notch fa-3x mb-3"/>
+                                <span class="fs-4">Cargando Factura Electrónica DGI...</span>
+                            </div>
+                        </t>
+                        <t t-elif="dgiInvoiceState.attachmentId">
+                            <iframe t-att-src="dgiInvoiceUrl" class="w-100 h-100 border-0 rounded shadow-sm" title="Factura Electrónica DGI"/>
+                        </t>
+                        <t t-else="">
+                            <div class="alert alert-warning m-3" role="alert">
+                                El PDF de la Factura Electrónica aún no está disponible. Use "Imprimir Factura" para reintentar.
+                            </div>
+                            <div t-att-class="{ 'w-50': !ui.isSmall }" class="d-inline-block m-2 m-lg-3 p-3 border rounded bg-view text-start overflow-y-auto">
+                                <OrderReceipt data="pos.orderExportForPrinting(pos.get_order())" formatCurrency="env.utils.formatCurrency" />
+                            </div>
+                        </t>
+                    </div>
+                </t>
+                <t t-else="">
+                    <div t-att-class="{ 'w-50': !ui.isSmall }" class="d-inline-block m-2 m-lg-3 p-3 border rounded bg-view text-start overflow-y-auto">
+                        <OrderReceipt data="pos.orderExportForPrinting(pos.get_order())" formatCurrency="env.utils.formatCurrency" />
+                    </div>
+                </t>
+            </div>
+        </xpath>
+    </t>
+</templates>
+

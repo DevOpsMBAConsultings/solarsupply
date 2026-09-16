@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+    <record id="group_digifact_user" model="res.groups">
+        <field name="name">Usuario Facturación Electrónica</field>
+        <field name="privilege_id" ref="account.res_groups_privilege_accounting"/>
+        <field name="comment">Permite acceder a las funcionalidades de facturación electrónica: configurar compañía, contactos, ver facturas FE y logs.</field>
+    </record>
+
+    <record id="group_digifact_manager" model="res.groups">
+        <field name="name">Administrador Facturación Electrónica</field>
+        <field name="privilege_id" ref="account.res_groups_privilege_accounting"/>
+        <field name="implied_ids" eval="[(4, ref('group_digifact_user'))]"/>
+        <field name="comment">Acceso completo a todas las funcionalidades de facturación electrónica, incluyendo administración y configuración avanzada.</field>
+    </record>
+
+    <record id="group_digifact_support" model="res.groups">
+        <field name="name">Facturación Electrónica Soporte Técnico</field>
+        <field name="privilege_id" ref="account.res_groups_privilege_accounting"/>
+        <field name="comment">Acceso a las pestañas FE(DGI) en facturas y contactos para troubleshooting. No permite crear facturas ni configurar, solo visualizar datos técnicos.</field>
+    </record>
+    </data>
+</odoo>

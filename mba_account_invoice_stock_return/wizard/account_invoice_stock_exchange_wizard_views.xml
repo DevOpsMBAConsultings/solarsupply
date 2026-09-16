@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_account_invoice_stock_exchange_wizard_form" model="ir.ui.view">
+        <field name="name">account.invoice.stock.exchange.wizard.form</field>
+        <field name="model">account.invoice.stock.exchange.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Exchange / Cambio de Mercancía">
+                <sheet>
+                    <div class="alert alert-info" role="alert">
+                        <strong>Cambio Mano a Mano / Intercambio de Mercancía:</strong> Permite ingresar los productos devueltos por el cliente y despachar los nuevos productos sustitutos sin alterar la factura fiscal original.
+                    </div>
+
+                    <group>
+                        <group>
+                            <field name="invoice_id" readonly="1" options="{'no_open': True}"/>
+                        </group>
+                        <group>
+                            <field name="warehouse_id" options="{'no_create': True}"/>
+                            <field name="currency_id" invisible="1"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page string="1. Productos que Regresa el Cliente (Entrada)" name="returns">
+                            <field name="return_line_ids">
+                                <list editable="bottom">
+                                    <field name="product_id"/>
+                                    <field name="quantity"/>
+                                    <field name="price_unit"/>
+                                    <field name="subtotal"/>
+                                    <field name="uom_id"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="2. Nuevos Productos que se Entregan (Salida)" name="deliveries">
+                            <field name="delivery_line_ids">
+                                <list editable="bottom">
+                                    <field name="product_id"/>
+                                    <field name="quantity"/>
+                                    <field name="price_unit"/>
+                                    <field name="subtotal"/>
+                                    <field name="uom_id"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+
+                    <group class="oe_subtotal_footer oe_right">
+                        <field name="total_return_amount" widget="monetary"/>
+                        <field name="total_delivery_amount" widget="monetary"/>
+                        <field name="difference_amount" class="oe_subtotal_footer_separator" widget="monetary"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="action_confirm_exchange" string="Sí, Procesar Exchange de Mercancía" type="object" class="btn-primary" data-hotkey="q"/>
+                    <button string="Cancelar" class="btn-secondary" special="cancel" data-hotkey="x"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

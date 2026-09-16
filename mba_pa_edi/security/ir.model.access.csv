@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_dgi_document_type_user,access.dgi.document.type.user,model_dgi_document_type,base.group_user,1,0,0,0
+access_dgi_document_type_rule_user,access.dgi.document.type.rule.user,model_dgi_document_type_rule,base.group_user,1,0,0,0
+access_dgi_payment_method_user,access.dgi.payment.method.user,model_dgi_payment_method,base.group_user,1,0,0,0
+access_dgi_retention_type_user,access.dgi.retention.type.user,model_dgi_retention_type,base.group_user,1,0,0,0
+access_confirmar_enviar_wizard_user,access.confirmar.enviar.wizard.user,model_mba_pa_edi_confirmar_enviar_wizard,base.group_user,1,1,1,1

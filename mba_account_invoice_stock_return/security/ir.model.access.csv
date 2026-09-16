@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_account_invoice_stock_return_wizard,account.invoice.stock.return.wizard,model_account_invoice_stock_return_wizard,base.group_user,1,1,1,1
+access_account_invoice_stock_return_wizard_line,account.invoice.stock.return.wizard.line,model_account_invoice_stock_return_wizard_line,base.group_user,1,1,1,1
+access_account_invoice_stock_delivery_wizard,account.invoice.stock.delivery.wizard,model_account_invoice_stock_delivery_wizard,base.group_user,1,1,1,1
+access_account_invoice_stock_delivery_wizard_line,account.invoice.stock.delivery.wizard.line,model_account_invoice_stock_delivery_wizard_line,base.group_user,1,1,1,1
+access_account_invoice_stock_exchange_wizard,account.invoice.stock.exchange.wizard,model_account_invoice_stock_exchange_wizard,base.group_user,1,1,1,1
+access_account_invoice_stock_exchange_return_line,account.invoice.stock.exchange.return.line,model_account_invoice_stock_exchange_return_line,base.group_user,1,1,1,1
+access_account_invoice_stock_exchange_delivery_line,account.invoice.stock.exchange.delivery.line,model_account_invoice_stock_exchange_delivery_line,base.group_user,1,1,1,1

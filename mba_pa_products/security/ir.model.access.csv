@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_dgi_unidad_medida_user,access.dgi.unidad.medida.user,model_dgi_unidad_medida,base.group_user,1,0,0,0
+access_dgi_cpbs_segment_user,access.dgi.cpbs.segment.user,model_dgi_cpbs_segment,base.group_user,1,0,0,0
+access_dgi_cpbs_family_user,access.dgi.cpbs.family.user,model_dgi_cpbs_family,base.group_user,1,0,0,0

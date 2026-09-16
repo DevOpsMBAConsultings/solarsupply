@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_sale_order_advance_payment_wizard_form" model="ir.ui.view">
+        <field name="name">sale.order.advance.payment.wizard.form</field>
+        <field name="model">sale.order.advance.payment.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Crear Anticipo / Hito de Facturación">
+                <field name="sale_order_id" invisible="1"/>
+                <field name="currency_id" invisible="1"/>
+                
+                <!-- Panel de Estado Financiero del Proyecto -->
+                <div class="alert alert-info py-2 px-3 mb-3" role="alert">
+                    <div class="row text-center">
+                        <div class="col-4 border-end">
+                            <small class="text-muted text-uppercase fw-bold d-block">Total Venta</small>
+                            <span class="fs-5 fw-bold"><field name="total_amount" widget="monetary" options="{'currency_field': 'currency_id'}"/></span>
+                        </div>
+                        <div class="col-4 border-end">
+                            <small class="text-muted text-uppercase fw-bold d-block">Ya Facturado</small>
+                            <span class="fs-5 fw-bold text-success"><field name="amount_invoiced" widget="monetary" options="{'currency_field': 'currency_id'}"/></span>
+                            <small class="text-muted d-block">(<field name="invoiced_percentage" class="oe_inline"/>%)</small>
+                        </div>
+                        <div class="col-4">
+                            <small class="text-muted text-uppercase fw-bold d-block">Saldo Pendiente</small>
+                            <span class="fs-5 fw-bold text-primary"><field name="amount_to_invoice" widget="monetary" options="{'currency_field': 'currency_id'}"/></span>
+                            <small class="text-muted d-block">(<field name="pending_percentage" class="oe_inline"/>%)</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Selección de Hito -->
+                <group>
+                    <field name="advance_type" widget="radio" string="Tipo de Anticipo"/>
+                </group>
+                <group>
+                    <field name="amount_percentage" 
+                           string="Porcentaje (%)" 
+                           invisible="advance_type != 'percentage'" 
+                           required="advance_type == 'percentage'"/>
+                    <field name="amount_fixed" 
+                           string="Importe Fijo" 
+                           invisible="advance_type != 'fixed'" 
+                           required="advance_type == 'fixed'"/>
+                </group>
+
+                <!-- Simulación Dinámica del Hito -->
+                <div class="alert alert-light border py-2 px-3 mt-3" role="alert" invisible="amount_percentage &lt;= 0 and amount_fixed &lt;= 0">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <span class="text-muted">Monto de este hito: </span>
+                            <strong class="text-dark fs-6"><field name="simulated_amount" widget="monetary" options="{'currency_field': 'currency_id'}"/></strong>
+                        </div>
+                        <div>
+                            <span class="text-muted">Saldo posterior: </span>
+                            <strong class="text-secondary fs-6"><field name="simulated_remaining_amount" widget="monetary" options="{'currency_field': 'currency_id'}"/></strong>
+                            <small class="text-muted"> (<field name="simulated_remaining_percentage" class="oe_inline"/>%)</small>
+                        </div>
+                    </div>
+                </div>
+
+                <footer>
+                    <button string="Crear Borrador" name="action_create_advance_invoice" type="object" class="btn-primary" data-hotkey="q"/>
+                    <button string="Cancelar" class="btn-secondary" special="cancel" data-hotkey="x"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

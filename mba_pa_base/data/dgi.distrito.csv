@@ -1,0 +1,81 @@
+id,code,name,provincia_id:id
+dgi_dist_01_01,1-1,Bocas del Toro,dgi_prov_01
+dgi_dist_01_02,1-2,Changuinola,dgi_prov_01
+dgi_dist_01_03,1-3,Chiriqui Grande,dgi_prov_01
+dgi_dist_02_01,2-1,Aguadulce,dgi_prov_02
+dgi_dist_02_02,2-2,Anton,dgi_prov_02
+dgi_dist_02_03,2-3,La Pintada,dgi_prov_02
+dgi_dist_02_04,2-4,Nata,dgi_prov_02
+dgi_dist_02_05,2-5,Ola,dgi_prov_02
+dgi_dist_02_06,2-6,Penonome,dgi_prov_02
+dgi_dist_03_01,3-1,Colon,dgi_prov_03
+dgi_dist_03_02,3-2,Chagres,dgi_prov_03
+dgi_dist_03_03,3-3,Donoso,dgi_prov_03
+dgi_dist_03_04,3-4,Portobelo,dgi_prov_03
+dgi_dist_03_05,3-5,Santa Isabel,dgi_prov_03
+dgi_dist_04_01,4-1,Alanje,dgi_prov_04
+dgi_dist_04_02,4-2,Baru,dgi_prov_04
+dgi_dist_04_03,4-3,Boqueron,dgi_prov_04
+dgi_dist_04_04,4-4,Boquete,dgi_prov_04
+dgi_dist_04_05,4-5,Bugaba,dgi_prov_04
+dgi_dist_04_06,4-6,David,dgi_prov_04
+dgi_dist_04_07,4-7,Dolega,dgi_prov_04
+dgi_dist_04_08,4-8,Gualaca,dgi_prov_04
+dgi_dist_04_09,4-9,Remedios,dgi_prov_04
+dgi_dist_04_10,4-10,Renacimiento,dgi_prov_04
+dgi_dist_04_11,4-11,San Felix,dgi_prov_04
+dgi_dist_04_12,4-12,San Lorenzo,dgi_prov_04
+dgi_dist_04_13,4-13,Tole,dgi_prov_04
+dgi_dist_04_15,4-15,Tierras Altas,dgi_prov_04
+dgi_dist_05_01,5-1,Chepigana,dgi_prov_05
+dgi_dist_05_02,5-2,Pinogana,dgi_prov_05
+dgi_dist_05_03,5-3,Santa Fe,dgi_prov_05
+dgi_dist_06_01,6-1,Chitre,dgi_prov_06
+dgi_dist_06_02,6-2,Las Minas,dgi_prov_06
+dgi_dist_06_03,6-3,Los Pozos,dgi_prov_06
+dgi_dist_06_04,6-4,Ocu,dgi_prov_06
+dgi_dist_06_05,6-5,Parita,dgi_prov_06
+dgi_dist_06_06,6-6,Pese,dgi_prov_06
+dgi_dist_06_07,6-7,Santa Maria,dgi_prov_06
+dgi_dist_07_01,7-1,Guarare,dgi_prov_07
+dgi_dist_07_02,7-2,Las Tablas,dgi_prov_07
+dgi_dist_07_03,7-3,Los Santos,dgi_prov_07
+dgi_dist_07_04,7-4,Macaracas,dgi_prov_07
+dgi_dist_07_05,7-5,Pedasi,dgi_prov_07
+dgi_dist_07_06,7-6,Pocri,dgi_prov_07
+dgi_dist_07_07,7-7,Tonosi,dgi_prov_07
+dgi_dist_08_02,8-2,Balboa,dgi_prov_08
+dgi_dist_08_05,8-5,Chepo,dgi_prov_08
+dgi_dist_08_06,8-6,Chiman,dgi_prov_08
+dgi_dist_08_08,8-8,Panamá,dgi_prov_08
+dgi_dist_08_10,8-10,San Miguelito,dgi_prov_08
+dgi_dist_08_11,8-11,Taboga,dgi_prov_08
+dgi_dist_09_01,9-1,Atalaya,dgi_prov_09
+dgi_dist_09_02,9-2,Calobre,dgi_prov_09
+dgi_dist_09_03,9-3,Cañazas,dgi_prov_09
+dgi_dist_09_04,9-4,La Meza,dgi_prov_09
+dgi_dist_09_05,9-5,Las Palmas,dgi_prov_09
+dgi_dist_09_06,9-6,Montijo,dgi_prov_09
+dgi_dist_09_07,9-7,Rio de Jesus,dgi_prov_09
+dgi_dist_09_08,9-8,San Francisco,dgi_prov_09
+dgi_dist_09_09,9-9,Santa Fe,dgi_prov_09
+dgi_dist_09_10,9-10,Santiago,dgi_prov_09
+dgi_dist_09_11,9-11,Sona,dgi_prov_09
+dgi_dist_09_12,9-12,Mariato,dgi_prov_09
+dgi_dist_10_01,10-1,Comarca Kuna Yala,dgi_prov_10
+dgi_dist_11_01,11-1,Cemaco,dgi_prov_11
+dgi_dist_11_02,11-2,Sambu,dgi_prov_11
+dgi_dist_12_01,12-1,Besiko,dgi_prov_12
+dgi_dist_12_02,12-2,Mirono,dgi_prov_12
+dgi_dist_12_03,12-3,Muna,dgi_prov_12
+dgi_dist_12_04,12-4,Nole Duima,dgi_prov_12
+dgi_dist_12_05,12-5,Nurum,dgi_prov_12
+dgi_dist_12_06,12-6,Kankintu,dgi_prov_12
+dgi_dist_12_07,12-7,Kusapin,dgi_prov_12
+dgi_dist_12_08,12-8,Jirondai,dgi_prov_12
+dgi_dist_12_09,12-9,Santa Catalina o Calovebora (Bledeshia),dgi_prov_12
+dgi_dist_13_01,13-1,Arraijan,dgi_prov_13
+dgi_dist_13_02,13-2,Capira,dgi_prov_13
+dgi_dist_13_03,13-3,Chame,dgi_prov_13
+dgi_dist_13_04,13-4,La Chorrera,dgi_prov_13
+dgi_dist_13_05,13-5,San Carlos,dgi_prov_13

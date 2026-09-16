@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_hka_import_wizard_form" model="ir.ui.view">
+        <field name="name">hka.import.wizard.form</field>
+        <field name="model">hka.import.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Importar Factura desde HKA">
+                <div class="alert alert-info" role="alert">
+                    Ingrese el Código Único de Factura Electrónica (CUFE) de la factura que desea recuperar desde HKA. El sistema descargará el XML original y reconstruirá la factura en Odoo.
+                </div>
+                <group>
+                    <field name="cufe" placeholder="Ej: FE01100000..."/>
+                    <field name="partner_id" placeholder="Seleccione el cliente (opcional)..." options="{'no_create': True}"/>
+                </group>
+                <footer>
+                    <button name="action_import_invoice" string="Descargar e Importar" type="object" class="btn-primary"/>
+                    <button string="Cancelar" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_hka_import_wizard" model="ir.actions.act_window">
+        <field name="name">Importar Factura HKA</field>
+        <field name="res_model">hka.import.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_hka_tools_root"
+              name="Herramientas PAC"
+              parent="account.menu_finance_entries"
+              sequence="50"/>
+
+    <menuitem id="menu_hka_import_invoice"
+              name="Importar Factura por CUFE"
+              parent="menu_hka_tools_root"
+              action="action_hka_import_wizard"
+              sequence="10"/>
+
+    <menuitem id="menu_hka_folios_restantes"
+              name="Consultar Folios Restantes HKA"
+              parent="menu_hka_tools_root"
+              action="action_hka_folios_wizard"
+              sequence="20"/>
+</odoo>

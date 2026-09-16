@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_dgi_warning_wizard_form" model="ir.ui.view">
+        <field name="name">partner.dgi.warning.wizard.form</field>
+        <field name="model">partner.dgi.warning.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Cliente no Validado con DGI">
+                <field name="message_type" invisible="1"/>
+                <div class="alert alert-warning" role="alert">
+                    <h4 class="alert-heading"><i class="fa fa-warning me-2"/>Cliente no Validado con DGI</h4>
+                    <p>
+                        El cliente <strong><field name="partner_name" readonly="1" class="oe_inline"/></strong> no ha sido validado con la DGI.
+                    </p>
+                    <p class="mb-0" invisible="message_type != 'sale'">
+                        Va a crear una cotización con un cliente que no está validado ante la DGI. Al intentar procesar o emitir la factura electrónica esta podría no ser aceptada.
+                    </p>
+                    <p class="mb-0" invisible="message_type != 'invoice'">
+                        Puede continuar con la preparación de la factura, pero tenga en cuenta que al procesar la factura electrónica la DGI podría rechazarla si los datos fiscales del contacto no son válidos.
+                    </p>
+                </div>
+                <footer>
+                    <button string="Cerrar" class="btn-primary" special="cancel" data-hotkey="z"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_company_form_facturacion_electronica" model="ir.ui.view">
+            <field name="name">res.company.form.facturacion_electronica</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Facturación Electrónica (DGI)" name="facturacion_electronica_tab">
+                        
+                        <!-- Aviso si falta DV: el proceso de setup debe llevar a obtenerlo antes de facturar -->
+                        <div class="alert alert-warning mb-2" role="alert" invisible="l10n_pa_dv">
+                            <strong>Configuración para facturar:</strong> Indique el RUC (NIF/VAT) y el Teléfono de la compañía, configure las credenciales de su PAC, y pulse <strong>«Obtener Detalles RUC desde NIF/VAT»</strong>. Sin el DV no se podrá generar el XML de factura.
+                        </div>
+                        
+                        <!-- Botón de validación RUC -->
+                        <div class="mb-3">
+                            <button name="action_get_ruc_details"
+                                    type="object"
+                                    string="Obtener Detalles RUC desde NIF/VAT"
+                                    class="btn-primary"
+                                    icon="fa-search"/>
+                        </div>
+                        
+                        <!-- Emisor (DGI) -->
+                        <group string="Emisor (DGI)" col="2">
+                            <group>
+                                <field name="l10n_pa_ruc" 
+                                       readonly="1"
+                                       string="RUC"
+                                       placeholder="RUC (se obtiene del campo NIF/VAT)"/>
+                                <field name="l10n_pa_dv" 
+                                       readonly="1"
+                                       string="Dígito Verificador (DV)"/>
+                                <field name="l10n_pa_tipo_contribuyente" 
+                                       readonly="1"
+                                       string="Tipo de Empresa"/>
+                            </group>
+                            <group>
+                                <field name="l10n_pa_sucursal_code" 
+                                       string="Código de Establecimiento (B071)"
+                                       placeholder="0000 (casa matriz), 0001+ (otras)"
+                                       help="Código de establecimiento según DGI (B071) - alfanumérico de 4 caracteres"/>
+                                <field name="l10n_pa_pto_fact" 
+                                       string="Punto de Facturación (AI05)"
+                                       placeholder="001"
+                                       help="Punto de facturación (AI05 / PtoFactDF) - alfanumérico de 3 caracteres"/>
+                            </group>
+                        </group>
+                        
+                        <!-- Ubicación del Emisor -->
+                        <group string="Ubicación del Emisor" col="2">
+                            <group>
+                                <field name="l10n_pa_provincia_id" placeholder="Seleccione provincia"/>
+                                <field name="l10n_pa_distrito_id" placeholder="Seleccione distrito"/>
+                                <field name="l10n_pa_corregimiento_id" placeholder="Seleccione corregimiento"/>
+                                <field name="l10n_pa_cod_ubi"
+                                       string="Código de ubicación (CodUbi)"
+                                       readonly="1"
+                                       placeholder="Ej: 8-4-3"
+                                       help="Código que se envía en el XML (Seller/BranchInfo/AdditionalBranchInfo/CodUbi). Solo lectura; se calcula del corregimiento seleccionado."/>
+                            </group>
+                            <group>
+                                <field name="l10n_pa_coordem" 
+                                       placeholder="+08.9892,-79.5201"
+                                       help="Coordenadas de la sucursal (formato: +latitud,-longitud)"/>
+                            </group>
+                        </group>
+                        
+                        <!-- PAC - Credenciales (Hook) -->
+                        <group name="pac_credentials" string="PAC – Credenciales" col="2">
+                        </group>
+                        
+                        <!-- Acciones PAC (Hook) -->
+                        <group name="pac_actions" string="Acciones PAC" col="2">
+                        </group>
+
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

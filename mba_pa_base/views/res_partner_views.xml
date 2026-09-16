@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_partner_form_inherit_l10n_pa" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit.l10n.pa</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+            
+                <!-- Botón Validar datos DGI en el header, SIN GRUPOS, disponible para vendedores -->
+                <xpath expr="//form/sheet" position="before">
+                    <header>
+                        <button name="action_validate_dgi"
+                                type="object"
+                                string="Validar datos DGI"
+                                class="btn-primary"
+                                invisible="parent_id"
+                                title="Consultar RUC en la DGI y completar datos. (Requiere conector PAC)"/>
+                    </header>
+                </xpath>
+
+                <!-- Tipo de Receptor: justo debajo de Persona/Empresa para flujo natural -->
+                <xpath expr="//field[@name='company_type']" position="after">
+                    <div invisible="parent_id" class="mb-2 w-50">
+                        <field name="l10n_pa_receptor_tipo" invisible="1"/>
+                        <field name="l10n_pa_receptor_tipo_company_ui" nolabel="1" placeholder="Tipo de Receptor (DGI)" invisible="company_type != 'company'"/>
+                        <field name="l10n_pa_receptor_tipo_person_ui" nolabel="1" placeholder="Tipo de Receptor (DGI)" invisible="company_type != 'person'"/>
+                    </div>
+                </xpath>
+
+                <!-- Identificación: RUC / Cédula / Pasaporte -->
+                <xpath expr="//field[@name='vat']" position="attributes">
+                    <attribute name="string">Identificación (RUC/Cédula)</attribute>
+                    <attribute name="placeholder">RUC, Cédula o Pasaporte</attribute>
+                    <attribute name="readonly">0</attribute>
+                </xpath>
+                <!-- Dirección: solo Street (máx. 100 caracteres para DGI); ocultar Street 2 -->
+                <xpath expr="//field[@name='street']" position="attributes">
+                    <attribute name="placeholder">Dirección (máx. 100 caracteres para FE/DGI)</attribute>
+                </xpath>
+                <xpath expr="//field[@name='street2']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <!-- En la sección Dirección: reemplazar Ciudad, Estado, C.P. por Provincia, Distrito, Corregimiento -->
+                <xpath expr="//div[hasclass('o_address_format')]" position="replace">
+                    <div class="o_address_format">
+                        <field name="street" placeholder="Street..." class="o_address_street"/>
+                        <field name="street2" placeholder="Street 2..." class="o_address_street" invisible="1"/>
+                        <div class="d-flex gap-2">
+                            <field name="l10n_pa_provincia_id" nolabel="1" placeholder="Provincia" class="o_address_city" style="flex: 1;"/>
+                            <field name="l10n_pa_distrito_id" nolabel="1" placeholder="Distrito" domain="[('provincia_id', '=', l10n_pa_provincia_id)]" class="o_address_state" style="flex: 1;"/>
+                            <field name="l10n_pa_corregimiento_id" nolabel="1" placeholder="Corregimiento" domain="[('distrito_id', '=', l10n_pa_distrito_id)]" class="o_address_zip" style="flex: 1;"/>
+                        </div>
+                        <div name="partner_address_country" class="d-flex justify-content-between">
+                            <field name="country_id" placeholder="Country" class="o_address_country" options="{'no_open': True, 'no_create': True}"/>
+                        </div>
+                    </div>
+                </xpath>
+
+                <!-- Campos fiscales DGI en la columna izquierda, debajo de la dirección -->
+                <xpath expr="//div[hasclass('o_address_format')]" position="after">
+                    <!-- Razón Social devuelta por la DGI -->
+                    <field name="l10n_pa_razon_social" string="RS" invisible="not vat" readonly="1" force_save="1"/>
+                    
+                    <!-- DV de Panamá (solo visible para empresas o contribuyentes) -->
+                    <field name="l10n_pa_dv" string="DV" placeholder="DV" invisible="not vat" readonly="1" force_save="1"/>
+                    
+                    <!-- Tipo de RUC devuelto por la DGI -->
+                    <field name="l10n_pa_tipo_contribuyente" string="TP" invisible="not vat" readonly="1" force_save="1"/>
+                </xpath>
+                
+                <!-- Añadimos Tipo de contribuyente en una pestaña secundaria o campo al final si se necesita ver explícitamente -->
+                <xpath expr="//notebook" position="inside">
+                    <page string="Datos Panamá (DGI)" name="dgi_billing" invisible="parent_id">
+                        <group>
+                            <group>
+                                <field name="l10n_pa_ruc" invisible="1" />
+                            </group>
+                            <group>
+                                <field name="l10n_pa_is_dgi_validated" readonly="1" />
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

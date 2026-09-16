@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="mba_pa_pos.DgiNumberPopup">
+        <Dialog title="props.title">
+            <div class="alert alert-info mb-3" style="font-size: 14px;">
+                Se generará la Factura Electrónica DGI para esta orden.
+                Por favor verifique o edite el número de documento fiscal a continuación.
+            </div>
+            <div class="form-group mb-3">
+                <label class="form-label fw-bold mb-2">Número de Factura DGI (10 dígitos):</label>
+                <input class="form-control form-control-lg text-center font-monospace"
+                       type="text"
+                       t-model="state.inputValue"
+                       t-ref="input"
+                       t-on-keydown="onKeydown"
+                       placeholder="0000000001"
+                       maxlength="10" />
+            </div>
+            <t t-set-slot="footer">
+                <button class="btn btn-primary btn-lg px-4 me-2" t-on-click="confirm">
+                    Confirmar y Facturar
+                </button>
+                <button class="btn btn-secondary btn-lg px-4" t-on-click="cancel">
+                    Cancelar
+                </button>
+            </t>
+        </Dialog>
+    </t>
+</templates>

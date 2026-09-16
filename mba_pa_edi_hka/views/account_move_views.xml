@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_move_form_inherit_l10n_pa_hka" model="ir.ui.view">
+            <field name="name">account.move.form.inherit.l10n.pa.hka</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form" />
+            <field name="arch" type="xml">
+
+                <!-- Botón "Anular Factura" para facturas aceptadas por HKA -->
+                <xpath expr="//header" position="inside">
+                    <button name="action_open_anular_wizard" 
+                            string="Anular Factura" 
+                            type="object" 
+                            class="btn-secondary"
+                            invisible="state != 'posted' or l10n_pa_pac_status not in ('accepted',) or payment_state == 'reversed'" />
+                </xpath>
+
+                <!-- Botón "Enviar" para facturas ANULADAS en DGI/HKA:
+                     Abre el wizard de correo con el PDF anulado adjunto. -->
+                <xpath expr="//header" position="inside">
+                    <button name="action_l10n_pa_send_anulado"
+                            string="Enviar"
+                            type="object"
+                            class="btn-primary"
+                            invisible="l10n_pa_pac_status != 'cancelled' or move_type not in ('out_invoice', 'out_refund')" />
+                </xpath>
+
+                <!-- Botón "Imprimir" para facturas ANULADAS en DGI/HKA:
+                     Abre/descarga el PDF con el sello Anulado en nueva pestaña. -->
+                <xpath expr="//header" position="inside">
+                    <button name="action_l10n_pa_print_anulado"
+                            string="Imprimir"
+                            type="object"
+                            class="btn-secondary"
+                            invisible="l10n_pa_pac_status != 'cancelled' or move_type not in ('out_invoice', 'out_refund')" />
+                </xpath>
+
+                <!-- El botón nativo "Enviar" ya incluye el CAFE PDF via account.move.send override -->
+                <!-- No necesitamos modificarlo aquí -->
+
+            </field>
+        </record>
+    </data>
+</odoo>
