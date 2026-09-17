@@ -2,7 +2,7 @@
 <odoo>
     <template id="report_saleorder_document_custom" inherit_id="sale.report_saleorder_document" priority="30">
 
-        <xpath expr="//t[@t-call='web.external_layout']" position="attributes">
+        <xpath expr="//*[contains(@t-call, 'layout')]" position="attributes">
             <attribute name="t-call">web.basic_layout</attribute>
         </xpath>
 
