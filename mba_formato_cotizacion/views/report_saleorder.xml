@@ -84,7 +84,7 @@
                                     <span t-esc="line.product_id.default_code"/>
                                 </td>
                                 <td class="text-start" style="padding: 4px 6px; vertical-align: middle;">
-                                    <t t-if="hasattr(line, '_get_dgi_item_description')">
+                                    <t t-if="'_get_dgi_item_description' in line">
                                         <span t-esc="line._get_dgi_item_description()"/>
                                     </t>
                                     <t t-else="">
@@ -98,7 +98,7 @@
                                     <t t-esc="doc.currency_id.symbol"/> <span t-field="line.price_unit" t-options='{"widget": "float", "precision": 2}'/>
                                 </td>
                                 <td class="text-center" style="padding: 4px 6px; vertical-align: middle;">
-                                    <t t-if="hasattr(line, '_get_dgi_line_tax')">
+                                    <t t-if="'_get_dgi_line_tax' in line">
                                         <t t-esc="doc.currency_id.symbol"/> <span t-esc="'%.2f' % line._get_dgi_line_tax()"/>
                                     </t>
                                     <t t-elif="'price_tax' in line">
