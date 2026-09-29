@@ -19,14 +19,15 @@
                 </style>
 
                 <div class="row mb-3 align-items-center">
-                    <div class="col-7">
-                        <img t-if="doc.company_id.logo" t-att-src="image_data_uri(doc.company_id.logo)" style="max-height: 85px; width: auto;" alt="Logo"/>
+                    <div class="col-6">
+                        <img t-if="doc.company_id.logo" t-att-src="image_data_uri(doc.company_id.logo)" style="max-height: 120px; width: auto;" alt="Logo"/>
                     </div>
-                    <div class="col-5 text-end" style="font-size: 9pt; color: #555;">
-                        <strong style="font-size: 12pt; color: #102B66;"><span t-field="doc.company_id.name"/></strong><br/>
-                        <span t-field="doc.company_id.street"/><br/>
+                    <div class="col-6 text-end" style="font-size: 9pt; color: #555;">
+                        <strong style="font-size: 15pt; color: #102B66;"><span t-field="doc.company_id.name"/></strong><br/>
+                        <span t-if="doc.company_id.street"><strong>Oficina:</strong> <span t-field="doc.company_id.street"/><br/></span>
                         <span t-if="doc.company_id.vat">RUC / NIT: <span t-field="doc.company_id.vat"/></span><br t-if="doc.company_id.vat"/>
-                        <span t-if="doc.company_id.phone">Tel: <span t-field="doc.company_id.phone"/></span>
+                        <span t-if="doc.company_id.phone"><strong>Tel/WhatsApp:</strong> <span t-field="doc.company_id.phone"/><br/></span>
+                        <span t-if="doc.company_id.email"><strong>Correo:</strong> <span t-field="doc.company_id.email"/></span>
                     </div>
                 </div>
 
@@ -168,6 +169,11 @@
                 <div class="mt-4" t-if="doc.note" style="font-size: 8.5pt; color: #444; border-top: 1px solid #ddd; padding-top: 8px;">
                     <strong style="display: block; margin-bottom: 3px; color: #102B66;">Términos y condiciones:</strong>
                     <span t-field="doc.note"/>
+                </div>
+
+                <div class="mt-4" style="font-size: 8.5pt; color: #444; border-top: 1px solid #ddd; padding-top: 8px;">
+                    <strong style="display: block; margin-bottom: 3px; color: #102B66;">Notas:</strong>
+                    <div style="min-height: 40px;" t-field="doc.notas"/>
                 </div>
 
             </div>
