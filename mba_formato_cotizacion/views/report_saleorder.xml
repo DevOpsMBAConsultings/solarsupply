@@ -20,7 +20,7 @@
 
                 <div class="row mb-3 align-items-center">
                     <div class="col-6">
-                        <img t-if="doc.company_id.logo" t-att-src="image_data_uri(doc.company_id.logo)" style="max-height: 150px; width: auto;" alt="Logo"/>
+                        <img t-if="doc.company_id.logo" t-att-src="image_data_uri(doc.company_id.logo)" style="max-height: 225px; width: auto;" alt="Logo"/>
                     </div>
                     <div class="col-6 text-end" style="font-size: 9pt; color: #555;">
                         <strong style="font-size: 15pt; color: #102B66;"><span t-field="doc.company_id.name"/></strong><br/>

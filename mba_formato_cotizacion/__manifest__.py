@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Formato Cotización (MBA Consultings)',
-    'version': '19.0.1.0.2',
+    'version': '19.0.1.0.3',
     'license': 'LGPL-3',
     'summary': 'Formato personalizado y agnóstico de cotización | MBA Consultings',
     'description': 'Plantilla base reutilizable y agnóstica para reportes de cotización y pedidos de venta.',
