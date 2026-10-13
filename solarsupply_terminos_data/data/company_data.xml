@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- noupdate="0": cada actualización del módulo reescribe estos datos (el repo es la fuente de verdad). -->
+<odoo noupdate="0">
+    <record id="base.main_company" model="res.company">
+        <field name="mba_pago_cheque_a">SOLAR SUPPLY S. A.</field>
+        <field name="mba_pago_beneficiario">SOLAR SUPPLY, S. A.</field>
+        <field name="mba_pago_cuenta">0496000014254</field>
+        <field name="mba_pago_tipo_cuenta">ahorros</field>
+        <field name="mba_pago_swift">BAGEPAPA</field>
+        <field name="mba_pago_dir_beneficiario">Edificio Plaza Calle 50, Local 1, Calle 50, Urbanización Obarrio, Corregimiento Bella Vista, Distrito de Panamá, Provincia de Panamá, República de Panamá.</field>
+        <field name="mba_pago_banco">Banco General</field>
+        <field name="mba_pago_dir_banco">Torre Banco General, Avenida 5B Sur, Calle Aquilino De La Guardía, Ciudad de Panamá, Panamá.</field>
+    </record>
+    <function model="res.company" name="action_mba_generar_terminos"
+              eval="[ref('base.main_company')]"/>
+</odoo>

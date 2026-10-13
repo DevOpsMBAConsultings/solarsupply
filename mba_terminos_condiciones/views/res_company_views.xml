@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_company_form_mba_terminos" model="ir.ui.view">
+        <field name="name">res.company.form.mba.terminos</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Datos de pago" name="mba_datos_pago">
+                    <group>
+                        <group string="Pago y cuenta bancaria">
+                            <field name="mba_pago_cheque_a"/>
+                            <field name="mba_pago_beneficiario"/>
+                            <field name="mba_pago_cuenta"/>
+                            <field name="mba_pago_tipo_cuenta"/>
+                            <field name="mba_pago_swift"/>
+                        </group>
+                        <group string="Direcciones">
+                            <field name="mba_pago_dir_beneficiario"/>
+                            <field name="mba_pago_banco"/>
+                            <field name="mba_pago_dir_banco"/>
+                        </group>
+                    </group>
+                    <button name="action_mba_generar_terminos" type="object"
+                            string="Generar términos y condiciones" class="btn-primary"
+                            help="Escribe estos datos como tabla de 2 columnas en los términos y condiciones por defecto."/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
