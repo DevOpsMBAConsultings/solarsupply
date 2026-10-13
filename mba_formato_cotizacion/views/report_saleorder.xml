@@ -124,7 +124,12 @@
                     </tbody>
                 </table>
 
-                <div class="row justify-content-end mt-3" style="page-break-inside: avoid;">
+                <!-- Términos y condiciones a la izquierda de los totales: aprovecha el espacio vacío (v19.0.1.0.4) -->
+                <div class="row justify-content-end mt-2" style="page-break-inside: avoid;">
+                    <div class="col-7" t-if="doc.note" style="font-size: 8.5pt; color: #444;">
+                        <strong style="display: block; margin-bottom: 3px; color: #102B66;">Términos y condiciones:</strong>
+                        <span t-field="doc.note"/>
+                    </div>
                     <div class="col-5">
                         <table style="width: 100%; border-collapse: collapse;">
                             <t t-set="is_dgi_retention" t-value="'dgi_show_retention_block' in doc and doc.dgi_show_retention_block"/>
@@ -166,14 +171,9 @@
                     </div>
                 </div>
 
-                <div class="mt-4" t-if="doc.note" style="font-size: 8.5pt; color: #444; border-top: 1px solid #ddd; padding-top: 8px;">
-                    <strong style="display: block; margin-bottom: 3px; color: #102B66;">Términos y condiciones:</strong>
-                    <span t-field="doc.note"/>
-                </div>
-
-                <div class="mt-4" style="font-size: 8.5pt; color: #444; border-top: 1px solid #ddd; padding-top: 8px;">
+                <div class="mt-2" style="font-size: 8.5pt; color: #444; border-top: 1px solid #ddd; padding-top: 8px;">
                     <strong style="display: block; margin-bottom: 3px; color: #102B66;">Notas:</strong>
-                    <div style="min-height: 40px;" t-field="doc.notas"/>
+                    <div style="min-height: 24px;" t-field="doc.notas"/>
                 </div>
 
             </div>
