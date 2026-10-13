@@ -124,10 +124,14 @@
                     </tbody>
                 </table>
 
-                <!-- Términos y condiciones a la izquierda de los totales: aprovecha el espacio vacío (v19.0.1.0.4) -->
+                <!-- Título de los términos a todo el ancho: así la tabla de términos y la caja de totales
+                     arrancan a la misma altura (v19.0.1.0.5) -->
+                <div class="mt-2" t-if="doc.note" style="font-size: 8.5pt; color: #444;">
+                    <strong style="display: block; color: #102B66;">Términos y condiciones:</strong>
+                </div>
+                <!-- Términos a la izquierda de los totales, con 16px de separación a la derecha -->
                 <div class="row justify-content-end mt-2" style="page-break-inside: avoid;">
-                    <div class="col-7" t-if="doc.note" style="font-size: 8.5pt; color: #444;">
-                        <strong style="display: block; margin-bottom: 3px; color: #102B66;">Términos y condiciones:</strong>
+                    <div class="col-7" t-if="doc.note" style="font-size: 8.5pt; color: #444; padding-right: 16px;">
                         <span t-field="doc.note"/>
                     </div>
                     <div class="col-5">
