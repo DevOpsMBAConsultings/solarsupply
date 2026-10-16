@@ -20,15 +20,6 @@
                 </group>
             </xpath>
 
-            <!-- Movemos la Disposición Fiscal (property_account_position_id) del tab "Sales & Purchases" (Accounting / Fiscal Information) 
-                 para que quede debajo del TP (l10n_pa_tipo_contribuyente) en el encabezado principal -->
-            <xpath expr="//field[@name='l10n_pa_tipo_contribuyente']" position="after">
-                <field name="property_account_position_id" string="Disposición fiscal" options="{'no_create': True, 'no_open': True}"/>
-            </xpath>
-            <xpath expr="//group[@name='fiscal_information']" position="attributes">
-                <attribute name="invisible">1</attribute>
-            </xpath>
-
             <!-- Sección de Pago DGI en la tab "Datos Panamá (DGI)".
                  Todo readonly — se auto-llena vía onchange desde Términos de pago.
                  El usuario NUNCA edita estos campos directamente (igual que el módulo original). -->
