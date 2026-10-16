@@ -218,15 +218,15 @@ class ResPartner(models.Model):
     def _check_df_receptor_tipo_matches_company_type(self):
         """
         Hard rule (DB-level validation):
-        - Company: only 01 (Contribuyente), 03 (Gobierno)
+        - Company: 01 (Contribuyente), 03 (Gobierno), 04 (Extranjero)
         - Person: only 01, 02 (Consumidor Final), 04 (Extranjero)
         """
         for rec in self:
             if not rec.l10n_pa_receptor_tipo:
                 continue
 
-            if rec.company_type == "company" and rec.l10n_pa_receptor_tipo not in ("01", "03"):
-                raise ValidationError(_("Para contactos tipo Empresa, el Tipo de Receptor (DGI) debe ser Contribuyente (01) o Gobierno (03)."))
+            if rec.company_type == "company" and rec.l10n_pa_receptor_tipo not in ("01", "03", "04"):
+                raise ValidationError(_("Para contactos tipo Empresa, el Tipo de Receptor (DGI) debe ser Contribuyente (01), Gobierno (03) o Extranjero (04)."))
 
             if rec.company_type == "person" and rec.l10n_pa_receptor_tipo not in ("01", "02", "04"):
                 raise ValidationError(_("Para contactos tipo Persona, el Tipo de Receptor (DGI) debe ser Contribuyente (01), Consumidor Final (02) o Extranjero (04)."))
@@ -236,14 +236,19 @@ class ResPartner(models.Model):
         "l10n_pa_provincia_id",
         "l10n_pa_distrito_id",
         "l10n_pa_corregimiento_id",
+        "country_id",
     )
     def _check_dgi_address_required(self):
         """
         DGI rule:
         - Si es Contribuyente (01) o Gobierno (03), Provincia, Distrito y Corregimiento son obligatorios
+        - Extranjeros (04) o países fuera de Panamá quedan exentos.
         """
         for rec in self:
             if rec.env.context.get("skip_fe_validation"):
+                continue
+
+            if rec.l10n_pa_receptor_tipo == "04" or (rec.country_id and rec.country_id.code != "PA"):
                 continue
 
             if rec.l10n_pa_receptor_tipo in ("01", "03"):

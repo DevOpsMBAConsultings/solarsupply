@@ -42,15 +42,23 @@
                     <attribute name="invisible">1</attribute>
                 </xpath>
 
-                <!-- En la sección Dirección: reemplazar Ciudad, Estado, C.P. por Provincia, Distrito, Corregimiento -->
+                <!-- En la sección Dirección: dinámica según país (Panamá vs Internacional) -->
                 <xpath expr="//div[hasclass('o_address_format')]" position="replace">
                     <div class="o_address_format">
+                        <field name="country_code" invisible="1"/>
                         <field name="street" placeholder="Street..." class="o_address_street"/>
                         <field name="street2" placeholder="Street 2..." class="o_address_street" invisible="1"/>
-                        <div class="d-flex gap-2">
+                        <!-- Dirección Panamá: Provincia, Distrito, Corregimiento (solo si es Panamá y NO es Extranjero) -->
+                        <div class="d-flex gap-2" invisible="country_code and country_code != 'PA' or l10n_pa_receptor_tipo == '04'">
                             <field name="l10n_pa_provincia_id" nolabel="1" placeholder="Provincia" class="o_address_city" style="flex: 1;"/>
                             <field name="l10n_pa_distrito_id" nolabel="1" placeholder="Distrito" domain="[('provincia_id', '=', l10n_pa_provincia_id)]" class="o_address_state" style="flex: 1;"/>
                             <field name="l10n_pa_corregimiento_id" nolabel="1" placeholder="Corregimiento" domain="[('distrito_id', '=', l10n_pa_distrito_id)]" class="o_address_zip" style="flex: 1;"/>
+                        </div>
+                        <!-- Dirección Internacional: Ciudad, Estado/Depto, Código Postal (cuando es Extranjero o país != PA) -->
+                        <div class="d-flex gap-2" invisible="not country_code or country_code == 'PA' and l10n_pa_receptor_tipo != '04'">
+                            <field name="city" placeholder="Ciudad" class="o_address_city" style="flex: 1;"/>
+                            <field name="state_id" class="o_address_state" placeholder="Estado / Depto" options="{'no_open': True, 'no_create': True}" context="{'country_id': country_id, 'default_country_id': country_id, 'zip': zip}" style="flex: 1;"/>
+                            <field name="zip" placeholder="C.P. / ZIP" class="o_address_zip" style="flex: 1;"/>
                         </div>
                         <div name="partner_address_country" class="d-flex justify-content-between">
                             <field name="country_id" placeholder="Country" class="o_address_country" options="{'no_open': True, 'no_create': True}"/>
@@ -61,13 +69,13 @@
                 <!-- Campos fiscales DGI en la columna izquierda, debajo de la dirección -->
                 <xpath expr="//div[hasclass('o_address_format')]" position="after">
                     <!-- Razón Social devuelta por la DGI -->
-                    <field name="l10n_pa_razon_social" string="RS" invisible="not vat" readonly="1" force_save="1"/>
+                    <field name="l10n_pa_razon_social" string="RS" invisible="not vat or l10n_pa_receptor_tipo == '04'" readonly="1" force_save="1"/>
                     
-                    <!-- DV de Panamá (solo visible para empresas o contribuyentes) -->
-                    <field name="l10n_pa_dv" string="DV" placeholder="DV" invisible="not vat" readonly="1" force_save="1"/>
+                    <!-- DV de Panamá (solo visible para empresas o contribuyentes locales) -->
+                    <field name="l10n_pa_dv" string="DV" placeholder="DV" invisible="not vat or l10n_pa_receptor_tipo == '04'" readonly="1" force_save="1"/>
                     
                     <!-- Tipo de RUC devuelto por la DGI -->
-                    <field name="l10n_pa_tipo_contribuyente" string="TP" invisible="not vat" readonly="1" force_save="1"/>
+                    <field name="l10n_pa_tipo_contribuyente" string="TP" invisible="not vat or l10n_pa_receptor_tipo == '04'" readonly="1" force_save="1"/>
                 </xpath>
                 
                 <!-- Añadimos Tipo de contribuyente en una pestaña secundaria o campo al final si se necesita ver explícitamente -->

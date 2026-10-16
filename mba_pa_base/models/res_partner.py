@@ -21,7 +21,7 @@ class ResPartner(models.Model):
 
     # UI-only selectors (to show only the valid options per company_type)
     l10n_pa_receptor_tipo_company_ui = fields.Selection(
-        selection=[("01", "Contribuyente"), ("03", "Gobierno")],
+        selection=[("01", "Contribuyente"), ("03", "Gobierno"), ("04", "Extranjero")],
         string="Tipo de Receptor (DGI)",
         compute="_compute_receptor_ui",
         inverse="_inverse_receptor_company_ui",
@@ -46,7 +46,7 @@ class ResPartner(models.Model):
             rec.l10n_pa_receptor_tipo_company_ui = False
             rec.l10n_pa_receptor_tipo_person_ui = False
 
-            if rec.company_type == "company" and rec.l10n_pa_receptor_tipo in ("01", "03"):
+            if rec.company_type == "company" and rec.l10n_pa_receptor_tipo in ("01", "03", "04"):
                 rec.l10n_pa_receptor_tipo_company_ui = rec.l10n_pa_receptor_tipo
             elif rec.company_type == "person" and rec.l10n_pa_receptor_tipo in ("01", "02", "04"):
                 rec.l10n_pa_receptor_tipo_person_ui = rec.l10n_pa_receptor_tipo
@@ -66,11 +66,50 @@ class ResPartner(models.Model):
         """
         When toggling Person/Company, reset CI01 so user must pick again.
         Also clear UI helpers so the displayed dropdown matches cleanly.
+        Preserves Extranjero (04) if country is foreign or already 04.
         """
         for rec in self:
+            if rec.l10n_pa_receptor_tipo == "04" or (rec.country_id and rec.country_id.code != "PA"):
+                rec.l10n_pa_receptor_tipo = "04"
+                if rec.company_type == "company":
+                    rec.l10n_pa_receptor_tipo_company_ui = "04"
+                else:
+                    rec.l10n_pa_receptor_tipo_person_ui = "04"
+                continue
             rec.l10n_pa_receptor_tipo = False
             rec.l10n_pa_receptor_tipo_company_ui = False
             rec.l10n_pa_receptor_tipo_person_ui = False
+
+    @api.onchange("country_id")
+    def _onchange_country_id_receptor(self):
+        """
+        When country changes:
+        - If NOT Panama: set to Extranjero (04) and clear Panama location fields.
+        - If Panama: default back to Contribuyente (01) for company or Consumidor Final (02) for person.
+        """
+        for rec in self:
+            if rec.country_id and rec.country_id.code != "PA":
+                rec.l10n_pa_receptor_tipo = "04"
+                rec.l10n_pa_receptor_tipo_company_ui = "04"
+                rec.l10n_pa_receptor_tipo_person_ui = "04"
+                rec.l10n_pa_provincia_id = False
+                rec.l10n_pa_distrito_id = False
+                rec.l10n_pa_corregimiento_id = False
+            elif rec.country_id and rec.country_id.code == "PA":
+                if rec.l10n_pa_receptor_tipo == "04":
+                    default_rec = "01" if rec.company_type == "company" else "02"
+                    rec.l10n_pa_receptor_tipo = default_rec
+                    rec.l10n_pa_receptor_tipo_company_ui = default_rec if rec.company_type == "company" else False
+                    rec.l10n_pa_receptor_tipo_person_ui = default_rec if rec.company_type == "person" else False
+
+    @api.onchange("l10n_pa_receptor_tipo_company_ui", "l10n_pa_receptor_tipo_person_ui")
+    def _onchange_receptor_ui_clear_panama(self):
+        for rec in self:
+            selected = rec.l10n_pa_receptor_tipo_company_ui if rec.company_type == "company" else rec.l10n_pa_receptor_tipo_person_ui
+            if selected == "04":
+                rec.l10n_pa_provincia_id = False
+                rec.l10n_pa_distrito_id = False
+                rec.l10n_pa_corregimiento_id = False
 
     l10n_pa_ruc = fields.Char(string='RUC / Cédula (DGI)', help='Número de identificación fiscal de la DGI.')
     l10n_pa_razon_social = fields.Char(string='Razón Social (DGI)', readonly=True, help='Nombre legal o razón social validado por la DGI.')
