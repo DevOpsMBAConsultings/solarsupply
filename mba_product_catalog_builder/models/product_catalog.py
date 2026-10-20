@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import base64
+import hashlib
 import io
 import logging
 import os
@@ -104,6 +105,11 @@ class MbaProductCatalog(models.Model):
     page_number_start = fields.Integer(
         string="Página inicial para numerar",
         default=1,
+    )
+    deduplicate_datasheets = fields.Boolean(
+        string="Deduplicar Fichas Técnicas",
+        default=True,
+        help="Si varios productos comparten la misma ficha técnica (mismo archivo PDF, común en familias de inversores o baterías), solo se incluirá una vez en el catálogo.",
     )
     pdf_compression = fields.Selection([
         ('300', '300 DPI — Alta Fidelidad / Imprenta (Recomendado)'),
@@ -344,6 +350,7 @@ class MbaProductCatalog(models.Model):
 
         # 4. Agrupar por categoría agregando separador de sección y fichas técnicas
         processed_categories = set()
+        processed_datasheet_hashes = set()
         for line in sorted_lines:
             category = line.category_id
             if category and category.id not in processed_categories:
@@ -356,6 +363,16 @@ class MbaProductCatalog(models.Model):
             datasheet_data, datasheet_name = line.product_tmpl_id._get_catalog_datasheet()
             datasheet_bytes = self._file_to_pdf_bytes(datasheet_data, datasheet_name)
             if datasheet_bytes:
+                if self.deduplicate_datasheets:
+                    content_hash = hashlib.sha256(datasheet_bytes).hexdigest()
+                    if content_hash in processed_datasheet_hashes:
+                        _logger.info(
+                            "Omitiendo ficha técnica repetida (%s) para el producto '%s' en catálogo '%s'",
+                            datasheet_name, line.product_tmpl_id.display_name, self.name
+                        )
+                        continue
+                    processed_datasheet_hashes.add(content_hash)
+
                 pdf_collection.append(datasheet_bytes)
 
         # 5. Contraportada / Cierre

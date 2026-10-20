@@ -86,6 +86,7 @@
                                     </group>
                                     <group string="Optimización y Formato">
                                         <field name="pdf_compression"/>
+                                        <field name="deduplicate_datasheets"/>
                                         <field name="paginate_pages"/>
                                         <field name="page_number_start" invisible="not paginate_pages"/>
                                     </group>
