@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="whatsapp_template_view_form" model="ir.ui.view">
+        <field name="name">whatsapp.template.form</field>
+        <field name="model">whatsapp.template</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_submit_for_approval" string="Submit for Approval" type="object" class="btn-primary" invisible="status in ('approved', 'pending')"/>
+                    <button name="action_preview" string="Preview" type="object" class="btn-secondary"/>
+                    <field name="status" widget="statusbar" statusbar_visible="draft,pending,approved"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_messages" type="object" class="oe_stat_button" icon="fa-whatsapp">
+                            <field name="message_count" widget="statinfo" string="Messages"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <label for="name" string="Name"/>
+                        <h1><field name="name" placeholder="e.g. Lead Follow-up"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="wa_account_id" options="{'no_create': True}"/>
+                            <field name="model_id" string="Applies to" options="{'no_create': True}"/>
+                            <field name="model" invisible="1"/>
+                            <field name="phone_field" placeholder="phone o mobile"/>
+                            <field name="category"/>
+                            <field name="user_scope"/>
+                            <field name="variable_type"/>
+                        </group>
+                        <group>
+                            <field name="template_name" placeholder="e.g. lead_follow_up"/>
+                            <field name="lang_code" placeholder="es_PA"/>
+                            <field name="header_type"/>
+                            <field name="header_text" invisible="header_type != 'text'"/>
+                            <field name="footer_text" placeholder="e.g. Motor Group TE"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Body" name="body_page">
+                            <div class="d-flex justify-content-end mb-1">
+                                <button name="action_add_variable" type="object" string="+ variable" class="btn btn-link btn-sm text-decoration-none text-muted p-0"/>
+                            </div>
+                            <field name="body" placeholder="Hola {{1}}, gracias por contactar a Motor Group. Tu cotización {{2}} está lista..."/>
+                        </page>
+                        <page string="Buttons" name="buttons_page">
+                            <field name="button_ids">
+                                <list editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="button_type"/>
+                                    <field name="name" string="Button Text"/>
+                                    <field name="url_or_phone" string="URL / Phone" placeholder="https://... o +507..."/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Variables" name="variables_page">
+                            <field name="variable_ids" context="{'default_model': model}">
+                                <list editable="bottom">
+                                    <field name="sequence" column_invisible="True"/>
+                                    <field name="name" string="Name" placeholder="{{1}}"/>
+                                    <field name="sample_value" string="Sample Value"/>
+                                    <field name="line_type" string="Type"/>
+                                    <field name="model" column_invisible="True"/>
+                                    <field name="field_name" string="Field" widget="field_selector" options="{'model': 'model'}" invisible="line_type != 'field'"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="whatsapp_template_view_list" model="ir.ui.view">
+        <field name="name">whatsapp.template.list</field>
+        <field name="model">whatsapp.template</field>
+        <field name="arch" type="xml">
+            <list decoration-success="status == 'approved'"
+                  decoration-warning="status == 'pending'"
+                  decoration-danger="status == 'rejected'"
+                  decoration-muted="status == 'draft'">
+                <field name="name"/>
+                <field name="template_name"/>
+                <field name="model_id" string="Applies to"/>
+                <field name="wa_account_id"/>
+                <field name="category" widget="badge"/>
+                <field name="lang_code"/>
+                <field name="status" widget="badge"
+                       decoration-success="status == 'approved'"
+                       decoration-warning="status == 'pending'"
+                       decoration-danger="status == 'rejected'"
+                       decoration-muted="status == 'draft'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="whatsapp_template_action" model="ir.actions.act_window">
+        <field name="name">WhatsApp Templates</field>
+        <field name="res_model">whatsapp.template</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Crea o sincroniza tu primera plantilla de WhatsApp.
+            </p>
+            <p>
+                Diseña plantillas, configúrales botones y variables, previsualízalas y envíalas directamente a aprobación oficial en Meta.
+            </p>
+        </field>
+    </record>
+</odoo>
