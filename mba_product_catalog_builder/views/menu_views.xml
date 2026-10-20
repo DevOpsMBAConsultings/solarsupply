@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Menú en Ventas -> Productos -> Catálogos en PDF -->
+        <menuitem id="menu_mba_product_catalog"
+                  name="Catálogos en PDF"
+                  parent="sale.product_menu_catalog"
+                  action="action_mba_product_catalog"
+                  sequence="35"/>
+    </data>
+</odoo>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="product_category_form_view_catalog" model="ir.ui.view">
+            <field name="name">product.category.form.catalog</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="product.product_category_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='first']" position="after">
+                    <group string="Catálogo de Productos">
+                        <group>
+                            <field name="catalog_sequence"/>
+                        </group>
+                        <group>
+                            <field name="catalog_section_cover" filename="catalog_section_cover_name" widget="binary"/>
+                            <field name="catalog_section_cover_name" invisible="1"/>
+                        </group>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

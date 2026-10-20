@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Form View de Product Template -->
+        <record id="product_template_form_view_catalog" model="ir.ui.view">
+            <field name="name">product.template.form.catalog</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Catálogo &amp; Ficha Técnica" name="catalog_info">
+                        <group>
+                            <group string="Parámetros de Catálogo">
+                                <field name="catalog_include"/>
+                                <field name="catalog_sequence"/>
+                                <field name="catalog_has_datasheet" readonly="1"/>
+                            </group>
+                            <group string="Ficha Técnica Oficial del Fabricante">
+                                <field name="catalog_datasheet_pdf" filename="catalog_datasheet_name" widget="binary"/>
+                                <field name="catalog_datasheet_name" invisible="1"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Search View de Product Template -->
+        <record id="product_template_search_view_catalog" model="ir.ui.view">
+            <field name="name">product.template.search.catalog</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_search_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='filter_to_sell']" position="after">
+                    <separator/>
+                    <filter string="Con Ficha Técnica" name="has_datasheet" domain="[('catalog_has_datasheet', '=', True)]"/>
+                    <filter string="Para Catálogo" name="catalog_include" domain="[('catalog_include', '=', True)]"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

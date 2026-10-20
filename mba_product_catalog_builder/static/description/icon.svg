@@ -1,0 +1,16 @@
+<svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <!-- Forma 1: Base del catálogo / Portada posterior (Morado Odoo) -->
+  <rect x="7" y="6" width="28" height="38" rx="4" fill="#985184"/>
+  <!-- Forma 2: Hojas interiores / Fichas técnicas (Amarillo cálido Odoo) -->
+  <rect x="13" y="10" width="28" height="34" rx="4" fill="#FBB945"/>
+  <!-- Forma 3: Separador / Portadilla frontal con pestaña de sección (Turquesa Odoo) -->
+  <path d="M19 14h18a4 4 0 0 1 4 4v22a4 4 0 0 1-4 4H19a2 2 0 0 1-2-2V16a2 2 0 0 1 2-2Z" fill="#1AD3BB"/>
+  <!-- Detalle sutil de encuadernación / anillas en color de apoyo -->
+  <circle cx="10" cy="13" r="1.8" fill="#ffffff" fill-opacity="0.7"/>
+  <circle cx="10" cy="25" r="1.8" fill="#ffffff" fill-opacity="0.7"/>
+  <circle cx="10" cy="37" r="1.8" fill="#ffffff" fill-opacity="0.7"/>
+  <!-- Líneas sutiles de ficha técnica en la hoja frontal -->
+  <rect x="23" y="20" width="12" height="2.5" rx="1.2" fill="#ffffff" fill-opacity="0.85"/>
+  <rect x="23" y="26" width="14" height="2" rx="1" fill="#ffffff" fill-opacity="0.85"/>
+  <rect x="23" y="31" width="9" height="2" rx="1" fill="#ffffff" fill-opacity="0.85"/>
+</svg>

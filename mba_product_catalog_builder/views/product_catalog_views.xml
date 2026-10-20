@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- List View -->
+        <record id="mba_product_catalog_view_list" model="ir.ui.view">
+            <field name="name">mba.product.catalog.list</field>
+            <field name="model">mba.product.catalog</field>
+            <field name="arch" type="xml">
+                <list string="Catálogos de Productos">
+                    <field name="name"/>
+                    <field name="date"/>
+                    <field name="total_products"/>
+                    <field name="total_pages"/>
+                    <field name="generated_pdf_size" string="Peso"/>
+                    <field name="generated_date"/>
+                    <field name="state" widget="badge" 
+                           decoration-success="state == 'done'" 
+                           decoration-info="state == 'ready'" 
+                           decoration-muted="state == 'draft'"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="mba_product_catalog_view_form" model="ir.ui.view">
+            <field name="name">mba.product.catalog.form</field>
+            <field name="model">mba.product.catalog</field>
+            <field name="arch" type="xml">
+                <form string="Catálogo de Productos">
+                    <header>
+                        <button name="action_load_products" 
+                                string="1. Cargar / Actualizar Productos" 
+                                type="object" 
+                                class="btn-primary" 
+                                icon="fa-refresh"/>
+                        <button name="action_generate_catalog_pdf" 
+                                string="2. Generar Catálogo PDF" 
+                                type="object" 
+                                class="btn-success" 
+                                icon="fa-file-pdf-o"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,ready,done"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" string="Título del Catálogo"/>
+                            <h1>
+                                <field name="name" placeholder="Ej. Catálogo Solar Supply 2026"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="date"/>
+                                <field name="company_id" groups="base.group_multi_company"/>
+                            </group>
+                            <group>
+                                <field name="total_products"/>
+                                <field name="total_pages" invisible="state != 'done'"/>
+                                <field name="generated_pdf_size" invisible="state != 'done'"/>
+                                <field name="generated_date" invisible="state != 'done'"/>
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <page string="Carátulas &amp; Páginas Institucionales" name="covers">
+                                <group>
+                                    <group string="Portada Principal">
+                                        <field name="cover_pdf" filename="cover_name" widget="binary"/>
+                                        <field name="cover_name" invisible="1"/>
+                                    </group>
+                                    <group string="Contraportada / Cierre Institucional">
+                                        <field name="back_cover_pdf" filename="back_cover_name" widget="binary"/>
+                                        <field name="back_cover_name" invisible="1"/>
+                                    </group>
+                                </group>
+                                <group string="Páginas de Introducción (Índice, Quiénes Somos, Sucursales)">
+                                    <field name="intro_pdf" filename="intro_name" widget="binary"/>
+                                    <field name="intro_name" invisible="1"/>
+                                </group>
+                            </page>
+
+                            <page string="Filtros &amp; Opciones" name="filters">
+                                <group>
+                                    <group string="Filtro de Categorías">
+                                        <field name="category_ids" widget="many2many_tags" placeholder="Todas las categorías si está vacío"/>
+                                        <field name="only_with_datasheet"/>
+                                    </group>
+                                    <group string="Optimización y Formato">
+                                        <field name="pdf_compression"/>
+                                        <field name="paginate_pages"/>
+                                        <field name="page_number_start" invisible="not paginate_pages"/>
+                                    </group>
+                                </group>
+                            </page>
+
+                            <page string="Productos a Incluir" name="products">
+                                <field name="line_ids">
+                                    <list editable="bottom" string="Líneas del Catálogo">
+                                        <field name="category_sequence" string="Sec. Categ."/>
+                                        <field name="category_id"/>
+                                        <field name="sequence" string="Sec. Prod."/>
+                                        <field name="product_tmpl_id"/>
+                                        <field name="has_datasheet" widget="boolean"/>
+                                        <field name="datasheet_name"/>
+                                        <field name="include_in_pdf" widget="boolean_toggle"/>
+                                    </list>
+                                </field>
+                            </page>
+
+                            <page string="Catálogo PDF Generado" name="result" invisible="state != 'done'">
+                                <group>
+                                    <group>
+                                        <field name="generated_pdf" filename="generated_pdf_name" widget="binary"/>
+                                        <field name="generated_pdf_name" invisible="1"/>
+                                    </group>
+                                    <group>
+                                        <field name="generated_pdf_size"/>
+                                        <field name="total_pages"/>
+                                        <field name="generated_date"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record id="mba_product_catalog_view_search" model="ir.ui.view">
+            <field name="name">mba.product.catalog.search</field>
+            <field name="model">mba.product.catalog</field>
+            <field name="arch" type="xml">
+                <search string="Buscar Catálogos">
+                    <field name="name"/>
+                    <filter string="Generados" name="filter_done" domain="[('state', '=', 'done')]"/>
+                    <filter string="Borrador" name="filter_draft" domain="[('state', '=', 'draft')]"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_mba_product_catalog" model="ir.actions.act_window">
+            <field name="name">Generador de Catálogos</field>
+            <field name="res_model">mba.product.catalog</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Crea tu primer catálogo de productos con fichas técnicas oficiales.
+                </p>
+                <p>
+                    Configura la portada, páginas de introducción, selecciona categorías y genera un PDF profesional unificado en segundos.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>
