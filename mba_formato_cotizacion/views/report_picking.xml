@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ============================================================ -->
+    <!-- REPORTE DE OPERACIONES DE RECOLECCIÓN / ENTREGA (stock.report_picking) -->
+    <!-- ============================================================ -->
+    <template id="report_picking_custom_solarsupply" inherit_id="stock.report_picking" priority="30">
+        <xpath expr="//div[hasclass('page')]" position="replace">
+            <div class="page" style="font-family: Arial, sans-serif; font-size: 10pt; color: #1a1a1a;">
+                
+                <!-- 1. Cabecera Corporativa: Logo y Datos de Solar Supply -->
+                <div class="row mb-3 align-items-center">
+                    <div class="col-6">
+                        <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)" style="max-height: 85px; width: auto;" alt="Logo"/>
+                    </div>
+                    <div class="col-6 text-end" style="font-size: 8.5pt; color: #555;">
+                        <strong style="font-size: 13pt; color: #102B66;"><span t-field="o.company_id.name"/></strong><br/>
+                        <span t-if="o.company_id.street"><strong>Oficina:</strong> <span t-field="o.company_id.street"/><br/></span>
+                        <span t-if="o.company_id.vat"><strong>RUC / NIT:</strong> <span t-field="o.company_id.vat"/><br/></span>
+                        <span t-if="o.company_id.phone"><strong>Tel/WhatsApp:</strong> <span t-field="o.company_id.phone"/><br/></span>
+                        <span t-if="o.company_id.email"><strong>Correo:</strong> <span t-field="o.company_id.email"/></span>
+                    </div>
+                </div>
+
+                <!-- 2. Título de Entrega y Código de Barras -->
+                <div class="row mb-3 align-items-center" style="border-top: 1px solid #e0e0e0; padding-top: 8px;">
+                    <div class="col-6">
+                        <span style="font-size: 10pt; color: #777; text-transform: uppercase; font-weight: bold;">
+                            <t t-if="o.picking_type_id.code == 'outgoing'">Orden de Entrega / Despacho</t>
+                            <t t-elif="o.picking_type_id.code == 'incoming'">Recepción de Mercancía</t>
+                            <t t-else="">Transferencia Interna</t>
+                        </span>
+                        <h2 style="color: #102B66; font-weight: bold; margin: 0;"><span t-field="o.name"/></h2>
+                    </div>
+                    <div class="col-6 text-end">
+                        <!-- Código de barras garantizado para escáner -->
+                        <div t-field="o.name" style="display:flex;justify-content:flex-end;display:-webkit-box;-webkit-box-pack:end;"
+                             t-options="{'widget': 'barcode', 'width': 600, 'height': 100, 'img_style': 'width:280px;height:45px;margin-right:0;'}"/>
+                    </div>
+                </div>
+
+                <!-- 3. Bloque Informativo: Cliente y Datos de Despacho -->
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <strong style="font-size: 11pt; color: #102B66; display: block;">Dirección de Entrega</strong>
+                        <hr style="border-top: 2px solid #102B66; opacity: 1; margin: 2px 0 6px 0;"/>
+                        <t t-set="delivery_partner" t-value="(o.move_ids and o.move_ids[0].partner_id) or o.partner_id"/>
+                        <t t-if="delivery_partner">
+                            <strong>Cliente:</strong> <span t-esc="delivery_partner.parent_id.name or delivery_partner.name"/><br/>
+                            <t t-if="delivery_partner.parent_id and delivery_partner.parent_id != delivery_partner">
+                                <strong>Contacto:</strong> <span t-esc="delivery_partner.name"/><br/>
+                            </t>
+                            <t t-if="delivery_partner.phone or delivery_partner.mobile">
+                                <strong>Teléfono:</strong> <span t-esc="delivery_partner.phone or delivery_partner.mobile"/><br/>
+                            </t>
+                            <t t-set="full_address" t-value="', '.join(filter(None, [delivery_partner.street, delivery_partner.street2, delivery_partner.city, delivery_partner.state_id.name, delivery_partner.country_id.name]))"/>
+                            <span t-if="full_address"><strong>Dirección:</strong> <span t-esc="full_address"/><br/></span>
+                        </t>
+                    </div>
+                    <div class="col-5 offset-1">
+                        <strong style="font-size: 11pt; color: #102B66; display: block;">Datos del Despacho</strong>
+                        <hr style="border-top: 2px solid #F39C12; opacity: 1; margin: 2px 0 6px 0;"/>
+                        <span t-if="o.origin"><strong>Orden Origen:</strong> <span t-field="o.origin"/><br/></span>
+                        <strong>Almacén:</strong> <span t-field="o.picking_type_id.warehouse_id.name"/><br/>
+                        <strong>Estado:</strong> 
+                        <span t-if="o.state == 'draft'">Borrador</span>
+                        <span t-elif="o.state == 'waiting'">Esperando otra operación</span>
+                        <span t-elif="o.state == 'confirmed'">En espera</span>
+                        <span t-elif="o.state == 'assigned'">Listo</span>
+                        <span t-elif="o.state == 'done'">Realizado</span>
+                        <span t-elif="o.state == 'cancel'">Cancelado</span>
+                        <span t-else="" t-field="o.state"/><br/>
+                        <strong>Fecha programada:</strong> 
+                        <span t-if="o.state == 'done' and o.date_done" t-field="o.date_done" t-options='{"widget": "date"}'/>
+                        <span t-elif="o.scheduled_date" t-field="o.scheduled_date" t-options='{"widget": "date"}'/><br/>
+                        <span t-if="o.user_id"><strong>Responsable:</strong> <span t-field="o.user_id.name"/><br/></span>
+                    </div>
+                </div>
+
+                <!-- 4. Tabla de Productos y Cantidades -->
+                <table class="table table-sm mt-2" style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr style="background-color: #102B66; color: white !important; font-weight: bold; border-bottom: 3px solid #F39C12;">
+                            <th class="text-center" style="padding: 6px; border: none; color: white !important; width: 60px;">Img</th>
+                            <th class="text-start" style="padding: 6px; border: none; color: white !important; width: 120px;">Referencia</th>
+                            <th class="text-start" style="padding: 6px; border: none; color: white !important;">Producto / Descripción</th>
+                            <th class="text-start" style="padding: 6px; border: none; color: white !important; width: 120px;">Desde</th>
+                            <th class="text-end" style="padding: 6px; border: none; color: white !important; width: 100px;">Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-set="lines" t-value="o.move_ids.filtered(lambda x: x.product_uom_qty or x.quantity)"/>
+                        <t t-foreach="lines" t-as="move">
+                            <tr style="border-bottom: 1px solid #e0e0e0; page-break-inside: avoid;">
+                                <!-- Imagen miniatura del producto -->
+                                <td class="text-center" style="padding: 4px; vertical-align: middle;">
+                                    <img t-if="move.product_id.image_128" t-att-src="image_data_uri(move.product_id.image_128)" style="max-height: 40px; max-width: 50px; object-fit: contain;"/>
+                                    <img t-elif="move.product_id.product_tmpl_id.image_128" t-att-src="image_data_uri(move.product_id.product_tmpl_id.image_128)" style="max-height: 40px; max-width: 50px; object-fit: contain;"/>
+                                </td>
+                                <!-- SKU / Referencia -->
+                                <td class="text-start" style="padding: 4px 6px; vertical-align: middle; font-weight: 500;">
+                                    <span t-esc="move.product_id.default_code"/>
+                                </td>
+                                <!-- Nombre y descripción -->
+                                <td class="text-start" style="padding: 4px 6px; vertical-align: middle;">
+                                    <strong t-field="move.product_id.name"/>
+                                    <t t-if="move.product_id.product_template_attribute_value_ids">
+                                        <span style="color: #555; font-size: 8.5pt;">
+                                            (<span t-esc="', '.join(move.product_id.product_template_attribute_value_ids.mapped('name'))"/>)
+                                        </span>
+                                    </t>
+                                    <p t-if="move.description_picking and move.description_picking != move.product_id.name and move.description_picking != move.product_id.display_name" style="margin: 0; color: #666; font-size: 8.5pt;">
+                                        <span t-esc="move.description_picking"/>
+                                    </p>
+                                    <!-- Lote / Serie si existe -->
+                                    <t t-if="move.lot_ids">
+                                        <div style="font-size: 8pt; color: #102B66; font-weight: bold;">
+                                            Lote(s): <span t-esc="', '.join(move.lot_ids.mapped('name'))"/>
+                                        </div>
+                                    </t>
+                                </td>
+                                <!-- Ubicación Origen (Desde) -->
+                                <td class="text-start" style="padding: 4px 6px; vertical-align: middle; color: #555; font-size: 8.5pt;">
+                                    <span t-esc="move.location_id.display_name"/>
+                                </td>
+                                <!-- Cantidad -->
+                                <td class="text-end" style="padding: 4px 6px; vertical-align: middle; font-weight: bold;">
+                                    <t t-if="o.state == 'done'">
+                                        <span t-esc="int(move.quantity) if move.quantity.is_integer() else move.quantity"/>
+                                    </t>
+                                    <t t-else="">
+                                        <span t-esc="int(move.product_uom_qty) if move.product_uom_qty.is_integer() else move.product_uom_qty"/>
+                                    </t>
+                                    <span t-field="move.product_uom.name" style="font-size: 8.5pt; font-weight: normal; color: #555;"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+
+                <!-- 5. Observaciones / Notas -->
+                <div t-if="o.note" class="mt-2" style="font-size: 8.5pt; color: #444; border-top: 1px solid #ddd; padding-top: 6px;">
+                    <strong style="color: #102B66;">Observaciones:</strong>
+                    <div t-field="o.note"/>
+                </div>
+
+                <!-- 6. Firmas de Entrega y Recepción -->
+                <div class="row mt-5" style="page-break-inside: avoid; padding-top: 25px;">
+                    <div class="col-5 text-center">
+                        <div style="border-top: 1px solid #333; margin-top: 35px; padding-top: 4px;">
+                            <strong style="color: #102B66;">Despachado por (Bodega):</strong><br/>
+                            <span style="font-size: 8.5pt; color: #666;">Firma y Fecha</span>
+                        </div>
+                    </div>
+                    <div class="col-5 offset-2 text-center">
+                        <div style="border-top: 1px solid #333; margin-top: 35px; padding-top: 4px;">
+                            <strong style="color: #102B66;">Recibido Conforme (Cliente / Transporte):</strong><br/>
+                            <span style="font-size: 8.5pt; color: #666;">Nombre, Cédula / RUC y Firma</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </xpath>
+    </template>
+
+    <!-- ============================================================ -->
+    <!-- RECIBO DE ENTREGA / VALE DE ENTREGA (stock.report_delivery_document) -->
+    <!-- ============================================================ -->
+    <template id="report_delivery_document_custom_solarsupply" inherit_id="stock.report_delivery_document" priority="30">
+        <xpath expr="//*[contains(@t-call, 'layout')]" position="attributes">
+            <attribute name="t-call">web.basic_layout</attribute>
+        </xpath>
+        <xpath expr="//t[@t-set='address']" position="replace">
+            <t t-set="address"/>
+        </xpath>
+        <xpath expr="//t[@t-set='information_block']" position="replace">
+            <t t-set="information_block"/>
+        </xpath>
+        <xpath expr="//div[hasclass('page')]" position="replace">
+            <div class="page" style="font-family: Arial, sans-serif; font-size: 10pt; color: #1a1a1a;">
+                
+                <!-- 1. Cabecera Corporativa: Logo y Datos de Solar Supply -->
+                <div class="row mb-3 align-items-center">
+                    <div class="col-6">
+                        <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)" style="max-height: 85px; width: auto;" alt="Logo"/>
+                    </div>
+                    <div class="col-6 text-end" style="font-size: 8.5pt; color: #555;">
+                        <strong style="font-size: 13pt; color: #102B66;"><span t-field="o.company_id.name"/></strong><br/>
+                        <span t-if="o.company_id.street"><strong>Oficina:</strong> <span t-field="o.company_id.street"/><br/></span>
+                        <span t-if="o.company_id.vat"><strong>RUC / NIT:</strong> <span t-field="o.company_id.vat"/><br/></span>
+                        <span t-if="o.company_id.phone"><strong>Tel/WhatsApp:</strong> <span t-field="o.company_id.phone"/><br/></span>
+                        <span t-if="o.company_id.email"><strong>Correo:</strong> <span t-field="o.company_id.email"/></span>
+                    </div>
+                </div>
+
+                <!-- 2. Título de Entrega y Código de Barras -->
+                <div class="row mb-3 align-items-center" style="border-top: 1px solid #e0e0e0; padding-top: 8px;">
+                    <div class="col-6">
+                        <span style="font-size: 10pt; color: #777; text-transform: uppercase; font-weight: bold;">Recibo / Vale de Entrega</span>
+                        <h2 style="color: #102B66; font-weight: bold; margin: 0;"><span t-field="o.name"/></h2>
+                    </div>
+                    <div class="col-6 text-end">
+                        <div t-field="o.name" style="display:flex;justify-content:flex-end;display:-webkit-box;-webkit-box-pack:end;"
+                             t-options="{'widget': 'barcode', 'width': 600, 'height': 100, 'img_style': 'width:280px;height:45px;margin-right:0;'}"/>
+                    </div>
+                </div>
+
+                <!-- 3. Bloque Informativo: Cliente y Datos de Despacho -->
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <strong style="font-size: 11pt; color: #102B66; display: block;">Dirección de Entrega</strong>
+                        <hr style="border-top: 2px solid #102B66; opacity: 1; margin: 2px 0 6px 0;"/>
+                        <t t-set="delivery_partner" t-value="(o.move_ids and o.move_ids[0].partner_id) or o.partner_id"/>
+                        <t t-if="delivery_partner">
+                            <strong>Cliente:</strong> <span t-esc="delivery_partner.parent_id.name or delivery_partner.name"/><br/>
+                            <t t-if="delivery_partner.parent_id and delivery_partner.parent_id != delivery_partner">
+                                <strong>Contacto:</strong> <span t-esc="delivery_partner.name"/><br/>
+                            </t>
+                            <t t-if="delivery_partner.phone or delivery_partner.mobile">
+                                <strong>Teléfono:</strong> <span t-esc="delivery_partner.phone or delivery_partner.mobile"/><br/>
+                            </t>
+                            <t t-set="full_address" t-value="', '.join(filter(None, [delivery_partner.street, delivery_partner.street2, delivery_partner.city, delivery_partner.state_id.name, delivery_partner.country_id.name]))"/>
+                            <span t-if="full_address"><strong>Dirección:</strong> <span t-esc="full_address"/><br/></span>
+                        </t>
+                    </div>
+                    <div class="col-5 offset-1">
+                        <strong style="font-size: 11pt; color: #102B66; display: block;">Datos del Despacho</strong>
+                        <hr style="border-top: 2px solid #F39C12; opacity: 1; margin: 2px 0 6px 0;"/>
+                        <span t-if="o.origin"><strong>Orden Origen:</strong> <span t-field="o.origin"/><br/></span>
+                        <strong>Almacén:</strong> <span t-field="o.picking_type_id.warehouse_id.name"/><br/>
+                        <strong>Estado:</strong> 
+                        <span t-if="o.state == 'draft'">Borrador</span>
+                        <span t-elif="o.state == 'waiting'">Esperando otra operación</span>
+                        <span t-elif="o.state == 'confirmed'">En espera</span>
+                        <span t-elif="o.state == 'assigned'">Listo</span>
+                        <span t-elif="o.state == 'done'">Realizado</span>
+                        <span t-elif="o.state == 'cancel'">Cancelado</span>
+                        <span t-else="" t-field="o.state"/><br/>
+                        <strong>Fecha de envío:</strong> 
+                        <span t-if="o.state == 'done' and o.date_done" t-field="o.date_done" t-options='{"widget": "date"}'/>
+                        <span t-elif="o.scheduled_date" t-field="o.scheduled_date" t-options='{"widget": "date"}'/><br/>
+                        <span t-if="o.user_id"><strong>Responsable:</strong> <span t-field="o.user_id.name"/><br/></span>
+                    </div>
+                </div>
+
+                <!-- 4. Tabla de Productos y Cantidades -->
+                <table class="table table-sm mt-2" style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr style="background-color: #102B66; color: white !important; font-weight: bold; border-bottom: 3px solid #F39C12;">
+                            <th class="text-center" style="padding: 6px; border: none; color: white !important; width: 60px;">Img</th>
+                            <th class="text-start" style="padding: 6px; border: none; color: white !important; width: 120px;">Referencia</th>
+                            <th class="text-start" style="padding: 6px; border: none; color: white !important;">Producto / Descripción</th>
+                            <th class="text-start" style="padding: 6px; border: none; color: white !important; width: 120px;">Desde</th>
+                            <th class="text-end" style="padding: 6px; border: none; color: white !important; width: 100px;">Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-set="lines" t-value="o.move_ids.filtered(lambda x: x.product_uom_qty or x.quantity)"/>
+                        <t t-foreach="lines" t-as="move">
+                            <tr style="border-bottom: 1px solid #e0e0e0; page-break-inside: avoid;">
+                                <td class="text-center" style="padding: 4px; vertical-align: middle;">
+                                    <img t-if="move.product_id.image_128" t-att-src="image_data_uri(move.product_id.image_128)" style="max-height: 40px; max-width: 50px; object-fit: contain;"/>
+                                    <img t-elif="move.product_id.product_tmpl_id.image_128" t-att-src="image_data_uri(move.product_id.product_tmpl_id.image_128)" style="max-height: 40px; max-width: 50px; object-fit: contain;"/>
+                                </td>
+                                <td class="text-start" style="padding: 4px 6px; vertical-align: middle; font-weight: 500;">
+                                    <span t-esc="move.product_id.default_code"/>
+                                </td>
+                                <td class="text-start" style="padding: 4px 6px; vertical-align: middle;">
+                                    <strong t-field="move.product_id.name"/>
+                                    <t t-if="move.product_id.product_template_attribute_value_ids">
+                                        <span style="color: #555; font-size: 8.5pt;">
+                                            (<span t-esc="', '.join(move.product_id.product_template_attribute_value_ids.mapped('name'))"/>)
+                                        </span>
+                                    </t>
+                                    <p t-if="move.description_picking and move.description_picking != move.product_id.name and move.description_picking != move.product_id.display_name" style="margin: 0; color: #666; font-size: 8.5pt;">
+                                        <span t-esc="move.description_picking"/>
+                                    </p>
+                                    <t t-if="move.lot_ids">
+                                        <div style="font-size: 8pt; color: #102B66; font-weight: bold;">
+                                            Lote(s): <span t-esc="', '.join(move.lot_ids.mapped('name'))"/>
+                                        </div>
+                                    </t>
+                                </td>
+                                <td class="text-start" style="padding: 4px 6px; vertical-align: middle; color: #555; font-size: 8.5pt;">
+                                    <span t-esc="move.location_id.display_name"/>
+                                </td>
+                                <td class="text-end" style="padding: 4px 6px; vertical-align: middle; font-weight: bold;">
+                                    <t t-if="o.state == 'done'">
+                                        <span t-esc="int(move.quantity) if move.quantity.is_integer() else move.quantity"/>
+                                    </t>
+                                    <t t-else="">
+                                        <span t-esc="int(move.product_uom_qty) if move.product_uom_qty.is_integer() else move.product_uom_qty"/>
+                                    </t>
+                                    <span t-field="move.product_uom.name" style="font-size: 8.5pt; font-weight: normal; color: #555;"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+
+                <!-- 5. Observaciones / Notas -->
+                <div t-if="o.note" class="mt-2" style="font-size: 8.5pt; color: #444; border-top: 1px solid #ddd; padding-top: 6px;">
+                    <strong style="color: #102B66;">Observaciones:</strong>
+                    <div t-field="o.note"/>
+                </div>
+
+                <!-- 6. Firmas de Entrega y Recepción -->
+                <div class="row mt-5" style="page-break-inside: avoid; padding-top: 25px;">
+                    <div class="col-5 text-center">
+                        <div style="border-top: 1px solid #333; margin-top: 35px; padding-top: 4px;">
+                            <strong style="color: #102B66;">Despachado por (Bodega):</strong><br/>
+                            <span style="font-size: 8.5pt; color: #666;">Firma y Fecha</span>
+                        </div>
+                    </div>
+                    <div class="col-5 offset-2 text-center">
+                        <div style="border-top: 1px solid #333; margin-top: 35px; padding-top: 4px;">
+                            <strong style="color: #102B66;">Recibido Conforme (Cliente / Transporte):</strong><br/>
+                            <span style="font-size: 8.5pt; color: #666;">Nombre, Cédula / RUC y Firma</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </xpath>
+    </template>
+</odoo>
