@@ -12,6 +12,7 @@ Recordatorio rápido para este repo:
   - Suite Facturación Electrónica Panamá (`mba-facturacion-panama/`: `mba_pa_base`, `mba_pa_edi`, `mba_pa_edi_hka`, `mba_pa_edi_digifact`, `mba_pa_hka_tools`, `mba_pa_pos`, `mba_pa_products`, `mba_pa_sale`, `mba_pa_sale_hitos`)
   - Devoluciones y despachos contables (`mba_account_invoice_stock_return`)
   - `mba_formato_cotizacion` (Reporte de cotización personalizado agnóstico)
+  - `mba_web_responsive_fix` (Sincronización de URL en menú de aplicaciones de web_responsive)
 - Nunca se edita directamente el código de Odoo Core ni de la OCA — se extiende con
   `_inherit` desde un módulo propio (ver `../../../agents.md` §8).
 - Ningún cambio de código procede sin un "sí, procede" explícito de Brooks (ver `../../../agents.md`
