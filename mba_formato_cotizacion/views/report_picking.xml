@@ -49,8 +49,8 @@
                             <t t-if="delivery_partner.parent_id and delivery_partner.parent_id != delivery_partner">
                                 <strong>Contacto:</strong> <span t-esc="delivery_partner.name"/><br/>
                             </t>
-                            <t t-if="delivery_partner.phone or delivery_partner.mobile">
-                                <strong>Teléfono:</strong> <span t-esc="delivery_partner.phone or delivery_partner.mobile"/><br/>
+                            <t t-if="delivery_partner.phone">
+                                <strong>Teléfono:</strong> <span t-esc="delivery_partner.phone"/><br/>
                             </t>
                             <t t-set="full_address" t-value="', '.join(filter(None, [delivery_partner.street, delivery_partner.street2, delivery_partner.city, delivery_partner.state_id.name, delivery_partner.country_id.name]))"/>
                             <span t-if="full_address"><strong>Dirección:</strong> <span t-esc="full_address"/><br/></span>
@@ -216,8 +216,8 @@
                             <t t-if="delivery_partner.parent_id and delivery_partner.parent_id != delivery_partner">
                                 <strong>Contacto:</strong> <span t-esc="delivery_partner.name"/><br/>
                             </t>
-                            <t t-if="delivery_partner.phone or delivery_partner.mobile">
-                                <strong>Teléfono:</strong> <span t-esc="delivery_partner.phone or delivery_partner.mobile"/><br/>
+                            <t t-if="delivery_partner.phone">
+                                <strong>Teléfono:</strong> <span t-esc="delivery_partner.phone"/><br/>
                             </t>
                             <t t-set="full_address" t-value="', '.join(filter(None, [delivery_partner.street, delivery_partner.street2, delivery_partner.city, delivery_partner.state_id.name, delivery_partner.country_id.name]))"/>
                             <span t-if="full_address"><strong>Dirección:</strong> <span t-esc="full_address"/><br/></span>
