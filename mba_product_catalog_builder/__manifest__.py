@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Generador de Catálogos de Productos (MBA Consultings)',
-    'version': '19.0.1.1.0',
+    'version': '19.0.1.2.0',
     'license': 'LGPL-3',
     'summary': 'Ensamblador y compilador de catálogos comerciales con fichas técnicas oficiales (PDF) y portadillas por categoría.',
     'description': """
